@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<resolutionmodel:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmlns:resolutionmodel="http://www.kermeta.org/resolutionModel">
+  <featureDiagram href="or.featurediagram#_ABqyEHSaEeC5PIpZsyyy_A"/>
+  <featureSelections state="selected" featureName="Car" operator="">
+    <feature name="Car">
+      <operator xsi:type="featureDiagram:Or" features="//@featureSelections.0/@owningSelection.0/@feature //@featureSelections.0/@owningSelection.1/@feature" name="Or"/>
+      <modelElements href="car.ecore#//Car"/>
+    </feature>
+    <owningSelection state="selected" featureName="petrol">
+      <feature name="petrol" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <modelElements href="car.ecore#//Petrol"/>
+      </feature>
+    </owningSelection>
+    <owningSelection featureName="diesel">
+      <feature name="diesel" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <modelElements href="car.ecore#//Diesel"/>
+      </feature>
+    </owningSelection>
+  </featureSelections>
+</resolutionmodel:ResolutionModel>

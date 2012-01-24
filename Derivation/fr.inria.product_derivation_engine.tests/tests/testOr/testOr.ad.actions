@@ -1,0 +1,3 @@
+:- style_check(-discontiguous).
+
+create(xmiid_UkJ9QPQTEeCXt5nMxMedaOQAxmiid,metaclass('platform:/resource/org.movida.d1.3.viewpoint/model/viewpointad.ecore#/', '//ad/architecturedescription',architecturedescription),[0,1318343655927,'lip6']).

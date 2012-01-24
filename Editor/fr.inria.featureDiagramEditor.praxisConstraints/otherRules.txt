@@ -1,0 +1,43 @@
+#-------------------------------------------------------------------------------
+# Copyright (c) 2010-2012 Marie Gouyette.
+# INRIA-IRISA- Triskell
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+# 
+# Contributors:
+#     INRIA-IRISA- Triskell
+#     Marie Gouyette - initial API and implementation
+#     contact marie.gouyette@gmail.com
+#-------------------------------------------------------------------------------
+["Features  {4} and  {5} cannot be mutually exclusive because they are children of the same feature {6} with an operator and"]
+	public noMutexBetweenAndFeatureChildren(FeatureParent, Feature1, Feature2,FeatureName1,FeatureName2,FeatureParentName, Op1, Op2, CEMutex) <=> and {
+		/* Only to display results */
+		addProperty(Feature1,#name, FeatureName1),
+		addProperty(Feature2, #name, FeatureName2),
+		addProperty(FeatureParent, #name, FeatureParentName),
+		
+		/* Feature1  children of parentFeature*/
+		addReference(FeatureParent, #operator, Op1),
+		addReference(Op1, #features, Feature1),
+		
+		/* Feature1  children of parentFeature*/
+		addReference(FeatureParent, #operator, Op2),
+		addReference(Op2, #features, Feature2) ,
+		
+		call isMutex(Feature1, Feature2,CEMutex)  ,
+		'isTypeOf(Op1, #and),
+		'isTypeOf(Op2, #and)
+	}.
+	
+	["There cannot be mutual exclusivity between the feature {5} and one of his ancestor {4}"]
+	public noMutexBetweenFeatureAndAncestor(CEMutex, FeatureAncestor, Feature, FeatureAncestorName, FeatureName ) <=>  and{
+		/* Only to display the name of the features */
+		addProperty(FeatureAncestor, #name, FeatureAncestorName),
+		addProperty(Feature, #name, FeatureName),
+		L = [Feature | T],
+		T = [],
+		call isMutex(FeatureAncestor, Feature,CEMutex),
+		call isAncestor(FeatureAncestor,L,Feature)	
+	}.

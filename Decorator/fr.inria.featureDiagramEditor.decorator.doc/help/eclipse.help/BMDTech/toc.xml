@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- 
+ * Copyright (c) 2010-2012 Marie Gouyette.
+ * INRIA-IRISA- Triskell
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     INRIA-IRISA- Triskell
+ *     Marie Gouyette - initial API and implementation
+ *     contact marie.gouyette@gmail.com
+-->
+<toc label="Generic Decorator Technical documentation" topic="build/eclipse.help/BMDTech/index.html">
+   <topic label="Preface" href="build/eclipse.help/BMDTech/pr01.html"/>
+   <topic label="Installation" href="build/eclipse.help/BMDTech/ch01.html"/>
+   <topic label=" Test of Base Model Decorator Engine" href="build/eclipse.help/BMDTech/ch02.html"/>
+   <topic label=" How to create a new Generic decorator" href="build/eclipse.help/BMDTech/ch03.html"/>
+   <topic label=" Conclusion" href="build/eclipse.help/BMDTech/ch04.html"/>
+</toc>

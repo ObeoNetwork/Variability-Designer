@@ -1,0 +1,43 @@
+<!-- 
+ * Copyright (c) 2010-2012 Marie Gouyette.
+ * INRIA-IRISA- Triskell
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     INRIA-IRISA- Triskell
+ *     Marie Gouyette - initial API and implementation
+ *     contact marie.gouyette@gmail.com
+-->
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;3.&nbsp; Feature Diagram Editor : Quick presentation</title><link rel="stylesheet" href="css/docbook.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><meta name="keywords" content="Feature Diagram Editor, metamodeling, Domain specific language (DSL)"><link rel="home" href="index.html" title="Feature Diagram Editor End-User documentation"><link rel="up" href="index.html" title="Feature Diagram Editor End-User documentation"><link rel="prev" href="ch02s02.html" title="2.2.&nbsp; Install feature diagram editor separately"><link rel="next" href="ch03s02.html" title="3.2.&nbsp; Create model elements with the palette"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;3.&nbsp; Feature Diagram Editor : Quick presentation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch02s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch03s02.html">Next</a></td></tr></table><hr></div><div class="chapter" lang="en-US"><div class="titlepage"><div><div><h2 class="title"><a name="d0e169"></a>Chapter&nbsp;3.&nbsp; Feature Diagram Editor : Quick presentation</h2></div></div></div><p>This chapter present a very quick of use of Feature Diagram Editor. For more information
+      please refer to the <a class="ulink" href="http://movida.gforge.inria.fr/uploads/Demos/FeatureDiagramEditorDemo.htm" target="_top"> sample wink
+        video</a>.</p><div class="section" lang="en-US"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e177"></a>3.1.&nbsp;Create a new Feature Diagram Model</h2></div></div></div><p>Our editor needs the use of the <span class="italic">Design</span> perspective
+        like in Obeo Designer to create or use a Domain Specific Language (DSL). So, go to<span class="italic"> Window</span>-&gt;<span class="italic"> Open Perspective</span>
+          -&gt;<span class="italic"> Other</span> -&gt;<span class="italic"> Design</span>.
+        A new view<span class="italic"> Model Explorer </span>appears. </p><p>To create a new feature model , you can create a new viewpoint project in the<span class="italic"> Model Explorer</span> view (<span class="italic">File</span>
+          -&gt;<span class="italic"> New</span> -&gt;<span class="italic">Other</span>
+          -&gt;<span class="italic"> General</span> -&gt;<span class="italic">
+          Project</span>. Call it <span class="bold"><strong>featureModel</strong></span>.</p><p>Then, create a new Session (<span class="italic">File </span>-<span class="italic">&gt; New</span> -&gt;<span class="italic"> Other</span>-&gt; <span class="italic">Viewpoint</span> -&gt; <span class="italic">Representation
+          File</span>) .</p><p><img src="FDEEnd_figures/RepresentationFileWizard.PNG"></p><p> Click on<span class="italic"> Next</span> and check<span class="italic">
+          empty file</span>.</p><p>You obtain a wizard as in the following figure :</p><p><img src="FDEEnd_figures/SessionName.png"></p><p>Click on<span class="italic"> Finish</span>.</p><p>Then, your Eclipse 's view looks like this: </p><p><img src="FDEEnd_figures/DesignPerspective.png"></p><p>
+        </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important:  Session need to be opened"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="gfx/admonitions/important.gif"></td><th align="left"> Session need to be opened</th></tr><tr><td align="left" valign="top"><p> Here session is opened. To open a closed session simply double click on the .aird
+            file in the<span class="italic"> Model Explorer</span> view.</p></td></tr></table></div><p>
+      </p><p> Next, right click on the session (here<span class="bold"><strong> mySession.aird</strong></span>
+        ) -&gt;<span class="italic"> Add Model</span> . You obtain the following wizard : </p><p></p><p><img src="FDEEnd_figures/AddSemanticResource.png"></p><p></p><p>You can choose a EMF feature diagram model ever created with the feature diagram EMF
+        editor proposed with this graphical editor or create a new EMF model selecting<span class="italic"> Create resource</span>, <span class="italic">Next</span> and
+          <span class="bold"><strong>http://www.kermeta.org/featureDiagram</strong></span> as metamodel URI as
+        shown in the following figure.</p><p></p><p><img src="FDEEnd_figures/chooseUri.png"></p><p>Select<span class="italic"> FeatureDiagram </span>as Model Object as shown on the
+        following figure : </p><p><img src="FDEEnd_figures/selectRoot.png"></p><p>Now, you can choose the name of your new feature model, on the following figure it is
+        fd.featurediagram :</p><p><img src="FDEEnd_figures/nameFeatureModel.png"></p><p>
+        </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important:  Use .featurediagram extension"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="gfx/admonitions/important.gif"></td><th align="left"> Use .featurediagram extension</th></tr><tr><td align="left" valign="top"><p> Do no forget to give the extension <span class="bold"><strong>
+              .featurediagram</strong></span> to the new EMF file created by this way. Otherwise, you
+            could not use the Praxis contraints associated to this feature diagram editor on
+            it.</p></td></tr></table></div><p>
+      </p><p>Click on Finish. A new wizard appears as in the following figure, select the
+          viewpoint<span class="italic"> Design </span>on it.</p><p><img src="FDEEnd_figures/selectFDViewpoint.png"></p><p>Then click on the little arrow at the left of the session file (.aird) in the<span class="italic"> Model Explorer</span> view. You obtain the following figure : </p><p><img src="FDEEnd_figures/OpenFeatureDiagramEditor.png"></p><p>Right click on<span class="bold"><strong> Feature Diagram true </strong></span>selected in the
+        wizard above, <span class="italic">New Representation </span>-&gt; <span class="italic"> new Feature Diagram Editor</span>.</p><p> Double click on <span class="italic"> new Feature Diagram Editor</span>, you
+        obtain a graphical editor as in the following figure : </p><p><img src="FDEEnd_figures/FeatureDiagramGraphicalEditor.PNG"></p><p> </p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch02s02.html">Prev</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch03s02.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">2.2.&nbsp; Install feature diagram editor separately &nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;3.2.&nbsp; Create model elements with the palette </td></tr></table></div></body></html>

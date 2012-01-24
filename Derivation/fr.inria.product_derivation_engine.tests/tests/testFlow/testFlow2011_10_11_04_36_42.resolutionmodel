@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<resolutionmodel:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmlns:resolutionmodel="http://www.kermeta.org/resolutionModel">
+  <featureDiagram href="testFlow.featurediagram#_196K8HSVEeCKbIkGdwPQ-A"/>
+  <featureSelections state="selected" featureName="System" operator="">
+    <feature name="System">
+      <operator xsi:type="featureDiagram:Alternative" features="//@featureSelections.0/@owningSelection.0/@feature //@featureSelections.0/@owningSelection.1/@feature" name="Alternative"/>
+      <operator xsi:type="featureDiagram:Opt" features="//@featureSelections.0/@owningSelection.2/@feature" name="Opt"/>
+      <modelElements href="My.flow#/"/>
+    </feature>
+    <owningSelection state="selected" featureName="a" operator="Alternative">
+      <feature name="a" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <modelElements href="My.flow#//@elements.0"/>
+      </feature>
+    </owningSelection>
+    <owningSelection featureName="b" operator="Alternative">
+      <feature name="b" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <modelElements href="My.flow#//@elements.1"/>
+      </feature>
+    </owningSelection>
+    <owningSelection state="selected" featureName="c" operator="Opt">
+      <feature name="c" owningOperator="//@featureSelections.0/@feature/@operator.1">
+        <modelElements href="My.flow#//@elements.2"/>
+      </feature>
+    </owningSelection>
+  </featureSelections>
+</resolutionmodel:ResolutionModel>

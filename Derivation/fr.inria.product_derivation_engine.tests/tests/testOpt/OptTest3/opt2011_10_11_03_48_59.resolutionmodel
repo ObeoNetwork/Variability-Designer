@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<resolutionmodel:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmlns:resolutionmodel="http://www.kermeta.org/resolutionModel">
+  <featureDiagram href="opt.featurediagram#_PuRQwMfmEd-D8OULRVYasw"/>
+  <featureSelections state="selected" featureName="car" operator="Opt">
+    <feature name="car">
+      <operator xsi:type="featureDiagram:Opt" features="//@featureSelections.0/@owningSelection.0/@feature //@featureSelections.0/@owningSelection.1/@feature //@featureSelections.0/@owningSelection.2/@feature" name="Opt"/>
+      <modelElements href="car.ecore#//Car"/>
+    </feature>
+    <owningSelection state="selected" featureName="GPS" operator="Opt">
+      <feature name="GPS" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <modelElements href="car.ecore#//GPS"/>
+      </feature>
+    </owningSelection>
+    <owningSelection featureName="Aircond" operator="Opt">
+      <feature name="Aircond" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <modelElements href="car.ecore#//AirCond"/>
+      </feature>
+    </owningSelection>
+    <owningSelection state="selected" featureName="Radio" operator="Opt">
+      <feature name="Radio" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <modelElements href="car.ecore#//Radio"/>
+      </feature>
+    </owningSelection>
+  </featureSelections>
+</resolutionmodel:ResolutionModel>

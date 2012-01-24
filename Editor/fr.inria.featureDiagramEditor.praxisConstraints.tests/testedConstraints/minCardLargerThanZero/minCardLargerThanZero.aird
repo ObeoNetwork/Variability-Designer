@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ad="platform:/resource/org.movida.d1.3.viewpoint/model/ViewPointAD.ecore#/org/movida/d13/viewpoint/ad" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:viewpoint="http://www.obeo.fr/dsl/viewpoint/1.1.0" xsi:schemaLocation="platform:/resource/org.movida.d1.3.viewpoint/model/ViewPointAD.ecore#/org/movida/d13/viewpoint/ad platform:/resource/org.movida.d1.3.viewpoint/model/ViewPointAD.ecore#//ad http://www.obeo.fr/dsl/viewpoint/description/1.1.0 http://www.obeo.fr/dsl/viewpoint/1.1.0#//description http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0 http://www.obeo.fr/dsl/viewpoint/1.1.0#//description/style" xmi:id="_dqurwPZ6EeCgeLbYwG2YwQ" selectedViews="_qZW6gPZ6EeCgeLbYwG2YwQ">
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_qZW6gPZ6EeCgeLbYwG2YwQ" initialized="true">
+    <ownedRepresentations xmi:type="viewpoint:DSemanticDiagram" xmi:id="_qZak4PZ6EeCgeLbYwG2YwQ" name="Feature Diagram Editor">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_qZbL8PZ6EeCgeLbYwG2YwQ" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_qZbL8fZ6EeCgeLbYwG2YwQ" type="Viewpoint" element="_qZak4PZ6EeCgeLbYwG2YwQ" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="__wpBIPZ6EeCgeLbYwG2YwQ" type="2003" element="__ulLoPZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__w3Dk_Z6EeCgeLbYwG2YwQ" type="3012" element="__vJzYPZ6EeCgeLbYwG2YwQ">
+              <children xmi:type="notation:Node" xmi:id="__w4RsPZ6EeCgeLbYwG2YwQ" type="5010">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="__w4RsfZ6EeCgeLbYwG2YwQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="__w6t8PZ6EeCgeLbYwG2YwQ" type="3004" element="__vM2sPZ6EeCgeLbYwG2YwQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="__w6t8fZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="__w6t8vZ6EeCgeLbYwG2YwQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__w3DlPZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__w3DlfZ6EeCgeLbYwG2YwQ" x="10" y="30" width="20" height="20"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__w44wPZ6EeCgeLbYwG2YwQ" type="3012" element="__vNdwPZ6EeCgeLbYwG2YwQ">
+              <children xmi:type="notation:Node" xmi:id="__w5f0PZ6EeCgeLbYwG2YwQ" type="5010">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="__w5f0fZ6EeCgeLbYwG2YwQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="__w7VAPZ6EeCgeLbYwG2YwQ" type="3004" element="__vPS8PZ6EeCgeLbYwG2YwQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="__w7VAfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="__w7VAvZ6EeCgeLbYwG2YwQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__w44wfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__w44wvZ6EeCgeLbYwG2YwQ" x="56" width="20" height="20"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__wqPQPZ6EeCgeLbYwG2YwQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="__wqPQfZ6EeCgeLbYwG2YwQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="__wqPQvZ6EeCgeLbYwG2YwQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="__wqPQ_Z6EeCgeLbYwG2YwQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__wpBIfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__wpBIvZ6EeCgeLbYwG2YwQ" x="135" y="200"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__wq2UPZ6EeCgeLbYwG2YwQ" type="2003" element="__uo2APZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__w8jIPZ6EeCgeLbYwG2YwQ" type="3012" element="__vaSEPZ6EeCgeLbYwG2YwQ">
+              <children xmi:type="notation:Node" xmi:id="__w9KMPZ6EeCgeLbYwG2YwQ" type="5010">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="__w9KMfZ6EeCgeLbYwG2YwQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="__w9xQPZ6EeCgeLbYwG2YwQ" type="3004" element="__vejgPZ6EeCgeLbYwG2YwQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="__w9xQfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="__w9xQvZ6EeCgeLbYwG2YwQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__w8jIfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="7"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__w8jIvZ6EeCgeLbYwG2YwQ" x="8" y="30" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__wrdYPZ6EeCgeLbYwG2YwQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="__wsEcPZ6EeCgeLbYwG2YwQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="__wsEcfZ6EeCgeLbYwG2YwQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="__wsEcvZ6EeCgeLbYwG2YwQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__wq2UfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__wq2UvZ6EeCgeLbYwG2YwQ" x="90" y="300"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__wsrgPZ6EeCgeLbYwG2YwQ" type="2003" element="__utHcPZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__wtSkPZ6EeCgeLbYwG2YwQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="__wt5oPZ6EeCgeLbYwG2YwQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="__wt5ofZ6EeCgeLbYwG2YwQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="__wt5ovZ6EeCgeLbYwG2YwQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__wsrgfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__wsrgvZ6EeCgeLbYwG2YwQ" x="150" y="300"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__wt5o_Z6EeCgeLbYwG2YwQ" type="2003" element="__ux_8PZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__w-_YPZ6EeCgeLbYwG2YwQ" type="3012" element="__vvCMPZ6EeCgeLbYwG2YwQ">
+              <children xmi:type="notation:Node" xmi:id="__w_mcPZ6EeCgeLbYwG2YwQ" type="5010">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="__w_mcfZ6EeCgeLbYwG2YwQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="__xANgPZ6EeCgeLbYwG2YwQ" type="3004" element="__vzToPZ6EeCgeLbYwG2YwQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="__xANgfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xANgvZ6EeCgeLbYwG2YwQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__w-_YfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="7"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__w-_YvZ6EeCgeLbYwG2YwQ" x="5" y="30" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__wvHwPZ6EeCgeLbYwG2YwQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="__wvHwfZ6EeCgeLbYwG2YwQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="__wvHwvZ6EeCgeLbYwG2YwQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="__wvHw_Z6EeCgeLbYwG2YwQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__wt5pPZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__wt5pfZ6EeCgeLbYwG2YwQ" x="245" y="300"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__wwV4PZ6EeCgeLbYwG2YwQ" type="2003" element="__u2RYPZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__wxkAPZ6EeCgeLbYwG2YwQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="__wyLEPZ6EeCgeLbYwG2YwQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="__wyLEfZ6EeCgeLbYwG2YwQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="__wyLEvZ6EeCgeLbYwG2YwQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__wwV4fZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__wwV4vZ6EeCgeLbYwG2YwQ" x="35" y="365"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__wyyIPZ6EeCgeLbYwG2YwQ" type="2003" element="__u6i0PZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__wzZMPZ6EeCgeLbYwG2YwQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="__w0AQPZ6EeCgeLbYwG2YwQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="__w0AQfZ6EeCgeLbYwG2YwQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="__w0AQvZ6EeCgeLbYwG2YwQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__wyyIfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__wyyIvZ6EeCgeLbYwG2YwQ" x="105" y="365"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__w0AQ_Z6EeCgeLbYwG2YwQ" type="2003" element="__u-0QPZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__w1OYPZ6EeCgeLbYwG2YwQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="__w1OYfZ6EeCgeLbYwG2YwQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="__w1OYvZ6EeCgeLbYwG2YwQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="__w1OY_Z6EeCgeLbYwG2YwQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__w0ARPZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__w0ARfZ6EeCgeLbYwG2YwQ" x="215" y="370"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__w11cPZ6EeCgeLbYwG2YwQ" type="2003" element="__vCeoPZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__w2cgPZ6EeCgeLbYwG2YwQ" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="__w3DkPZ6EeCgeLbYwG2YwQ" type="7004">
+              <styles xmi:type="notation:SortingStyle" xmi:id="__w3DkfZ6EeCgeLbYwG2YwQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="__w3DkvZ6EeCgeLbYwG2YwQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__w11cfZ6EeCgeLbYwG2YwQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__w11cvZ6EeCgeLbYwG2YwQ" x="275" y="370"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_qZbL8vZ6EeCgeLbYwG2YwQ"/>
+          <edges xmi:type="notation:Edge" xmi:id="__xCCsPZ6EeCgeLbYwG2YwQ" type="4001" element="__wWGMPZ6EeCgeLbYwG2YwQ" source="__w3Dk_Z6EeCgeLbYwG2YwQ" target="__wq2UPZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__xCpwPZ6EeCgeLbYwG2YwQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xCpwfZ6EeCgeLbYwG2YwQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xCpwvZ6EeCgeLbYwG2YwQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xDQ0PZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xDQ0fZ6EeCgeLbYwG2YwQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xDQ0vZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__xCCsfZ6EeCgeLbYwG2YwQ"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__xCCsvZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__xCCs_Z6EeCgeLbYwG2YwQ" points="[18, -10, 83, 60]$[-65, -70, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xD34PZ6EeCgeLbYwG2YwQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xD34fZ6EeCgeLbYwG2YwQ" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="__xD34vZ6EeCgeLbYwG2YwQ" type="4001" element="__wX7YPZ6EeCgeLbYwG2YwQ" source="__w3Dk_Z6EeCgeLbYwG2YwQ" target="__wsrgPZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__xEe8PZ6EeCgeLbYwG2YwQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xEe8fZ6EeCgeLbYwG2YwQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xFGAPZ6EeCgeLbYwG2YwQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xFGAfZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xFGAvZ6EeCgeLbYwG2YwQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xFGA_Z6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__xD34_Z6EeCgeLbYwG2YwQ"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__xD35PZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__xD35fZ6EeCgeLbYwG2YwQ" points="[35, -10, 0, 60]$[35, -70, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xFtEPZ6EeCgeLbYwG2YwQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xFtEfZ6EeCgeLbYwG2YwQ" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="__xGUIPZ6EeCgeLbYwG2YwQ" type="4001" element="__wZJgPZ6EeCgeLbYwG2YwQ" source="__w44wPZ6EeCgeLbYwG2YwQ" target="__wt5o_Z6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__xG7MPZ6EeCgeLbYwG2YwQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xG7MfZ6EeCgeLbYwG2YwQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xG7MvZ6EeCgeLbYwG2YwQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xG7M_Z6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xHiQPZ6EeCgeLbYwG2YwQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xHiQfZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__xGUIfZ6EeCgeLbYwG2YwQ"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__xGUIvZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__xGUI_Z6EeCgeLbYwG2YwQ" points="[-17, -10, -84, 60]$[67, -70, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xHiQvZ6EeCgeLbYwG2YwQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xIJUPZ6EeCgeLbYwG2YwQ" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="__xIJUfZ6EeCgeLbYwG2YwQ" type="4001" element="__waXoPZ6EeCgeLbYwG2YwQ" source="__w8jIPZ6EeCgeLbYwG2YwQ" target="__wwV4PZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__xIwYPZ6EeCgeLbYwG2YwQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xIwYfZ6EeCgeLbYwG2YwQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xJXcPZ6EeCgeLbYwG2YwQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xJXcfZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xJXcvZ6EeCgeLbYwG2YwQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xJXc_Z6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__xIJUvZ6EeCgeLbYwG2YwQ"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__xIJU_Z6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__xIJVPZ6EeCgeLbYwG2YwQ" points="[20, -12, 43, 60]$[-23, -72, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xJ-gPZ6EeCgeLbYwG2YwQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xJ-gfZ6EeCgeLbYwG2YwQ" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="__xLMoPZ6EeCgeLbYwG2YwQ" type="4001" element="__wcM0PZ6EeCgeLbYwG2YwQ" source="__w8jIPZ6EeCgeLbYwG2YwQ" target="__wyyIPZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__xMawPZ6EeCgeLbYwG2YwQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xMawfZ6EeCgeLbYwG2YwQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xNB0PZ6EeCgeLbYwG2YwQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xNB0fZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xOP8PZ6EeCgeLbYwG2YwQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xOP8fZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__xLMofZ6EeCgeLbYwG2YwQ"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__xLMovZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__xLMo_Z6EeCgeLbYwG2YwQ" points="[33, -12, -44, 60]$[77, -72, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xOP8vZ6EeCgeLbYwG2YwQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xOP8_Z6EeCgeLbYwG2YwQ" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="__xO3APZ6EeCgeLbYwG2YwQ" type="4001" element="__wda8PZ6EeCgeLbYwG2YwQ" source="__w-_YPZ6EeCgeLbYwG2YwQ" target="__w0AQ_Z6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__xPeEPZ6EeCgeLbYwG2YwQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xPeEfZ6EeCgeLbYwG2YwQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xQFIPZ6EeCgeLbYwG2YwQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xQFIfZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xQFIvZ6EeCgeLbYwG2YwQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xQFI_Z6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__xO3AfZ6EeCgeLbYwG2YwQ"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__xO3AvZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__xO3A_Z6EeCgeLbYwG2YwQ" points="[20, -12, 43, 60]$[-23, -72, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xQsMPZ6EeCgeLbYwG2YwQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xQsMfZ6EeCgeLbYwG2YwQ" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="__xRTQPZ6EeCgeLbYwG2YwQ" type="4001" element="__wepEPZ6EeCgeLbYwG2YwQ" source="__w-_YPZ6EeCgeLbYwG2YwQ" target="__w11cPZ6EeCgeLbYwG2YwQ">
+            <children xmi:type="notation:Node" xmi:id="__xShYPZ6EeCgeLbYwG2YwQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xShYfZ6EeCgeLbYwG2YwQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xTIcPZ6EeCgeLbYwG2YwQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xTIcfZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__xTvgPZ6EeCgeLbYwG2YwQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xTvgfZ6EeCgeLbYwG2YwQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__xRTQfZ6EeCgeLbYwG2YwQ"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__xRTQvZ6EeCgeLbYwG2YwQ" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__xRTQ_Z6EeCgeLbYwG2YwQ" points="[33, -12, -44, 60]$[77, -72, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xUWkPZ6EeCgeLbYwG2YwQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__xUWkfZ6EeCgeLbYwG2YwQ" id="(0.5,1.0)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="viewpoint:DNodeList" xmi:id="__ulLoPZ6EeCgeLbYwG2YwQ" name="root Feature" tooltipText="Root feature">
+        <target xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_qSnH4GBREeCKsc_3ohU3og"/>
+        <semanticElements xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_qSnH4GBREeCKsc_3ohU3og"/>
+        <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="__vJzYPZ6EeCgeLbYwG2YwQ" name="Or" outgoingEdges="__wWGMPZ6EeCgeLbYwG2YwQ __wX7YPZ6EeCgeLbYwG2YwQ" width="2" height="2">
+          <target xmi:type="featureDiagram:Or" href="minCardLargerThanZero.featurediagram#_ywG4oGBREeCKsc_3ohU3og"/>
+          <semanticElements xmi:type="featureDiagram:Or" href="minCardLargerThanZero.featurediagram#_ywG4oGBREeCKsc_3ohU3og"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="viewpoint:BundledImage" xmi:id="__vM2sPZ6EeCgeLbYwG2YwQ" showIcon="false" shape="triangle">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__vM2sfZ6EeCgeLbYwG2YwQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']/@conditionnalStyles.1/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__vM2svZ6EeCgeLbYwG2YwQ"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="__vM2s_Z6EeCgeLbYwG2YwQ"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description:NodeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="__vNdwPZ6EeCgeLbYwG2YwQ" name="Opt" outgoingEdges="__wZJgPZ6EeCgeLbYwG2YwQ" width="2" height="2">
+          <target xmi:type="featureDiagram:Opt" href="minCardLargerThanZero.featurediagram#_0QZmsGBREeCKsc_3ohU3og"/>
+          <semanticElements xmi:type="featureDiagram:Opt" href="minCardLargerThanZero.featurediagram#_0QZmsGBREeCKsc_3ohU3og"/>
+          <ownedStyle xmi:type="viewpoint:BundledImage" xmi:id="__vPS8PZ6EeCgeLbYwG2YwQ" showIcon="false" shape="ring">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__vP6APZ6EeCgeLbYwG2YwQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']/@conditionnalStyles.0/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__vP6AfZ6EeCgeLbYwG2YwQ" red="255" green="255" blue="255"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="__vP6AvZ6EeCgeLbYwG2YwQ" red="255" green="255" blue="255"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description:NodeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="viewpoint:FlatContainerStyle" xmi:id="__unn4PZ6EeCgeLbYwG2YwQ" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__unn4fZ6EeCgeLbYwG2YwQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@conditionnalStyles.0/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__unn4vZ6EeCgeLbYwG2YwQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__unn4_Z6EeCgeLbYwG2YwQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="__unn5PZ6EeCgeLbYwG2YwQ" red="204" green="242" blue="166"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description:ContainerMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DNodeList" xmi:id="__uo2APZ6EeCgeLbYwG2YwQ" name="a" incomingEdges="__wWGMPZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_q8bg8GBREeCKsc_3ohU3og"/>
+        <semanticElements xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_q8bg8GBREeCKsc_3ohU3og"/>
+        <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="__vaSEPZ6EeCgeLbYwG2YwQ" name="-5 : 0" outgoingEdges="__waXoPZ6EeCgeLbYwG2YwQ __wcM0PZ6EeCgeLbYwG2YwQ" width="3" height="3">
+          <target xmi:type="featureDiagram:Card" href="minCardLargerThanZero.featurediagram#_2M36cGBREeCKsc_3ohU3og"/>
+          <semanticElements xmi:type="featureDiagram:Card" href="minCardLargerThanZero.featurediagram#_2M36cGBREeCKsc_3ohU3og"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="viewpoint:BundledImage" xmi:id="__vejgPZ6EeCgeLbYwG2YwQ" labelSize="7" showIcon="false" labelPosition="node">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__vejgfZ6EeCgeLbYwG2YwQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']/@conditionnalStyles.4/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__vejgvZ6EeCgeLbYwG2YwQ" red="233" green="185" blue="110"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="__vejg_Z6EeCgeLbYwG2YwQ" red="233" green="185" blue="110"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description:NodeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']"/>
+        </ownedBorderedNodes>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="viewpoint:FlatContainerStyle" xmi:id="__ur5UPZ6EeCgeLbYwG2YwQ" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__ur5UfZ6EeCgeLbYwG2YwQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__ur5UvZ6EeCgeLbYwG2YwQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__ur5U_Z6EeCgeLbYwG2YwQ" red="209" green="209" blue="209"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="__ur5VPZ6EeCgeLbYwG2YwQ" red="114" green="159" blue="207"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description:ContainerMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DNodeList" xmi:id="__utHcPZ6EeCgeLbYwG2YwQ" name="b" incomingEdges="__wX7YPZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_ryY4kGBREeCKsc_3ohU3og"/>
+        <semanticElements xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_ryY4kGBREeCKsc_3ohU3og"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="viewpoint:FlatContainerStyle" xmi:id="__uwx0PZ6EeCgeLbYwG2YwQ" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__uwx0fZ6EeCgeLbYwG2YwQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__uwx0vZ6EeCgeLbYwG2YwQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__uwx0_Z6EeCgeLbYwG2YwQ" red="209" green="209" blue="209"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="__uwx1PZ6EeCgeLbYwG2YwQ" red="114" green="159" blue="207"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description:ContainerMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DNodeList" xmi:id="__ux_8PZ6EeCgeLbYwG2YwQ" name="c" tooltipText="Optional Feature" incomingEdges="__wZJgPZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_tPPREGBREeCKsc_3ohU3og"/>
+        <semanticElements xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_tPPREGBREeCKsc_3ohU3og"/>
+        <ownedBorderedNodes xmi:type="viewpoint:DNode" xmi:id="__vvCMPZ6EeCgeLbYwG2YwQ" name="0 : 6" outgoingEdges="__wda8PZ6EeCgeLbYwG2YwQ __wepEPZ6EeCgeLbYwG2YwQ" width="3" height="3">
+          <target xmi:type="featureDiagram:Card" href="minCardLargerThanZero.featurediagram#_5ry4YGBREeCKsc_3ohU3og"/>
+          <semanticElements xmi:type="featureDiagram:Card" href="minCardLargerThanZero.featurediagram#_5ry4YGBREeCKsc_3ohU3og"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="viewpoint:BundledImage" xmi:id="__vzToPZ6EeCgeLbYwG2YwQ" labelSize="7" showIcon="false" labelPosition="node">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__vzTofZ6EeCgeLbYwG2YwQ"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']/@conditionnalStyles.4/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__vzTovZ6EeCgeLbYwG2YwQ" red="233" green="185" blue="110"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="__vzTo_Z6EeCgeLbYwG2YwQ" red="233" green="185" blue="110"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description:NodeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']"/>
+        </ownedBorderedNodes>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="viewpoint:FlatContainerStyle" xmi:id="__u1DQPZ6EeCgeLbYwG2YwQ" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__u1DQfZ6EeCgeLbYwG2YwQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@conditionnalStyles.1/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__u1DQvZ6EeCgeLbYwG2YwQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__u1DQ_Z6EeCgeLbYwG2YwQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="__u1DRPZ6EeCgeLbYwG2YwQ" red="253" green="206" blue="137"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description:ContainerMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DNodeList" xmi:id="__u2RYPZ6EeCgeLbYwG2YwQ" name="d" incomingEdges="__waXoPZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_uNbXoGBREeCKsc_3ohU3og"/>
+        <semanticElements xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_uNbXoGBREeCKsc_3ohU3og"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="viewpoint:FlatContainerStyle" xmi:id="__u5UsPZ6EeCgeLbYwG2YwQ" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__u5UsfZ6EeCgeLbYwG2YwQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__u5UsvZ6EeCgeLbYwG2YwQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__u5Us_Z6EeCgeLbYwG2YwQ" red="209" green="209" blue="209"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="__u5UtPZ6EeCgeLbYwG2YwQ" red="114" green="159" blue="207"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description:ContainerMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DNodeList" xmi:id="__u6i0PZ6EeCgeLbYwG2YwQ" name="e" incomingEdges="__wcM0PZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_u-xVAGBREeCKsc_3ohU3og"/>
+        <semanticElements xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_u-xVAGBREeCKsc_3ohU3og"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="viewpoint:FlatContainerStyle" xmi:id="__u9mIPZ6EeCgeLbYwG2YwQ" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__u9mIfZ6EeCgeLbYwG2YwQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__u9mIvZ6EeCgeLbYwG2YwQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__u9mI_Z6EeCgeLbYwG2YwQ" red="209" green="209" blue="209"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="__u9mJPZ6EeCgeLbYwG2YwQ" red="114" green="159" blue="207"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description:ContainerMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DNodeList" xmi:id="__u-0QPZ6EeCgeLbYwG2YwQ" name="f" incomingEdges="__wda8PZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_v1dFYGBREeCKsc_3ohU3og"/>
+        <semanticElements xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_v1dFYGBREeCKsc_3ohU3og"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="viewpoint:FlatContainerStyle" xmi:id="__vBQgPZ6EeCgeLbYwG2YwQ" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__vBQgfZ6EeCgeLbYwG2YwQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__vBQgvZ6EeCgeLbYwG2YwQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__vBQg_Z6EeCgeLbYwG2YwQ" red="209" green="209" blue="209"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="__vBQhPZ6EeCgeLbYwG2YwQ" red="114" green="159" blue="207"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description:ContainerMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DNodeList" xmi:id="__vCeoPZ6EeCgeLbYwG2YwQ" name="g" incomingEdges="__wepEPZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_xCT6EGBREeCKsc_3ohU3og"/>
+        <semanticElements xmi:type="featureDiagram:Feature" href="minCardLargerThanZero.featurediagram#_xCT6EGBREeCKsc_3ohU3og"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="viewpoint:FlatContainerStyle" xmi:id="__vFh8PZ6EeCgeLbYwG2YwQ" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__vFh8fZ6EeCgeLbYwG2YwQ"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__vFh8vZ6EeCgeLbYwG2YwQ"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__vFh8_Z6EeCgeLbYwG2YwQ" red="209" green="209" blue="209"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="__vFh9PZ6EeCgeLbYwG2YwQ" red="114" green="159" blue="207"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description:ContainerMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__wWGMPZ6EeCgeLbYwG2YwQ" sourceNode="__vJzYPZ6EeCgeLbYwG2YwQ" targetNode="__uo2APZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Or" href="minCardLargerThanZero.featurediagram#_ywG4oGBREeCKsc_3ohU3og"/>
+        <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__wWtQPZ6EeCgeLbYwG2YwQ" targetArrow="NoDecoration" foldingStyle="SOURCE" size="0">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__wWtQfZ6EeCgeLbYwG2YwQ"/>
+          <centerLabelStyle xmi:type="viewpoint:CenterLabelStyle" xmi:id="__wWtQvZ6EeCgeLbYwG2YwQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__wWtQ_Z6EeCgeLbYwG2YwQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description:EdgeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__wX7YPZ6EeCgeLbYwG2YwQ" sourceNode="__vJzYPZ6EeCgeLbYwG2YwQ" targetNode="__utHcPZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Or" href="minCardLargerThanZero.featurediagram#_ywG4oGBREeCKsc_3ohU3og"/>
+        <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__wX7YfZ6EeCgeLbYwG2YwQ" targetArrow="NoDecoration" foldingStyle="SOURCE" size="0">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__wX7YvZ6EeCgeLbYwG2YwQ"/>
+          <centerLabelStyle xmi:type="viewpoint:CenterLabelStyle" xmi:id="__wX7Y_Z6EeCgeLbYwG2YwQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__wX7ZPZ6EeCgeLbYwG2YwQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description:EdgeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__wZJgPZ6EeCgeLbYwG2YwQ" sourceNode="__vNdwPZ6EeCgeLbYwG2YwQ" targetNode="__ux_8PZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Opt" href="minCardLargerThanZero.featurediagram#_0QZmsGBREeCKsc_3ohU3og"/>
+        <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__wZJgfZ6EeCgeLbYwG2YwQ" targetArrow="NoDecoration" foldingStyle="SOURCE" size="0">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__wZJgvZ6EeCgeLbYwG2YwQ"/>
+          <centerLabelStyle xmi:type="viewpoint:CenterLabelStyle" xmi:id="__wZJg_Z6EeCgeLbYwG2YwQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__wZJhPZ6EeCgeLbYwG2YwQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description:EdgeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__waXoPZ6EeCgeLbYwG2YwQ" sourceNode="__vaSEPZ6EeCgeLbYwG2YwQ" targetNode="__u2RYPZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Card" href="minCardLargerThanZero.featurediagram#_2M36cGBREeCKsc_3ohU3og"/>
+        <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__waXofZ6EeCgeLbYwG2YwQ" targetArrow="NoDecoration" foldingStyle="SOURCE" size="0">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__waXovZ6EeCgeLbYwG2YwQ"/>
+          <centerLabelStyle xmi:type="viewpoint:CenterLabelStyle" xmi:id="__waXo_Z6EeCgeLbYwG2YwQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__waXpPZ6EeCgeLbYwG2YwQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description:EdgeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__wcM0PZ6EeCgeLbYwG2YwQ" sourceNode="__vaSEPZ6EeCgeLbYwG2YwQ" targetNode="__u6i0PZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Card" href="minCardLargerThanZero.featurediagram#_2M36cGBREeCKsc_3ohU3og"/>
+        <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__wcM0fZ6EeCgeLbYwG2YwQ" targetArrow="NoDecoration" foldingStyle="SOURCE" size="0">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__wcM0vZ6EeCgeLbYwG2YwQ"/>
+          <centerLabelStyle xmi:type="viewpoint:CenterLabelStyle" xmi:id="__wcM0_Z6EeCgeLbYwG2YwQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__wcM1PZ6EeCgeLbYwG2YwQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description:EdgeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__wda8PZ6EeCgeLbYwG2YwQ" sourceNode="__vvCMPZ6EeCgeLbYwG2YwQ" targetNode="__u-0QPZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Card" href="minCardLargerThanZero.featurediagram#_5ry4YGBREeCKsc_3ohU3og"/>
+        <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__wda8fZ6EeCgeLbYwG2YwQ" targetArrow="NoDecoration" foldingStyle="SOURCE" size="0">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__wda8vZ6EeCgeLbYwG2YwQ"/>
+          <centerLabelStyle xmi:type="viewpoint:CenterLabelStyle" xmi:id="__wda8_Z6EeCgeLbYwG2YwQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__wda9PZ6EeCgeLbYwG2YwQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description:EdgeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="viewpoint:DEdge" xmi:id="__wepEPZ6EeCgeLbYwG2YwQ" sourceNode="__vvCMPZ6EeCgeLbYwG2YwQ" targetNode="__vCeoPZ6EeCgeLbYwG2YwQ">
+        <target xmi:type="featureDiagram:Card" href="minCardLargerThanZero.featurediagram#_5ry4YGBREeCKsc_3ohU3og"/>
+        <ownedStyle xmi:type="viewpoint:EdgeStyle" xmi:id="__wepEfZ6EeCgeLbYwG2YwQ" targetArrow="NoDecoration" foldingStyle="SOURCE" size="0">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__wepEvZ6EeCgeLbYwG2YwQ"/>
+          <centerLabelStyle xmi:type="viewpoint:CenterLabelStyle" xmi:id="__wepE_Z6EeCgeLbYwG2YwQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__wepFPZ6EeCgeLbYwG2YwQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description:EdgeMapping" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description:DiagramDescription" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']"/>
+      <filterVariableHistory xmi:type="viewpoint:FilterVariableHistory" xmi:id="_qZak4fZ6EeCgeLbYwG2YwQ"/>
+      <activatedLayers xmi:type="description:Layer" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer"/>
+      <target xmi:type="featureDiagram:FeatureDiagram" href="minCardLargerThanZero.featurediagram#_iAzpwGBREeCKsc_3ohU3og"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']"/>
+  </ownedViews>
+  <models xmi:type="ad:ArchitectureDescription" href="minCardLargerThanZero.ad#_dt7JsPZ6EeCgeLbYwG2YwQ"/>
+  <models xmi:type="featureDiagram:FeatureDiagram" href="minCardLargerThanZero.featurediagram#_iAzpwGBREeCKsc_3ohU3og"/>
+  <eAnnotations xmi:type="description:DAnnotationEntry" xmi:id="_dqurwfZ6EeCgeLbYwG2YwQ" source="Migration">
+    <details>style</details>
+    <details>someViewsAreHiddenDeactivation</details>
+    <details>edgeLabels</details>
+    <details>LabelAlignmentForDNodeListElementMigrationForNotHavingSessionDirtyAtOpening</details>
+    <details>sequenceAbsoluteBoundsFlag</details>
+  </eAnnotations>
+</viewpoint:DAnalysis>

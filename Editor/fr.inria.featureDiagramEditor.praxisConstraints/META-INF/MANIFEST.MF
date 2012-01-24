@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.inria.featureDiagramEditor.praxisConstraints Plug-in
+Bundle-SymbolicName: fr.inria.featureDiagramEditor.praxisConstraints;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: Activator
+Require-Bundle: org.eclipse.core.runtime,
+ Praxis;bundle-version="0.1.6"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

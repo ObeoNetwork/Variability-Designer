@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2010-2012 mgouyett.
+  INRIA-IRISA- Triskell Team
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+  
+  Contributors:
+      mgouyett - initial API and implementation
+  	INRIA-IRISA- Triskell Team
+  	contact : marie.gouyette@gmail.com
+-->
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="resolutionmodel"
+    nsURI="http://www.kermeta.org/resolutionModel" nsPrefix="resolutionmodel">
+  <eClassifiers xsi:type="ecore:EClass" name="ResolutionModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" eType="ecore:EClass ../../fr.inria.featureDiagramEditor.emf/model/featureDiagram.ecore#//Attribute"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featureDiagram" lowerBound="1"
+        eType="ecore:EClass ../../fr.inria.featureDiagramEditor.emf/model/featureDiagram.ecore#//FeatureDiagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featureSelections" upperBound="-1"
+        eType="#//FeatureSelection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureSelection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" lowerBound="1" eType="#//SelectionState"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" lowerBound="1"
+        eType="ecore:EClass ../../fr.inria.featureDiagramEditor.emf/model/featureDiagram.ecore#//Feature"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="featureName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owningSelection" upperBound="-1"
+        eType="#//FeatureSelection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="#//Operator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SelectionState">
+    <eLiterals name="unselected" literal="unselected"/>
+    <eLiterals name="selected" value="1" literal="selected"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Operator">
+    <eLiterals name="Or"/>
+    <eLiterals name="Opt"/>
+    <eLiterals name="Alternative"/>
+    <eLiterals name="Mandatory" literal=""/>
+    <eLiterals name="Card"/>
+  </eClassifiers>
+</ecore:EPackage>

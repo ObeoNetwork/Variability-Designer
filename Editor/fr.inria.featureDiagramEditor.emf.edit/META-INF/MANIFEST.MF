@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.inria.featureDiagramEditor.emf.edit;singleton:=true
+Bundle-Version: 1.0.1
+Bundle-ClassPath: .
+Bundle-Activator: featureDiagram.provider.FeatureDiagramEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: featureDiagram.provider
+Require-Bundle: org.eclipse.core.runtime,
+ fr.inria.featureDiagramEditor.emf;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

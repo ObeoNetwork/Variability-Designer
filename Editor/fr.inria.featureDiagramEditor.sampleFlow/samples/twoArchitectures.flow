@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flow:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.obeo.fr/dsl/designer/sample/flow" xmi:id="_Tpt-MDpCEd-5SZ8AQ2heng">
+  <elements xsi:type="flow:CompositeProcessor" xmi:id="_Tpt-MTpCEd-5SZ8AQ2heng" name="camera1">
+    <elements xsi:type="flow:DataSource" xmi:id="_Tpt-MjpCEd-5SZ8AQ2heng" volume="5" name="outdoor">
+      <outgoingFlows xmi:id="_Tpt-MzpCEd-5SZ8AQ2heng" usage="low" load="5" target="_Tpt-OzpCEd-5SZ8AQ2heng"/>
+    </elements>
+  </elements>
+  <elements xsi:type="flow:CompositeProcessor" xmi:id="_Tpt-NDpCEd-5SZ8AQ2heng" name="camera2">
+    <elements xsi:type="flow:DataSource" xmi:id="_Tpt-NTpCEd-5SZ8AQ2heng" volume="5" name="outdoor sensor">
+      <outgoingFlows xmi:id="_Tpt-NjpCEd-5SZ8AQ2heng" usage="low" load="5" target="_Tpt-OzpCEd-5SZ8AQ2heng"/>
+    </elements>
+  </elements>
+  <elements xsi:type="flow:CompositeProcessor" xmi:id="_Tpt-NzpCEd-5SZ8AQ2heng" name="alimentation controller">
+    <powerOutputs xmi:id="_Tpt-ODpCEd-5SZ8AQ2heng">
+      <links xmi:id="_Tpt-OTpCEd-5SZ8AQ2heng"/>
+    </powerOutputs>
+  </elements>
+  <elements xsi:type="flow:CompositeProcessor" xmi:id="_Tpt-OjpCEd-5SZ8AQ2heng" consumption="480" name="processing unit" temperature="60" weight="80">
+    <elements xsi:type="flow:Processor" xmi:id="_Tpt-OzpCEd-5SZ8AQ2heng" usage="standard" incomingFlows="_Tpt-MzpCEd-5SZ8AQ2heng _Tpt-NjpCEd-5SZ8AQ2heng" load="10" consumption="100" name="input controller" volume="10">
+      <outgoingFlows xmi:id="_Tpt-PDpCEd-5SZ8AQ2heng" usage="standard" load="10" target="_Tpt-QDpCEd-5SZ8AQ2heng"/>
+    </elements>
+    <elements xsi:type="flow:Processor" xmi:id="_Tpt-PTpCEd-5SZ8AQ2heng" usage="standard" capacity="5" load="5" consumption="50" name="input controller" volume="5">
+      <outgoingFlows xmi:id="_Tpt-PjpCEd-5SZ8AQ2heng" usage="low" load="5" target="_Tpt-QDpCEd-5SZ8AQ2heng"/>
+    </elements>
+    <elements xsi:type="flow:Processor" xmi:id="_Tpt-PzpCEd-5SZ8AQ2heng" usage="standard" incomingFlows="_Tpt-QTpCEd-5SZ8AQ2heng" capacity="15" load="15" consumption="150" name="output controller" volume="15"/>
+    <elements xsi:type="flow:Processor" xmi:id="_Tpt-QDpCEd-5SZ8AQ2heng" usage="standard" incomingFlows="_Tpt-PjpCEd-5SZ8AQ2heng _Tpt-PDpCEd-5SZ8AQ2heng" capacity="15" load="15" consumption="150" name="data pocessor" volume="15">
+      <outgoingFlows xmi:id="_Tpt-QTpCEd-5SZ8AQ2heng" usage="high" load="15"/>
+      <outgoingFlows xmi:id="_Tpt-QTpCEd-5SZ8AQ2heng" usage="high" load="15" target="_Tpt-PzpCEd-5SZ8AQ2heng"/>
+    </elements>
+    <elements xsi:type="flow:Fan" xmi:id="_Tpt-QjpCEd-5SZ8AQ2heng" consumption="30" speed="3000" weight="40"/>
+    <powerInputs xmi:id="_Tpt-QzpCEd-5SZ8AQ2heng"/>
+  </elements>
+</flow:System>

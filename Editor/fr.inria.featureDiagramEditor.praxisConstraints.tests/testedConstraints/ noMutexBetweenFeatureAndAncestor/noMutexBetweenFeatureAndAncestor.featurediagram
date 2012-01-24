@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_FRyLcJM7Ed-AgJ3baSBNBg" root="_GtWxkJM7Ed-AgJ3baSBNBg">
+  <features xmi:id="_GtWxkJM7Ed-AgJ3baSBNBg" name="root Feature">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_KLKVMJM7Ed-AgJ3baSBNBg" features="_Hcz4kJM7Ed-AgJ3baSBNBg _HtVA0JM7Ed-AgJ3baSBNBg" name="Or"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_L8X0IJM7Ed-AgJ3baSBNBg" features="_IOf0MJM7Ed-AgJ3baSBNBg" name="Opt"/>
+  </features>
+  <features xmi:id="_Hcz4kJM7Ed-AgJ3baSBNBg" name="a" owningOperator="_KLKVMJM7Ed-AgJ3baSBNBg">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_ODAJcJM7Ed-AgJ3baSBNBg" features="_SG6DwJM7Ed-AgJ3baSBNBg _SaixcJM7Ed-AgJ3baSBNBg" name="Card" max="3"/>
+  </features>
+  <features xmi:id="_HtVA0JM7Ed-AgJ3baSBNBg" name="b" owningOperator="_KLKVMJM7Ed-AgJ3baSBNBg"/>
+  <features xmi:id="_IOf0MJM7Ed-AgJ3baSBNBg" name="c" owningOperator="_L8X0IJM7Ed-AgJ3baSBNBg">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_QdICgJM7Ed-AgJ3baSBNBg" features="_VSaWcJM7Ed-AgJ3baSBNBg _V-v4AJM7Ed-AgJ3baSBNBg" name="Card" max="6"/>
+  </features>
+  <features xmi:id="_SG6DwJM7Ed-AgJ3baSBNBg" name="d" owningOperator="_ODAJcJM7Ed-AgJ3baSBNBg">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_YIDt4JM7Ed-AgJ3baSBNBg" features="_ZDtd0JM7Ed-AgJ3baSBNBg _ZXf8gJM7Ed-AgJ3baSBNBg" name="Or"/>
+  </features>
+  <features xmi:id="_SaixcJM7Ed-AgJ3baSBNBg" name="e" owningOperator="_ODAJcJM7Ed-AgJ3baSBNBg"/>
+  <features xmi:id="_VSaWcJM7Ed-AgJ3baSBNBg" name="f" owningOperator="_QdICgJM7Ed-AgJ3baSBNBg"/>
+  <features xmi:id="_V-v4AJM7Ed-AgJ3baSBNBg" name="g" owningOperator="_QdICgJM7Ed-AgJ3baSBNBg"/>
+  <features xmi:id="_ZDtd0JM7Ed-AgJ3baSBNBg" name="h" owningOperator="_YIDt4JM7Ed-AgJ3baSBNBg"/>
+  <features xmi:id="_ZXf8gJM7Ed-AgJ3baSBNBg" name="i" owningOperator="_YIDt4JM7Ed-AgJ3baSBNBg"/>
+  <constraintEdges xmi:id="_dtivsJM7Ed-AgJ3baSBNBg" target="_SaixcJM7Ed-AgJ3baSBNBg" source="_Hcz4kJM7Ed-AgJ3baSBNBg">
+    <constraint xsi:type="featureDiagram:Mutex" xmi:id="_dtivsZM7Ed-AgJ3baSBNBg"/>
+  </constraintEdges>
+  <constraintEdges xmi:id="_fc9e4JM7Ed-AgJ3baSBNBg" target="_Hcz4kJM7Ed-AgJ3baSBNBg" source="_SG6DwJM7Ed-AgJ3baSBNBg">
+    <constraint xsi:type="featureDiagram:Mutex" xmi:id="_fc9e4ZM7Ed-AgJ3baSBNBg"/>
+  </constraintEdges>
+  <constraintEdges xmi:id="_hDdioJM7Ed-AgJ3baSBNBg" target="_ZDtd0JM7Ed-AgJ3baSBNBg" source="_Hcz4kJM7Ed-AgJ3baSBNBg">
+    <constraint xsi:type="featureDiagram:Mutex" xmi:id="_hDdioZM7Ed-AgJ3baSBNBg"/>
+  </constraintEdges>
+  <constraintEdges xmi:id="_me1mMJM7Ed-AgJ3baSBNBg" target="_ZXf8gJM7Ed-AgJ3baSBNBg" source="_Hcz4kJM7Ed-AgJ3baSBNBg">
+    <constraint xsi:type="featureDiagram:Mutex" xmi:id="_me1mMZM7Ed-AgJ3baSBNBg"/>
+  </constraintEdges>
+  <constraintEdges xmi:id="_dK24QfuxEeCsI78MF0uWaQ" target="_ZDtd0JM7Ed-AgJ3baSBNBg" source="_SG6DwJM7Ed-AgJ3baSBNBg">
+    <constraint xsi:type="featureDiagram:Mutex" xmi:id="_dMNjIPuxEeCsI78MF0uWaQ"/>
+  </constraintEdges>
+</featureDiagram:FeatureDiagram>

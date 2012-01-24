@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2010-2012 mgouyett.
+  INRIA-IRISA- Triskell Team
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+  
+  Contributors:
+      mgouyett - initial API and implementation
+  	INRIA-IRISA- Triskell Team
+  	contact : marie.gouyette@gmail.com
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<book lang="en-US">
+  <?ooogenerator OpenOffice.org/2.0$Linux OpenOffice.org_project/680m1$Build-8990?>
+  <?oooversion?>
+  <bookinfo>
+    <pubdate>Build date: @BUILD.DATE@</pubdate>
+    <date>Last modification: $Date:: 2010-05-25 08:39:54#$</date>
+    <author>
+      <firstname> Marie Gouyette</firstname>
+      <firstname/>
+    </author>
+    <title>Selection and Product Derivation Engine Technical documentation</title>
+    <keywordset>
+      <keyword>Feature Diagram Editor</keyword>
+      <keyword>metamodeling</keyword>
+      <keyword>Domain specific language (DSL)</keyword>
+    </keywordset>
+    <subtitle> </subtitle>
+    <bibliomisc>Licence EPL</bibliomisc>
+    <bibliomisc/>
+    <abstract>
+      <para>This documentation presents the technical documentation about selection engine and
+        product derivation for Feature Diagram Editor and the tests, which takes part of the ANR
+        Project MOVIDA. </para>
+    </abstract>
+    <publisher>
+      <publishername>INRIA</publishername>
+      <address>
+        <state>France</state>
+        <otheraddr>
+          <ulink url="http://www.inria.fr">http://www.inria.fr</ulink>
+        </otheraddr>
+      </address>
+    </publisher>
+    <confgroup>
+      <conftitle>title</conftitle>
+      <confnum>Reference</confnum>
+      <confsponsor>sponsor</confsponsor>
+    </confgroup>
+  </bookinfo>
+  <preface>
+    <?print-orientation portrait?>
+    <title>Preface</title>
+    <para>Product Derivation is a way in the Software Product Line (SPL) to obtain a particular
+      product model (a<emphasis role="bold"> resolved model</emphasis>) from a global model
+        <emphasis role="bold">(base model</emphasis>) on which variability (a way to model common
+      and variable parts of a given architecture) is defined on a <emphasis role="bold">variability
+        model</emphasis> (in our case a feature model).</para>
+    <para> Here we have two tools : <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Selection Engine </emphasis>: It permits to an end-user to
+            select desired features and stores all of these choices on a model called <emphasis
+              role="bold">resolution model</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para><emphasis role="bold">Product Derivation Engine</emphasis> : it use this resolved
+            model to create the product model <emphasis role="bold">(resolved
+            model</emphasis>).</para>
+          <para>This graphical tool regroup these two tools to integrate them on the Feature Diagram
+            Editor.</para>
+        </listitem>
+      </itemizedlist></para>
+    <para> It is an extension of the Feature Diagram Editor that permits to user to choose desired
+      features and store it on a resolution model (Selection Engine) and then obtain resolved model
+      from this resolution model (Product Derivation Engine). For more information about it please
+      refer to the Product Derivation Documentation on the Eclipse help and on the <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/SelectionAndDerivationDemo.htm"> sample
+        wink video
+        http://movida.gforge.inria.fr/uploads/Demos/SelectionAndDerivationDemo.htm</ulink>. </para>
+    <para>Please also refer to <ulink
+        url="@ONLINE.OR.LOCAL@/fr.inria.featureDiagramEditor.doc/help/@OUTPUT.VERSION@/Movida-ProductDerivationEngine-Technical-Documentation/index.html"
+        > end-user documentation</ulink> .</para>
+  </preface>
+  <chapter>
+    <title>Installation</title>
+    <para>To install Selection Engine and Product Derivation Engine you need to select Feature
+      Diagram Editor category on the Movida Studio update site and all of its dependencies and
+      select Product Derivation and Selection Engine. In this case, Selection Engine and Product
+      Derivation Engine are dependant from Feature Diagram Editor. </para>
+  </chapter>
+  <chapter>
+    <title>Metamodel used and choices made</title>
+    <section>
+      <title>Meta-model used</title>
+      <para> Two metamodels are used on these Selection and Product Derivation engine : </para>
+      <para>
+        <orderedlist>
+          <listitem>
+            <para>The feature meta-model presented on the following figure : </para>
+            <para><inlinegraphic fileref="PTech_figures/featureDiagram.png"/></para>
+            <para>For more information about it please refer to the Feature Diagram Editor
+              Documentation.</para>
+          </listitem>
+          <listitem>
+            <para>the resolution model that store selected and unselected features as presented on
+              the following figure : </para>
+            <para><inlinegraphic fileref="PTech_figures/ResolutionMetamodel.png"/></para>
+            <para>Note that Attribute, FeatureDiagram and Feature meta-classes are meta-classes of
+              featureDiagram metamodel. The enumeration SelectionState permits to know if a feature
+              is selected or not.</para>
+            <para/>
+          </listitem>
+        </orderedlist>
+      </para>
+    </section>
+    <section>
+      <title> Choices about variability</title>
+      <para>Two ways can be used to derive the base model ( model on which elements were added on
+        the derived feature model) :</para>
+      <para><itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Positive variability</emphasis>: we create a new empty model
+              as resolved model and we add on it base model elements associated with selected
+              features. </para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Negative variability</emphasis>: we create a copy of the
+              base model and remove on it base model elements associated with unselected
+              feature.</para>
+          </listitem>
+        </itemizedlist> We use the negative variability for the current version. In a next version
+        we will combine both positive and negative variability. </para>
+      <important>
+        <title> Negative variability remove only domain model elements associated with unselected
+          features</title>
+        <para> Product derivation with negative variability remove only domain model elements
+          associated with unselected features. All other elements stay in the resolved model.</para>
+      </important>
+    </section>
+  </chapter>
+  <chapter>
+    <title> Test of Selection and Product Derivation Engine</title>
+    <para>Derivation tests are available on the project<emphasis role="bold">
+        fr.inria.featureDiagramEditor.fdext.ui.tests</emphasis>. To retrieve this project go
+        to<emphasis role="italic"> File</emphasis>-><emphasis role="italic"> New</emphasis>
+        -><emphasis role="italic"> Example</emphasis> -><emphasis role="italic">Product Derivation
+        Sample</emphasis> -> <emphasis role="italic">Product Derivation Test</emphasis>. Then you
+      can open the<emphasis role="italic"> Design Perspective</emphasis> and click on the session
+      files (.aird) and open it.</para>
+  </chapter>
+  <chapter>
+    <title> Conclusion</title>
+    <para> This document has presented the technical documentation and the tests of the selection
+      and product derivation . This is a first version that will be completed.</para>
+  </chapter>
+</book>

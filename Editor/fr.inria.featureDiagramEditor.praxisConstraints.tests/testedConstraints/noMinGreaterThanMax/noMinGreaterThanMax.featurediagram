@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_jR8QkJM0Ed-uhfwrhUsmdA" root="_mfwQYJM0Ed-uhfwrhUsmdA">
+  <features xmi:id="_mfwQYJM0Ed-uhfwrhUsmdA" name="root Feature">
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_rR04QJM0Ed-uhfwrhUsmdA" features="_onKBwJM0Ed-uhfwrhUsmdA" name="Opt"/>
+    <operator xsi:type="featureDiagram:Or" xmi:id="_s9QfUJM0Ed-uhfwrhUsmdA" features="_oLn8UJM0Ed-uhfwrhUsmdA _oZ6P8JM0Ed-uhfwrhUsmdA" name="Or"/>
+  </features>
+  <features xmi:id="_oLn8UJM0Ed-uhfwrhUsmdA" name="a" owningOperator="_s9QfUJM0Ed-uhfwrhUsmdA">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_xSxHAJM0Ed-uhfwrhUsmdA" features="_vgMWIJM0Ed-uhfwrhUsmdA _vvOQoJM0Ed-uhfwrhUsmdA" name="Card" min="2" max="1"/>
+  </features>
+  <features xmi:id="_oZ6P8JM0Ed-uhfwrhUsmdA" name="b" owningOperator="_s9QfUJM0Ed-uhfwrhUsmdA">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_42zgMJM0Ed-uhfwrhUsmdA" features="_3Op2oJM0Ed-uhfwrhUsmdA _3fKX0JM0Ed-uhfwrhUsmdA" name="Card" max="6"/>
+  </features>
+  <features xmi:id="_onKBwJM0Ed-uhfwrhUsmdA" name="c" owningOperator="_rR04QJM0Ed-uhfwrhUsmdA">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_8S4lgJM0Ed-uhfwrhUsmdA" features="_9jhuAJM0Ed-uhfwrhUsmdA _9z5FQJM0Ed-uhfwrhUsmdA" name="Card" max="-1"/>
+  </features>
+  <features xmi:id="_vgMWIJM0Ed-uhfwrhUsmdA" name="d" owningOperator="_xSxHAJM0Ed-uhfwrhUsmdA"/>
+  <features xmi:id="_vvOQoJM0Ed-uhfwrhUsmdA" name="e" owningOperator="_xSxHAJM0Ed-uhfwrhUsmdA"/>
+  <features xmi:id="_3Op2oJM0Ed-uhfwrhUsmdA" name="h" owningOperator="_42zgMJM0Ed-uhfwrhUsmdA"/>
+  <features xmi:id="_3fKX0JM0Ed-uhfwrhUsmdA" name="i" owningOperator="_42zgMJM0Ed-uhfwrhUsmdA"/>
+  <features xmi:id="_9jhuAJM0Ed-uhfwrhUsmdA" name="f" owningOperator="_8S4lgJM0Ed-uhfwrhUsmdA"/>
+  <features xmi:id="_9z5FQJM0Ed-uhfwrhUsmdA" name="g" owningOperator="_8S4lgJM0Ed-uhfwrhUsmdA"/>
+</featureDiagram:FeatureDiagram>

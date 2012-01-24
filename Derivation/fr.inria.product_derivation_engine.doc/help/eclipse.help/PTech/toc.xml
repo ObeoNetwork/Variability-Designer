@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<toc label="Selection and Product Derivation Engine Technical documentation" topic="build/eclipse.help/PTech/index.html">
+   <topic label="Preface" href="build/eclipse.help/PTech/pr01.html"/>
+   <topic label="Installation" href="build/eclipse.help/PTech/ch01.html"/>
+   <topic label="Metamodel used and choices made" href="build/eclipse.help/PTech/ch02.html">
+      <topic label="Meta-model used" href="build/eclipse.help/PTech/ch02.html#d0e105"/>
+      <topic label=" Choices about variability" href="build/eclipse.help/PTech/ch02s02.html"/>
+   </topic>
+   <topic label=" Test of Selection and Product Derivation Engine" href="build/eclipse.help/PTech/ch03.html"/>
+   <topic label=" Conclusion" href="build/eclipse.help/PTech/ch04.html"/>
+</toc>

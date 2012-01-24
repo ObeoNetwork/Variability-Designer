@@ -1,0 +1,319 @@
+<project name="common buid" default="all">
+	
+	<!-- project configuration  must be set by the calling script-->
+	<!-- <property name="project.name" value="KerMeta-UI-UserGuide"/>-->
+	<property name="project.base.dir" location=".."/>
+	<property name="build.dir" location="${project.base.dir}/build"/>
+	<property name="build.docbook.dir" location="${build.dir}/docbook42"/>
+	<property name="OOo.source.dir" location="${project.base.dir}/src/OOo"/>
+	<property name="docbook.source.dir" location="${project.base.dir}/src/docbook"/>
+	<property name="OOo.source.file" location="${OOo.source.dir}/${project.name}.sxw"/>
+	<property name="deployment.dest" location="t:\\www\\triskell\\softwares\\kermeta\\docs"/>
+		
+    <!-- disable use of xsltproc in order to enable xslthl for programlisting coloration -->
+	<property name="disable.xsltproc" value="true"/>
+	
+	<!-- common configuration properties -->
+	<!-- tool location -->
+	<property name="ant.docbook.styler.dir" location="../../ant-docbook-styler" />
+    <property name="ant.docbook.styler"     value="ant-build-docbook.xml" />
+	<!--<property name="ooo2dbk.dir"			location="/udd/triskell/bin/multiplatform/ooo2dbk"/>-->
+	<property name="ooo2dbk.dir"			location="t:/bin/multiplatform/ooo2dbk"/>
+	<property name="ooo2dbk.file"			location="${ooo2dbk.dir}/ooo2dbk"/>
+	<!--<property name="python.exe"				location="C:\OpenOffice.org1.1.4\program\python.bat"/>-->
+	<!--<property name="python.exe"				location="/usr/bin/python"/>-->
+	<property name="python.exe"				location="C:\python24\python.exe"/>
+	<property name="hhc.exe"				location="T:\bin\win32\HTML Help Workshop\hhc.exe"/>
+	
+	
+
+	<target name="all" depends="OOo2dbk, html.single, html.chunked ,pdf.fop, eclipse.help">
+	</target>
+	
+
+	<target name="OOo2dbk">
+		<mkdir dir="${build.docbook.dir}/${project.name}"/>
+		<!-- TODO tester l'appel ole en ajoutant les variables env et en appelant le python de OOo -->
+		<echo>${python.exe} ${ooo2dbk.file} --book --verbose ${OOo.source.file}</echo>
+		<exec dir="${build.docbook.dir}/${project.name}" executable="${python.exe}">
+		  <arg line="${ooo2dbk.file} --book --verbose ${OOo.source.file}"/>
+		  <!--<env key="PATH" path="${java.library.path}:${basedir}/bin:/usr/bin/xsltproc"/>-->
+		</exec>
+		
+		<!-- copy the images -->
+		<copy todir="${build.docbook.dir}/${project.name}">
+			<fileset file="${OOo.source.dir}/ooo2dbk.xml"/>
+		</copy>
+		<copy todir="${build.docbook.dir}/${project.name}/figures">
+			<fileset dir="${OOo.source.dir}/figures"/>
+		</copy>
+		<copy todir="${build.docbook.dir}/${project.name}/${project.name}_figures">
+			<fileset dir="${OOo.source.dir}/${project.name}_figures"/>
+		</copy>
+    	<copy todir="${build.dir}/figures">
+    	    <fileset dir="${OOo.source.dir}/figures"/>
+    	</copy>		
+	</target>
+
+	<target name="preparedbk">
+		<!-- copy the docbook -->
+		<copy todir="${build.docbook.dir}/${project.name}">
+			<fileset file="${docbook.source.dir}/${project.name}.docb.xml"/>
+		</copy>
+		<!-- copy the images -->		
+		<copy todir="${build.docbook.dir}/${project.name}/figures">
+			<fileset dir="${OOo.source.dir}/figures"/>
+		</copy>
+		<copy todir="${build.docbook.dir}/${project.name}/${project.name}_figures">
+			<fileset dir="${docbook.source.dir}/${project.name}_figures"/>
+		</copy>
+    	<copy todir="${build.dir}/figures">
+    	    <fileset dir="${OOo.source.dir}/figures"/>
+    	</copy>	
+    	<copy todir="${build.dir}/figures">
+    	    <fileset dir="${project.base.dir}/src/figures"/>
+    	</copy>	
+	</target>
+	<target name="prepare_index.xml">
+		<tstamp>
+			<format property="TODAY_UK" pattern="d-MMMM-yyyy" locale="en"/>
+		</tstamp>
+		<!-- ant-docbook-styler needs an entry point named index.xml-->
+		<!-- only one doc at this time -->
+		<!-- note : voir comment on peut améliorer le script avec une config, 
+					en particulier la possibilité d'ajouter un docbook file ? == merge ??-->
+		<filter token="BUILD.DATE" value="${TODAY_UK}"/>
+		<filter token="OUTPUT.VERSION" value="${output.version}"/>
+		<filter token="ONLINE.OR.LOCAL" value="${online.or.local.url}"/>
+				
+		<copy todir="${build.docbook.dir}/${project.name}">
+						<fileset file="${OOo.source.dir}/ooo2dbk.xml"/>
+		</copy>
+		<copy file="${build.docbook.dir}/${project.name}/${project.name}.docb.xml" 
+			tofile="${build.docbook.dir}/${project.name}/index.xml"
+			filtering="true"
+			overwrite="true"/>
+	</target>
+	
+	<target name="html.single">
+		<antcall target="prepare_index.xml">
+			<param name="output.version" value="html.single"/>
+			<param name="online.or.local.url" value="../../../../"/>
+		</antcall>
+		<antcall target="clean.html.single" />
+        <mkdir dir="${build.dir}/html.single/${project.name}" />
+		<copy todir="${build.dir}/html.single/${project.name}/${project.name}_figures">
+			    	    <fileset dir="${build.docbook.dir}/${project.name}/${project.name}_figures"/>
+			</copy>
+		<ant antfile="${ant.docbook.styler}" dir="${ant.docbook.styler.dir}" inheritall="false"
+              target="html.single">
+             <property name="docbook.xml.dir" location="${build.docbook.dir}/${project.name}" />
+             <property name="docbook.resources.dir" location="${build.dir}/figures" />
+             <property name="distribution.dir" location="${build.dir}/html.single/${project.name}" />
+             <property name="build.dir" location="${build.docbook.dir}/${project.name}" />
+			 <property name="disable.xsltproc" value="true"/> 
+			 <!-- <property name="disable.saxon" value="true"/> --> 
+			 <!-- <property name="xslthl.config" value="file:///c:/docbook-xsl/highlighting/xslthl-config.xml"/> -->
+        </ant>
+
+        <available property="tmp:single.ok" file="${build.dir}/html.single/${project.name}/index.html" />
+        <fail message="not good: single HTML failed." unless="tmp:single.ok" />
+	</target>
+	
+	<target name="html.chunked">
+		<antcall target="prepare_index.xml">
+			<param name="output.version" value="html.chunked"/>
+			<param name="online.or.local.url" value="../../../../"/>
+		</antcall>
+		<antcall target="clean.html.chunked" />
+        <mkdir dir="${build.dir}/html.chunked/${project.name}" />
+		<copy todir="${build.dir}/html.chunked/${project.name}/${project.name}_figures">
+			    	    <fileset dir="${build.docbook.dir}/${project.name}/${project.name}_figures"/>
+			</copy>
+		<ant antfile="${ant.docbook.styler}" dir="${ant.docbook.styler.dir}" inheritall="false"
+              target="html.chunked">
+             <property name="docbook.xml.dir" location="${build.docbook.dir}/${project.name}" />
+             <property name="docbook.resources.dir" location="${build.dir}/figures" />
+             <property name="distribution.dir" location="${build.dir}/html.chunked/${project.name}" />
+             <property name="build.dir" location="${build.docbook.dir}/${project.name}" />
+			 <property name="disable.xsltproc" value="true"/> 
+			 <!--<property name="disable.saxon" value="true"/>--> 
+        </ant>
+
+        <available property="tmp:chunked.ok" file="${build.dir}/html.chunked/${project.name}/index.html" />
+        <fail message="not good: chunked HTML failed." unless="tmp:chunked.ok" />
+	</target>
+	<target name="html.help">
+		<antcall target="prepare_index.xml">
+			<param name="output.version" value="html.help"/>
+			<param name="online.or.local.url" value="../../../../"/>
+		</antcall>
+		<antcall target="clean.html.help" />
+        <mkdir dir="${build.dir}/html.help/${project.name}" />
+		<copy todir="${build.dir}/html.help/${project.name}/${project.name}_figures">
+			    	    <fileset dir="${build.docbook.dir}/${project.name}/${project.name}_figures"/>
+			</copy>
+        <ant antfile="${ant.docbook.styler}" dir="${ant.docbook.styler.dir}" inheritall="false"
+              target="html.help">
+             <property name="docbook.xml.dir" location="${build.docbook.dir}/${project.name}" />
+             <property name="docbook.resources.dir" location="${build.dir}/figures" />
+             <property name="distribution.dir" location="${build.dir}/html.help/${project.name}" />
+             <property name="build.dir" location="${build.docbook.dir}/${project.name}" />
+			 <property name="disable.xsltproc" value="true"/> 
+			 <!--<property name="disable.saxon" value="true"/>--> 
+        </ant>
+
+        <available property="tmp:help.ok" file="${build.dir}/html.help/${project.name}/index.html" />
+        <fail message="not good: HTMLHelp failed." unless="tmp:help.ok" />
+		<!-- I don't know any linux version of hhc -->
+		<exec dir="${build.dir}/html.help/${project.name}" executable="${hhc.exe}">
+			<arg line="htmlhelp.hhp"/>
+		</exec>
+		<copy tofile="${build.dir}/html.help/${project.name}/${project.name}.chm" 
+			file="${build.dir}/html.help/${project.name}/htmlhelp.chm"/>
+	</target>
+	
+	<target name="eclipse.help" depends="preparedbk">
+		<antcall target="prepare_index.xml">
+			<param name="output.version" value="eclipse.help"/>
+			<param name="online.or.local.url" value="../../../../"/>
+		</antcall>
+		<antcall target="clean.eclipse.help" />
+        <mkdir dir="${build.dir}/eclipse.help/${project.name}" />
+		<copy todir="${build.dir}/eclipse.help/${project.name}/${project.name}_figures">
+			    	    <fileset dir="${build.docbook.dir}/${project.name}/${project.name}_figures"/>
+			</copy>
+		<ant antfile="${ant.docbook.styler}" dir="${ant.docbook.styler.dir}" inheritall="false"
+              target="eclipse.help">
+            <property name="docbook.xml.dir" location="${build.docbook.dir}/${project.name}" />
+            <property name="docbook.resources.dir" location="${build.dir}/figures" />
+            <property name="distribution.dir" location="${build.dir}/eclipse.help/${project.name}" />
+            <property name="build.dir" location="${build.docbook.dir}/${project.name}" />
+			<!--<property name="manual.name" location="${build.docbook.dir}/${project.name}" />-->
+            <property name="docbook.eclipse.plugin.name" value="KerMeta documentation" />
+            <property name="docbook.eclipse.plugin.id" value="fr.irisa.triskell.kermeta.documentation" />
+            <property name="docbook.eclipse.plugin.provider" value="IRISA/INRIA" />
+			<property name="eclipse.html.base.dir" location="${build.dir}/eclipse.help/${project.name}/"/>
+			<property name="to.html.dir.relative.path" value="build/eclipse.help/${project.name}/"/>
+			<property name="base.dir" value="${build.dir}/eclipse.help/${project.name}"/>
+			<property name="disable.xsltproc" value="true"/> 
+        </ant>
+
+		<echo>${build.dir}/eclipse.help/${project.name}</echo>
+	  	<move todir="${build.dir}/eclipse.help/${project.name}">
+	  	    <fileset dir="${build.dir}/eclipse.help/${project.name}"/>
+	  	</move> 
+		<condition property="tmp:Eclipsehelp.ok" value="true">
+	        <and>
+	        	<available file="${build.dir}/eclipse.help/${project.name}/index.html" />	        	
+	        	<available file="${build.dir}/eclipse.help/${project.name}/toc.xml" />	        	        
+	        </and>
+	    </condition>
+        <fail message="not good: Eclipse Help failed." unless="tmp:Eclipsehelp.ok" />
+	</target>
+	
+	<target name="pdf.fop"  depends="prepare_index.xml">
+		<antcall target="prepare_index.xml">
+			<param name="output.version" value="html.single"/>
+			<param name="online.or.local.url" value="http://www.kermeta.org/docs/"/>
+		</antcall>
+	        <antcall target="clean.fop" />
+	    	        
+	        <mkdir dir="${build.dir}/pdf.fop/${project.name}" />
+
+		    <available file="${ant.docbook.styler.dir}/module-fop" type="dir"
+	               property="module.fop.present" value="true" /> 
+			<fail message="### module fop not installed, pleas check your ant-docbook*styler installation"
+			          unless="module.fop.present" />
+			
+			<!-- HACK: copy figures in the ${ant.docbook.styler.dir} directory : I don't know why the docbook.resources.dir doesn't work -->
+	    	<copy todir="${ant.docbook.styler.dir}/figures">
+	    	    <fileset dir="${build.docbook.dir}/${project.name}/figures"/>
+	    	</copy>
+			<copy todir="${ant.docbook.styler.dir}/${project.name}_figures">
+			   	 <fileset dir="${build.docbook.dir}/${project.name}/${project.name}_figures"/>
+			</copy>
+	    	
+	        <ant antfile="${ant.docbook.styler}" dir="${ant.docbook.styler.dir}" inheritall="false"
+	              target="pdf.fop">
+	             <property name="docbook.xml.dir" location="${build.docbook.dir}/${project.name}" />
+	             <property name="docbook.resources.dir" location="${build.docbook.dir}/${project.name}/figures" />
+	             <property name="distribution.dir" location="${build.dir}/pdf.fop/${project.name}" />
+	             <property name="build.dir" location="${build.docbook.dir}/${project.name}" />
+				 <property name="disable.xsltproc" value="true"/>
+	        </ant>
+	    	<!-- HACK: remove the copy from ${ant.docbook.styler.dir} directory -->
+	    	<delete dir="${ant.docbook.styler.dir}/figures" failonerror="false" quiet="true" /> 
+			<delete dir="${ant.docbook.styler.dir}/${project.name}_figures" failonerror="false" quiet="true" />
+
+
+	        <available property="tmp:pdf.fop.ok" file="${build.dir}/pdf.fop/${project.name}/index.pdf" />
+	        <fail message="not good: pdf fop not found." unless="tmp:pdf.fop.ok" />
+			<copy file="${build.dir}/pdf.fop/${project.name}/index.pdf" 
+				tofile="${build.dir}/pdf.fop/${project.name}/${project.name}.pdf"/>
+		</target>
+
+	<target name="OOodeploy" description="generate all and copy documentation files to http://www.irisa.fr/triskell/prive/docs" 
+		depends="OOo2dbk, html.single, html.chunked, html.help, pdf.fop, eclipse.help">
+	  	<delete dir="${deployment.dest}\\html.single\\${project.name}" failonerror="false"/>
+	  	<delete dir="${deployment.dest}\\html.chunked\\${project.name}" failonerror="false"/>
+		<copy todir="${deployment.dest}\\html.chunked\\${project.name}">
+	  		<fileset dir="${build.dir}\\html.chunked\\${project.name}">
+	  		</fileset>  			
+	  	</copy>
+	  	<copy todir="${deployment.dest}\\html.single\\${project.name}">
+	  		<fileset dir="${build.dir}\\html.single\\${project.name}">
+	  		</fileset>  			
+	  	</copy>
+		<copy file="${build.dir}/pdf.fop/${project.name}/${project.name}.pdf" 
+				todir="${deployment.dest}"/>
+		<copy file="${build.dir}/html.help/${project.name}/${project.name}.chm" 
+			todir="${deployment.dest}"/>
+
+	</target>
+	<target name="dbkdeploy" description="generate all and copy documentation files to http://www.irisa.fr/triskell/prive/docs" 
+			depends="preparedbk, html.single, html.chunked, pdf.fop, eclipse.help">
+		  	<delete dir="${deployment.dest}\\html.single\\${project.name}" failonerror="false"/>
+		  	<delete dir="${deployment.dest}\\html.chunked\\${project.name}" failonerror="false"/>
+			<copy todir="${deployment.dest}\\html.chunked\\${project.name}">
+		  		<fileset dir="${build.dir}\\html.chunked\\${project.name}">
+		  		</fileset>  			
+		  	</copy>
+		  	<copy todir="${deployment.dest}\\html.single\\${project.name}">
+		  		<fileset dir="${build.dir}\\html.single\\${project.name}">
+		  		</fileset>  			
+		  	</copy>
+			<copy file="${build.dir}/pdf.fop/${project.name}/${project.name}.pdf" 
+					todir="${deployment.dest}"/>
+			<!-- <copy file="${build.dir}/html.help/${project.name}/${project.name}.chm" 
+				todir="${deployment.dest}"/> -->
+
+		</target>
+	
+	<!-- Cleaning targets -->
+    <target name="clean">
+        <delete dir="${build.dir}" failonerror="false" quiet="true" />
+        <mkdir dir="${build.dir}" />
+    </target>
+	<target name="clean.fop">
+	        <delete dir="${build.dir}/pdf.fop/${project.name}" failonerror="false" quiet="true" />
+	        <mkdir dir="${build.dir}/pdf.fop" />
+	</target>
+	<target name="clean.html.chunked">
+	        <delete dir="${build.dir}/html.chunked/${project.name}" failonerror="false" quiet="true" />
+	        <mkdir dir="${build.dir}/html.chunked" />
+	</target>
+	<target name="clean.html.single">
+	        <delete dir="${build.dir}/html.single/${project.name}" failonerror="false" quiet="true" />
+	        <mkdir dir="${build.dir}/html.single" />
+	</target>
+	<target name="clean.html.help">
+	        <delete dir="${build.dir}/html.help/${project.name}" failonerror="false" quiet="true" />
+	        <mkdir dir="${build.dir}/html.help" />
+	</target>
+	<target name="clean.eclipse.help">
+	        <delete dir="${build.dir}/eclipse.help/${project.name}" failonerror="false" quiet="true" />
+	        <mkdir dir="${build.dir}/eclipse.help" />
+	</target>
+	
+</project>

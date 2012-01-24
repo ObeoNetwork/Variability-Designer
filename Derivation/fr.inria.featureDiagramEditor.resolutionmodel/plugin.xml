@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ * Copyright (c) 2010-2012 mgouyett.
+ * INRIA-IRISA- Triskell Team
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     mgouyett - initial API and implementation
+ * 	INRIA-IRISA- Triskell Team
+ * 	contact : marie.gouyette@gmail.com
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.kermeta.org/resolutionModel"
+            class="resolutionmodel.ResolutionmodelPackage"
+            genModel="model/resolutionmodel.genmodel"/>
+   </extension>
+
+</plugin>

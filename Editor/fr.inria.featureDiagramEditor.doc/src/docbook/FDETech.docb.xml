@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2010-2012 Marie Gouyette.
+  INRIA-IRISA- Triskell
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+  
+  Contributors:
+      INRIA-IRISA- Triskell
+      Marie Gouyette - initial API and implementation
+      contact marie.gouyette@gmail.com
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<book lang="en-US">
+  <?ooogenerator OpenOffice.org/2.0$Linux OpenOffice.org_project/680m1$Build-8990?>
+  <?oooversion?>
+  <bookinfo>
+    <pubdate>Build date: @BUILD.DATE@</pubdate>
+    <date>Last modification: $Date:: 2010-05-25 08:39:54#$</date>
+    <author>
+      <firstname> Marie Gouyette</firstname>
+      <firstname/>
+    </author>
+    <title>Feature Diagram Technical documentation</title>
+    <keywordset>
+      <keyword>Feature Diagram Editor</keyword>
+      <keyword>metamodeling</keyword>
+      <keyword>Domain specific language (DSL)</keyword>
+    </keywordset>
+    <subtitle> </subtitle>
+    <bibliomisc>Licence ?</bibliomisc>
+    <bibliomisc/>
+    <abstract>
+      <para>This documentation presents the technical documentation about feature diagram editor and
+        the tests. This feature diagram editor takes part of the ANR Project Movida. </para>
+    </abstract>
+    <publisher>
+      <publishername>INRIA</publishername>
+      <address>
+        <state>France</state>
+        <otheraddr>
+          <ulink url="http://www.inria.fr">http://www.inria.fr</ulink>
+        </otheraddr>
+      </address>
+    </publisher>
+    <confgroup>
+      <conftitle>title</conftitle>
+      <confnum>Reference</confnum>
+      <confsponsor>sponsor</confsponsor>
+    </confgroup>
+  </bookinfo>
+  <preface>
+    <?print-orientation portrait?>
+    <title>Preface</title>
+    <para>The feature diagram editor permits to model variability of software architectures. It is
+      divided into two parts, the graphical feature diagram editor himself and a Praxis plugin
+      constraints. This feature diagram editor take into account different notations about feature
+      models and separate features model and base domain models on which it apply.</para>
+  </preface>
+  <chapter>
+    <title>Choices made on this feature diagram editor</title>
+    <para/>
+    <section>
+      <title> Feature Diagram Editor</title>
+      <para>We choose to create a graphical feature diagram editor as an Eclipse plugin. This
+        graphical editor must take into account the following elements : features, decomposition
+        edge such as and, or, xor, card, attributes which can permit to associate metadata on a
+        feature to facilitate the selection into its sons, and a direct mapping with elements from
+        viewpoint model (base model from variability) with addition of model elements from these
+        viewpoint model into the features. These model elements can be any element stored into a
+        model based on EMF (and ecore). </para>
+    </section>
+    <section>
+      <title> Constraints plugin</title>
+      <para>In addition to the feature diagram editor, a plugin constraints was developed in order
+        to help user to create valid feature models. This plugin is written using Praxis rules.
+        Then, we present the rules created on this plugin : <orderedlist>
+          <listitem>
+            <para>noTwoFeaturesHaveSameName : Feature has the same name of another feature in the
+              feature diagram.</para>
+          </listitem>
+          <listitem>
+            <para>noParentFeatureAsChildren : The feature children cannot contain their parent
+              feature.</para>
+          </listitem>
+          <listitem>
+            <para>noMutexBetweenParentAndChild : There cannot be mutual exclusivity between a
+              feature parent and one of its child.</para>
+          </listitem>
+          <listitem>
+            <para>noSeveralMutexOnSameFeature : There cannot have several mutex between the same
+              pair of features. </para>
+          </listitem>
+          <listitem>
+            <para>noCyclesOnRequire : For two features f1, if f1 requires f2, f2 cannot requires
+              f1.</para>
+          </listitem>
+          <listitem>
+            <para>noBothRequireAndMutexOnSameFeatures : There cannot have both mutex and require
+              constraints between the same pair of features.</para>
+          </listitem>
+          <listitem>
+            <para> minCardLargerThanZero : Cardinality minimum on operator card on feature must be
+              equal or larger than zero.</para>
+          </listitem>
+          <listitem>
+            <para>noMinGreaterThanMax : Cardinality maximum on operator card on feature must be
+              equal and greater than cardinality minimum. </para>
+          </listitem>
+          <listitem>
+            <para>noMaxLessThanMinusOne : Cardinality maximum on operator card on a given feature
+              must be greater and equal than minus one.</para>
+          </listitem>
+          <listitem>
+            <para>nbFeaturesMustBeMoreThanMin : The number of children features of the operator Card
+              on the feature must be equal or more than the minimum cardinality. </para>
+          </listitem>
+          <listitem>
+            <para>orOperatorMustHaveAtLeastTwoOperands : The or operator on the feature must have at
+              least two features children.</para>
+          </listitem>
+          <listitem>
+            <para>alternativeOperatorMustHaveAtLeastTwoOperands : The Xor operator on the feature
+              must have at least two features children.</para>
+          </listitem>
+          <listitem>
+            <para>noAncestorFeatureAsChildren : a child feature cannot have one of these ancestors
+              as children.</para>
+          </listitem>
+          <listitem>
+            <para>noConstraintReflexive : Agiven feature cannot require itself or be mutually
+              exclusive with itself.</para>
+          </listitem>
+          <listitem>
+            <para>noMutexBetweenMandatoryFeatureChildren : features with the same feature parent and
+              containec in an and operator cannot be mutually exclusive.</para>
+          </listitem>
+        </orderedlist></para>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Metamodel used </title>
+    <para> This section consists in a quick presentation of the metamodel used to create the feature
+      diagram editor. The following picture presents this metamodel.</para>
+    <para>
+      <inlinegraphic fileref="FDETech_figures/featureDiagram.png"/></para>
+    <para>On this section we will present the feature diagram metamodel used in this tool (cf
+      metamodel above). FeatureDiagram is the root class of the metamodel. This class has an
+      attribute graphTypeTree which permits to determines whether if the feature disgram is a tree
+      feature diagram or a Directed Acyclic Graph (DAG). It also contains a list of features (class
+      Feature) which are represented in the feature diagram as a node. The special root node r is
+      identify by the reference root from FeatureDiagram to Feature. In the metamodel, these
+      operators are subtype of the class Operator, and each feature (class Feature) contains 0 or
+      more operators. The class Feature also contains a list of edges (class Edge) allowing the
+      construction of the setDE of decomposition edges. The set CE of constraint edges is
+      represented in the metamodel by the class ConstraintEdge and they are contained by the class
+      FeatureDiagram. Each ConstraintEdge contains either a Require constraint or a Mutex
+      constraint. Model elements from the base model are stored directly on the Feature metaclass
+      with the modelElements reference. To conclude the Attribute metaclass defines an attribute
+      that we can add on a feature in order to store informations used to determines whether child
+      must be selected. For example, we can add an attribute with the name of a country in a feature
+      and choose to select one of the children feature according to this country. </para>
+  </chapter>
+  <chapter>
+    <title> Limitation of the current version</title>
+    <para>A future version will permit to not display all parts of the feature diagram at the same
+      time. </para>
+  </chapter>
+  <chapter>
+    <title> Test of feature diagram editor</title>
+    <para>The tests of the constraints are available on the project<emphasis role="bold">
+        fr.inria.featureDiagramEditor.praxisConstraints.tests</emphasis>. To retrieve this project
+      go to<emphasis role="italic"> File</emphasis>-><emphasis role="italic"> New</emphasis>
+        -><emphasis role="italic"> Example</emphasis> -><emphasis role="italic"> Feature Diagram
+        Editor Sample</emphasis> -> <emphasis role="italic">Feature Diagram Editor Test
+        Constraints</emphasis>. Each constraint have one model test stored into a folder with the
+      constraint's name. To test these constraint open the session (file .aird) to see what violates
+      the constraints. If it does not work, select <emphasis role="italic">ViewPoint Selection
+      </emphasis>and click on<emphasis role="italic"> Design</emphasis>. Then right click on the EMF
+      model -><emphasis role="italic"> Praxis</emphasis>-><emphasis role="italic"> Activate
+        Consistency Management</emphasis>. You can see possibles error on the Eclipse Problem view.
+      The file<emphasis role="bold"> readMe.txt</emphasis> on the folder testedConstraints presents
+      each tests.</para>
+  </chapter>
+  <chapter>
+    <title> Conclusion</title>
+    <para> This document has presented the technical documentation and the tests of the feature
+      diagram editor .</para>
+  </chapter>
+</book>

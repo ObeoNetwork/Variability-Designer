@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/decorator_engine.feature_1.0.0.201201201500.jar" id="decorator_engine.feature" version="1.0.0.201201201500">
+      <category name="Decorator"/>
+   </feature>
+   <category-def name="Decorator" label="Decorator"/>
+</site>

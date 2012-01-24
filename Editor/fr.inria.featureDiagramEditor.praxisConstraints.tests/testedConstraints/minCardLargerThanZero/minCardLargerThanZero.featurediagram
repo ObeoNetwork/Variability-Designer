@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_iAzpwGBREeCKsc_3ohU3og" root="_qSnH4GBREeCKsc_3ohU3og">
+  <features xmi:id="_qSnH4GBREeCKsc_3ohU3og" name="root Feature">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_ywG4oGBREeCKsc_3ohU3og" features="_q8bg8GBREeCKsc_3ohU3og _ryY4kGBREeCKsc_3ohU3og" name="Or"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_0QZmsGBREeCKsc_3ohU3og" features="_tPPREGBREeCKsc_3ohU3og" name="Opt"/>
+  </features>
+  <features xmi:id="_q8bg8GBREeCKsc_3ohU3og" name="a" owningOperator="_ywG4oGBREeCKsc_3ohU3og">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_2M36cGBREeCKsc_3ohU3og" features="_uNbXoGBREeCKsc_3ohU3og _u-xVAGBREeCKsc_3ohU3og" name="Card" min="-5"/>
+  </features>
+  <features xmi:id="_ryY4kGBREeCKsc_3ohU3og" name="b" owningOperator="_ywG4oGBREeCKsc_3ohU3og"/>
+  <features xmi:id="_tPPREGBREeCKsc_3ohU3og" name="c" owningOperator="_0QZmsGBREeCKsc_3ohU3og">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_5ry4YGBREeCKsc_3ohU3og" features="_v1dFYGBREeCKsc_3ohU3og _xCT6EGBREeCKsc_3ohU3og" name="Card" max="6"/>
+  </features>
+  <features xmi:id="_uNbXoGBREeCKsc_3ohU3og" name="d" owningOperator="_2M36cGBREeCKsc_3ohU3og"/>
+  <features xmi:id="_u-xVAGBREeCKsc_3ohU3og" name="e" owningOperator="_2M36cGBREeCKsc_3ohU3og"/>
+  <features xmi:id="_v1dFYGBREeCKsc_3ohU3og" name="f" owningOperator="_5ry4YGBREeCKsc_3ohU3og"/>
+  <features xmi:id="_xCT6EGBREeCKsc_3ohU3og" name="g" owningOperator="_5ry4YGBREeCKsc_3ohU3og"/>
+</featureDiagram:FeatureDiagram>

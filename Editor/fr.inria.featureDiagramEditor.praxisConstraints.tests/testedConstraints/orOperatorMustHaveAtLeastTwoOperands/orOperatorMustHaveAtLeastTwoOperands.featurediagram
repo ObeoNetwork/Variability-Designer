@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_N1FjgGm2EeCi_o5q62Kpkg" root="_P6ZDIGm2EeCi_o5q62Kpkg">
+  <features xmi:id="_P6ZDIGm2EeCi_o5q62Kpkg" name="root Feature">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_RXrggGm2EeCi_o5q62Kpkg" features="_QOx-wGm2EeCi_o5q62Kpkg" name="Or"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_RyAsEGm2EeCi_o5q62Kpkg" features="_QvzoMGm2EeCi_o5q62Kpkg" name="Opt"/>
+  </features>
+  <features xmi:id="_QOx-wGm2EeCi_o5q62Kpkg" name="a" owningOperator="_RXrggGm2EeCi_o5q62Kpkg"/>
+  <features xmi:id="_QvzoMGm2EeCi_o5q62Kpkg" name="c" owningOperator="_RyAsEGm2EeCi_o5q62Kpkg"/>
+</featureDiagram:FeatureDiagram>

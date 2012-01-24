@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_hWU64HNAEeCuwcHQaxOk8Q" root="_lIngwHNAEeCuwcHQaxOk8Q">
+  <features xmi:id="_lIngwHNAEeCuwcHQaxOk8Q" name="System">
+    <operator xsi:type="featureDiagram:Mandatory" xmi:id="_yDifEHNAEeCuwcHQaxOk8Q" features="_oH8_sHNAEeCuwcHQaxOk8Q" name="Mandatory"/>
+    <modelElements href="MovidaUseCase2and3.flow#/"/>
+  </features>
+  <features xmi:id="_oH8_sHNAEeCuwcHQaxOk8Q" name="global architecture" owningOperator="_yDifEHNAEeCuwcHQaxOk8Q">
+    <operator xsi:type="featureDiagram:Alternative" xmi:id="_06sSYHNAEeCuwcHQaxOk8Q" features="_pfASMHNAEeCuwcHQaxOk8Q _o8ez8HNAEeCuwcHQaxOk8Q" name="Alternative"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_r20zQHNCEeCuwcHQaxOk8Q" features="_4s5_wHNAEeCuwcHQaxOk8Q" name="Opt"/>
+    <attributes xmi:id="__heD0HNAEeCuwcHQaxOk8Q" name="maxConsumption" value="500" type="EInteger"/>
+  </features>
+  <features xmi:id="_o8ez8HNAEeCuwcHQaxOk8Q" name="powered" owningOperator="_06sSYHNAEeCuwcHQaxOk8Q">
+    <modelElements href="MovidaUseCase2and3.flow#//@elements.2/@powerOutputs.0"/>
+    <modelElements href="MovidaUseCase2and3.flow#//@elements.1/@powerInputs.0"/>
+    <modelElements href="MovidaUseCase2and3.flow#//@elements.3/@elements.0/@outgoingFlows.0"/>
+    <modelElements href="MovidaUseCase2and3.flow#//@elements.2"/>
+  </features>
+  <features xmi:id="_pfASMHNAEeCuwcHQaxOk8Q" name="twoInputs" owningOperator="_06sSYHNAEeCuwcHQaxOk8Q">
+    <modelElements href="MovidaUseCase2and3.flow#//@elements.1/@elements.4"/>
+    <modelElements href="MovidaUseCase2and3.flow#//@elements.0/@elements.0/@outgoingFlows.1"/>
+    <modelElements href="MovidaUseCase2and3.flow#//@elements.1"/>
+  </features>
+  <features xmi:id="_4s5_wHNAEeCuwcHQaxOk8Q" name="addFan" owningOperator="_r20zQHNCEeCuwcHQaxOk8Q">
+    <modelElements href="MovidaUseCase2and3.flow#//@elements.1/@elements.5"/>
+    <modelElements href="MovidaUseCase2and3.flow#//@elements.3"/>
+  </features>
+</featureDiagram:FeatureDiagram>

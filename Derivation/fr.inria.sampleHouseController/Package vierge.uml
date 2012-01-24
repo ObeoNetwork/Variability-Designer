@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2010-2012 mgouyett.
+  INRIA-IRISA- Triskell Team
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+  
+  Contributors:
+      mgouyett - initial API and implementation
+  	INRIA-IRISA- Triskell Team
+  	contact : marie.gouyette@gmail.com
+-->
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_LeMpwzUsEeCmhPV0TuQaTg" name="Package vierge">
+  <packageImport xmi:id="_LeMpxDUsEeCmhPV0TuQaTg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_LeMpxTUsEeCmhPV0TuQaTg" name="house"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LeMpxjUsEeCmhPV0TuQaTg" name="House"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LeMpxzUsEeCmhPV0TuQaTg" name="HouseController">
+    <ownedAttribute xmi:id="_LeMpyDUsEeCmhPV0TuQaTg" name="houseEquipment" visibility="private" type="_LeMpyzUsEeCmhPV0TuQaTg" association="_LeMp3DUsEeCmhPV0TuQaTg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LeMpyTUsEeCmhPV0TuQaTg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LeMpyjUsEeCmhPV0TuQaTg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LeMpyzUsEeCmhPV0TuQaTg" name="HouseEquipment">
+    <ownedAttribute xmi:id="_LeMpzDUsEeCmhPV0TuQaTg" name="state" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_LeMpzTUsEeCmhPV0TuQaTg" name="houseController" visibility="private" type="_LeMpxzUsEeCmhPV0TuQaTg" association="_LeMp3DUsEeCmhPV0TuQaTg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LeMpzjUsEeCmhPV0TuQaTg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LeMpzzUsEeCmhPV0TuQaTg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_LeMp0DUsEeCmhPV0TuQaTg" name="getState">
+      <ownedParameter xmi:id="_LeMp0TUsEeCmhPV0TuQaTg" name="Paramètre1" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_LeMp0jUsEeCmhPV0TuQaTg" name="changeState">
+      <ownedParameter xmi:id="_LeMp0zUsEeCmhPV0TuQaTg" name="Paramètre1" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_LeMp1DUsEeCmhPV0TuQaTg" name="Paramètre2">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LeMp1TUsEeCmhPV0TuQaTg" name="Light">
+    <generalization xmi:id="_LeMp1jUsEeCmhPV0TuQaTg" general="_LeMpyzUsEeCmhPV0TuQaTg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LeMp1zUsEeCmhPV0TuQaTg" name="Shutter">
+    <generalization xmi:id="_LeMp2DUsEeCmhPV0TuQaTg" general="_LeMpyzUsEeCmhPV0TuQaTg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LeMp2TUsEeCmhPV0TuQaTg" name="Heating">
+    <generalization xmi:id="_LeMp2jUsEeCmhPV0TuQaTg" general="_LeMpyzUsEeCmhPV0TuQaTg"/>
+    <ownedAttribute xmi:id="_LeMp2zUsEeCmhPV0TuQaTg" name="temperature" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_LeMp3DUsEeCmhPV0TuQaTg" memberEnd="_LeMpyDUsEeCmhPV0TuQaTg _LeMpzTUsEeCmhPV0TuQaTg"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LeMp3TUsEeCmhPV0TuQaTg" name="House"/>
+  <packagedElement xmi:type="uml:Collaboration" xmi:id="_LeMp3jUsEeCmhPV0TuQaTg" name="Collaboration1">
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_LeMp3zUsEeCmhPV0TuQaTg" name="Interaction1">
+      <ownedConnector xmi:id="_LeMp4DUsEeCmhPV0TuQaTg">
+        <end xmi:id="_LeMp4TUsEeCmhPV0TuQaTg" role="_LeMqGDUsEeCmhPV0TuQaTg"/>
+        <end xmi:id="_LeMp4jUsEeCmhPV0TuQaTg" role="_LeMqFzUsEeCmhPV0TuQaTg"/>
+      </ownedConnector>
+      <ownedConnector xmi:id="_LeMp4zUsEeCmhPV0TuQaTg">
+        <end xmi:id="_LeMp5DUsEeCmhPV0TuQaTg" role="_LeMqGTUsEeCmhPV0TuQaTg"/>
+        <end xmi:id="_LeMp5TUsEeCmhPV0TuQaTg" role="_LeMqFzUsEeCmhPV0TuQaTg"/>
+      </ownedConnector>
+      <ownedConnector xmi:id="_LeMp5jUsEeCmhPV0TuQaTg">
+        <end xmi:id="_LeMp5zUsEeCmhPV0TuQaTg" role="_LeMqGjUsEeCmhPV0TuQaTg"/>
+        <end xmi:id="_LeMp6DUsEeCmhPV0TuQaTg" role="_LeMqFzUsEeCmhPV0TuQaTg"/>
+      </ownedConnector>
+      <lifeline xmi:id="_LeMp6TUsEeCmhPV0TuQaTg" name="houseController" represents="_LeMqFzUsEeCmhPV0TuQaTg" coveredBy="_LeMp7TUsEeCmhPV0TuQaTg _LeMp8TUsEeCmhPV0TuQaTg _LeMp8jUsEeCmhPV0TuQaTg _LeMp9jUsEeCmhPV0TuQaTg _LeMp9zUsEeCmhPV0TuQaTg _LeMp-zUsEeCmhPV0TuQaTg _LeMp_DUsEeCmhPV0TuQaTg _LeMqADUsEeCmhPV0TuQaTg _LeMqATUsEeCmhPV0TuQaTg _LeMqBTUsEeCmhPV0TuQaTg _LeMqBjUsEeCmhPV0TuQaTg _LeMqCjUsEeCmhPV0TuQaTg"/>
+      <lifeline xmi:id="_LeMp6jUsEeCmhPV0TuQaTg" name="light" represents="_LeMqGDUsEeCmhPV0TuQaTg" coveredBy="_LeMp7jUsEeCmhPV0TuQaTg _LeMp7zUsEeCmhPV0TuQaTg _LeMp8DUsEeCmhPV0TuQaTg _LeMp8zUsEeCmhPV0TuQaTg _LeMp9DUsEeCmhPV0TuQaTg _LeMp9TUsEeCmhPV0TuQaTg"/>
+      <lifeline xmi:id="_LeMp6zUsEeCmhPV0TuQaTg" name="shutter" represents="_LeMqGTUsEeCmhPV0TuQaTg" coveredBy="_LeMp-DUsEeCmhPV0TuQaTg _LeMp-TUsEeCmhPV0TuQaTg _LeMp-jUsEeCmhPV0TuQaTg _LeMp_TUsEeCmhPV0TuQaTg _LeMp_jUsEeCmhPV0TuQaTg _LeMp_zUsEeCmhPV0TuQaTg"/>
+      <lifeline xmi:id="_LeMp7DUsEeCmhPV0TuQaTg" name="heating" represents="_LeMqGjUsEeCmhPV0TuQaTg" coveredBy="_LeMqAjUsEeCmhPV0TuQaTg _LeMqAzUsEeCmhPV0TuQaTg _LeMqBDUsEeCmhPV0TuQaTg _LeMqBzUsEeCmhPV0TuQaTg _LeMqCDUsEeCmhPV0TuQaTg _LeMqCTUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp7TUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqGzUsEeCmhPV0TuQaTg" message="_LeMqCzUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp7jUsEeCmhPV0TuQaTg" covered="_LeMp6jUsEeCmhPV0TuQaTg" event="_LeMqHDUsEeCmhPV0TuQaTg" message="_LeMqCzUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_LeMp7zUsEeCmhPV0TuQaTg" covered="_LeMp6jUsEeCmhPV0TuQaTg" start="_LeMp7jUsEeCmhPV0TuQaTg" finish="_LeMp8DUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp8DUsEeCmhPV0TuQaTg" covered="_LeMp6jUsEeCmhPV0TuQaTg" event="_LeMqGzUsEeCmhPV0TuQaTg" message="_LeMqDDUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp8TUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqHDUsEeCmhPV0TuQaTg" message="_LeMqDDUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp8jUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqHTUsEeCmhPV0TuQaTg" message="_LeMqDTUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp8zUsEeCmhPV0TuQaTg" covered="_LeMp6jUsEeCmhPV0TuQaTg" event="_LeMqHjUsEeCmhPV0TuQaTg" message="_LeMqDTUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_LeMp9DUsEeCmhPV0TuQaTg" covered="_LeMp6jUsEeCmhPV0TuQaTg" start="_LeMp8zUsEeCmhPV0TuQaTg" finish="_LeMp9TUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp9TUsEeCmhPV0TuQaTg" covered="_LeMp6jUsEeCmhPV0TuQaTg" event="_LeMqHTUsEeCmhPV0TuQaTg" message="_LeMqDjUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp9jUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqHjUsEeCmhPV0TuQaTg" message="_LeMqDjUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp9zUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqGzUsEeCmhPV0TuQaTg" message="_LeMqDzUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp-DUsEeCmhPV0TuQaTg" covered="_LeMp6zUsEeCmhPV0TuQaTg" event="_LeMqHDUsEeCmhPV0TuQaTg" message="_LeMqDzUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_LeMp-TUsEeCmhPV0TuQaTg" covered="_LeMp6zUsEeCmhPV0TuQaTg" start="_LeMp-DUsEeCmhPV0TuQaTg" finish="_LeMp-jUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp-jUsEeCmhPV0TuQaTg" covered="_LeMp6zUsEeCmhPV0TuQaTg" event="_LeMqGzUsEeCmhPV0TuQaTg" message="_LeMqEDUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp-zUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqHDUsEeCmhPV0TuQaTg" message="_LeMqEDUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp_DUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqHTUsEeCmhPV0TuQaTg" message="_LeMqETUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp_TUsEeCmhPV0TuQaTg" covered="_LeMp6zUsEeCmhPV0TuQaTg" event="_LeMqHjUsEeCmhPV0TuQaTg" message="_LeMqETUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_LeMp_jUsEeCmhPV0TuQaTg" covered="_LeMp6zUsEeCmhPV0TuQaTg" start="_LeMp_TUsEeCmhPV0TuQaTg" finish="_LeMp_zUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMp_zUsEeCmhPV0TuQaTg" covered="_LeMp6zUsEeCmhPV0TuQaTg" event="_LeMqHTUsEeCmhPV0TuQaTg" message="_LeMqEjUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMqADUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqHjUsEeCmhPV0TuQaTg" message="_LeMqEjUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMqATUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqGzUsEeCmhPV0TuQaTg" message="_LeMqEzUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMqAjUsEeCmhPV0TuQaTg" covered="_LeMp7DUsEeCmhPV0TuQaTg" event="_LeMqHDUsEeCmhPV0TuQaTg" message="_LeMqEzUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_LeMqAzUsEeCmhPV0TuQaTg" covered="_LeMp7DUsEeCmhPV0TuQaTg" start="_LeMqAjUsEeCmhPV0TuQaTg" finish="_LeMqBDUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMqBDUsEeCmhPV0TuQaTg" covered="_LeMp7DUsEeCmhPV0TuQaTg" event="_LeMqGzUsEeCmhPV0TuQaTg" message="_LeMqFDUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMqBTUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqHDUsEeCmhPV0TuQaTg" message="_LeMqFDUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMqBjUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqHTUsEeCmhPV0TuQaTg" message="_LeMqFTUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMqBzUsEeCmhPV0TuQaTg" covered="_LeMp7DUsEeCmhPV0TuQaTg" event="_LeMqHjUsEeCmhPV0TuQaTg" message="_LeMqFTUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_LeMqCDUsEeCmhPV0TuQaTg" covered="_LeMp7DUsEeCmhPV0TuQaTg" start="_LeMqBzUsEeCmhPV0TuQaTg" finish="_LeMqCTUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMqCTUsEeCmhPV0TuQaTg" covered="_LeMp7DUsEeCmhPV0TuQaTg" event="_LeMqHTUsEeCmhPV0TuQaTg" message="_LeMqFjUsEeCmhPV0TuQaTg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LeMqCjUsEeCmhPV0TuQaTg" covered="_LeMp6TUsEeCmhPV0TuQaTg" event="_LeMqHjUsEeCmhPV0TuQaTg" message="_LeMqFjUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqCzUsEeCmhPV0TuQaTg" name="getState" receiveEvent="_LeMp7jUsEeCmhPV0TuQaTg" sendEvent="_LeMp7TUsEeCmhPV0TuQaTg" connector="_LeMp4DUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqDDUsEeCmhPV0TuQaTg" name="getState" messageSort="reply" receiveEvent="_LeMp8TUsEeCmhPV0TuQaTg" sendEvent="_LeMp8DUsEeCmhPV0TuQaTg" connector="_LeMp4DUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqDTUsEeCmhPV0TuQaTg" name="changeState" receiveEvent="_LeMp8zUsEeCmhPV0TuQaTg" sendEvent="_LeMp8jUsEeCmhPV0TuQaTg" connector="_LeMp4DUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqDjUsEeCmhPV0TuQaTg" name="changeState" messageSort="reply" receiveEvent="_LeMp9jUsEeCmhPV0TuQaTg" sendEvent="_LeMp9TUsEeCmhPV0TuQaTg" connector="_LeMp4DUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqDzUsEeCmhPV0TuQaTg" name="getState" receiveEvent="_LeMp-DUsEeCmhPV0TuQaTg" sendEvent="_LeMp9zUsEeCmhPV0TuQaTg" connector="_LeMp4zUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqEDUsEeCmhPV0TuQaTg" name="getState" messageSort="reply" receiveEvent="_LeMp-zUsEeCmhPV0TuQaTg" sendEvent="_LeMp-jUsEeCmhPV0TuQaTg" connector="_LeMp4zUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqETUsEeCmhPV0TuQaTg" name="changeState" receiveEvent="_LeMp_TUsEeCmhPV0TuQaTg" sendEvent="_LeMp_DUsEeCmhPV0TuQaTg" connector="_LeMp4zUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqEjUsEeCmhPV0TuQaTg" name="changeState" messageSort="reply" receiveEvent="_LeMqADUsEeCmhPV0TuQaTg" sendEvent="_LeMp_zUsEeCmhPV0TuQaTg" connector="_LeMp4zUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqEzUsEeCmhPV0TuQaTg" name="getState" receiveEvent="_LeMqAjUsEeCmhPV0TuQaTg" sendEvent="_LeMqATUsEeCmhPV0TuQaTg" connector="_LeMp5jUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqFDUsEeCmhPV0TuQaTg" name="getState" messageSort="reply" receiveEvent="_LeMqBTUsEeCmhPV0TuQaTg" sendEvent="_LeMqBDUsEeCmhPV0TuQaTg" connector="_LeMp5jUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqFTUsEeCmhPV0TuQaTg" name="changeState" receiveEvent="_LeMqBzUsEeCmhPV0TuQaTg" sendEvent="_LeMqBjUsEeCmhPV0TuQaTg" connector="_LeMp5jUsEeCmhPV0TuQaTg"/>
+      <message xmi:id="_LeMqFjUsEeCmhPV0TuQaTg" name="changeState" messageSort="reply" receiveEvent="_LeMqCjUsEeCmhPV0TuQaTg" sendEvent="_LeMqCTUsEeCmhPV0TuQaTg" connector="_LeMp5jUsEeCmhPV0TuQaTg"/>
+    </ownedBehavior>
+    <ownedAttribute xmi:id="_LeMqFzUsEeCmhPV0TuQaTg" name="houseController" type="_LeMpxzUsEeCmhPV0TuQaTg"/>
+    <ownedAttribute xmi:id="_LeMqGDUsEeCmhPV0TuQaTg" name="light" type="_LeMp1TUsEeCmhPV0TuQaTg"/>
+    <ownedAttribute xmi:id="_LeMqGTUsEeCmhPV0TuQaTg" name="shutter" type="_LeMp1zUsEeCmhPV0TuQaTg"/>
+    <ownedAttribute xmi:id="_LeMqGjUsEeCmhPV0TuQaTg" name="heating" type="_LeMp2TUsEeCmhPV0TuQaTg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_LeMqGzUsEeCmhPV0TuQaTg" name="Evénementd'envoid'opération1" operation="_LeMp0DUsEeCmhPV0TuQaTg"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_LeMqHDUsEeCmhPV0TuQaTg" name="Evénementderéceptiond'opération1" operation="_LeMp0DUsEeCmhPV0TuQaTg"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_LeMqHTUsEeCmhPV0TuQaTg" name="Evénementd'envoid'opération2" operation="_LeMp0jUsEeCmhPV0TuQaTg"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_LeMqHjUsEeCmhPV0TuQaTg" name="Evénementderéceptiond'opération2" operation="_LeMp0jUsEeCmhPV0TuQaTg"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_LeMqHzUsEeCmhPV0TuQaTg" name="state">
+    <region xmi:id="_LeMqIDUsEeCmhPV0TuQaTg" name="Région1">
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_LeMqITUsEeCmhPV0TuQaTg" name="begin"/>
+      <subvertex xmi:type="uml:State" xmi:id="_LeMqIjUsEeCmhPV0TuQaTg" name="Init"/>
+      <subvertex xmi:type="uml:State" xmi:id="_LeMqIzUsEeCmhPV0TuQaTg" name="GetState"/>
+      <subvertex xmi:type="uml:State" xmi:id="_LeMqJDUsEeCmhPV0TuQaTg" name="ChangeState"/>
+      <subvertex xmi:type="uml:State" xmi:id="_LeMqJTUsEeCmhPV0TuQaTg" name="Error"/>
+      <subvertex xmi:type="uml:State" xmi:id="_LeMqJjUsEeCmhPV0TuQaTg" name="Update"/>
+      <subvertex xmi:type="uml:State" xmi:id="_LeMqJzUsEeCmhPV0TuQaTg" name="CheckWarning"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_LeMqKDUsEeCmhPV0TuQaTg" name="finalSucess"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_LeMqKTUsEeCmhPV0TuQaTg" name="finalError"/>
+      <transition xmi:id="_LeMqKjUsEeCmhPV0TuQaTg" name="init" source="_LeMqITUsEeCmhPV0TuQaTg" target="_LeMqIjUsEeCmhPV0TuQaTg"/>
+      <transition xmi:id="_LeMqKzUsEeCmhPV0TuQaTg" name="error" source="_LeMqIjUsEeCmhPV0TuQaTg" target="_LeMqJTUsEeCmhPV0TuQaTg"/>
+      <transition xmi:id="_LeMqLDUsEeCmhPV0TuQaTg" name="toFinalError" source="_LeMqJTUsEeCmhPV0TuQaTg" target="_LeMqKTUsEeCmhPV0TuQaTg"/>
+      <transition xmi:id="_LeMqLTUsEeCmhPV0TuQaTg" name="get" source="_LeMqIjUsEeCmhPV0TuQaTg" target="_LeMqIzUsEeCmhPV0TuQaTg"/>
+      <transition xmi:id="_LeMqLjUsEeCmhPV0TuQaTg" name="change" source="_LeMqIjUsEeCmhPV0TuQaTg" target="_LeMqJDUsEeCmhPV0TuQaTg"/>
+      <transition xmi:id="_LeMqLzUsEeCmhPV0TuQaTg" name="changeCheck" source="_LeMqJDUsEeCmhPV0TuQaTg" target="_LeMqJzUsEeCmhPV0TuQaTg"/>
+      <transition xmi:id="_LeMqMDUsEeCmhPV0TuQaTg" name="getCheck" source="_LeMqIzUsEeCmhPV0TuQaTg" target="_LeMqJzUsEeCmhPV0TuQaTg"/>
+      <transition xmi:id="_LeMqMTUsEeCmhPV0TuQaTg" name="udpate" source="_LeMqJzUsEeCmhPV0TuQaTg" target="_LeMqJjUsEeCmhPV0TuQaTg"/>
+      <transition xmi:id="_LeMqMjUsEeCmhPV0TuQaTg" name="udpateState" source="_LeMqJjUsEeCmhPV0TuQaTg" target="_LeMqIzUsEeCmhPV0TuQaTg"/>
+      <transition xmi:id="_LeMqMzUsEeCmhPV0TuQaTg" name="toSucess" source="_LeMqIzUsEeCmhPV0TuQaTg" target="_LeMqKDUsEeCmhPV0TuQaTg"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:id="_LeMqNDUsEeCmhPV0TuQaTg">
+    <eAnnotations xmi:id="_LeMqNTUsEeCmhPV0TuQaTg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

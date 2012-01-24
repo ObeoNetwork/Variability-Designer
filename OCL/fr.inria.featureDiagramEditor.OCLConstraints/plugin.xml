@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!-- 
+ * Copyright (c) 2010-2012 Marie Gouyette.
+ * INRIA-IRISA- Triskell
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     INRIA-IRISA- Triskell
+ *     Marie Gouyette - initial API and implementation
+ *     contact marie.gouyette@gmail.com
+-->
+<!-- This is the OCL constraints for Feature models plugin -->
+<plugin>
+   <extension
+         point="org.eclipse.emf.validation.constraintProviders">
+      <category
+            id="fr.inria.featureDiagramEditor.OCLConstraints.category"
+            mandatory="false"
+            name="Feature Diagram OCL contraints">
+      </category>
+      <constraintProvider
+            cache="true">
+         <package
+               namespaceUri="http://www.kermeta.org/featureDiagram">
+         </package>
+         <constraints
+               categories="fr.inria.featureDiagramEditor.OCLConstraints.category">
+            <constraint
+                  id="name_constraint"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noTwoFeaturesHaveSameName"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints1">
+               <message>
+                  Feature {0} has the same name of another feature in the feature diagram
+               </message>
+               <description>
+                  Features must have different names
+               </description>
+               <target
+                     class="Feature">
+               </target>
+               <![CDATA[
+               	 not self.owningFeatureDiagram.features->exists(f1| f1.name = self.name and f1 <> self)
+               ]]>
+            </constraint>
+            <constraint
+                  id="minCardLargerThanZero"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="minCardLargerThanZero"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints2">
+               <message>
+                  cardinality minimum on  operator card on feature {0}  must be equal or larger than zero and different of minus one
+               </message>
+               <description>
+                  cardinality minimum on  operator card on feature {0}  must be equal or larger than zero and different of minus one
+               </description>
+               <target
+                     class="Card">
+               </target>
+               <![CDATA[
+               	self.min >= 0 or self.min = -1
+               ]]>
+            </constraint>
+            <constraint
+                  id="nbFeatureMustBeMoreThanMin"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="nbFeatureMustBeMoreThanMin"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.">
+               <message>
+                  The number of children features of the operator Card must be equal or more than the minimum cardinality.
+               </message>
+               <description>
+                  The number of children features of the operator Card must be equal or more than the minimum cardinality.
+               </description>
+               <target
+                     class="Card">
+               </target>
+               <![CDATA[
+               	self.features->size() >= self.min
+               ]]>
+            </constraint>
+            <constraint
+                  id="noAncestorFeatureAsChildren"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noAncestorFeatureAsChildren"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints4">
+               <message>
+                  The feature {0} cannot contains one of its ancestors as child
+               </message>
+               <description>
+                  The feature {0} cannot contains one of its ancestors  as child
+               </description>
+               <target
+                     class="Feature">
+               </target>
+               <![CDATA[
+            	 not self.operator->exists(op | op.features->exists (f | self.owningOperator->exists (owningOp | owningOp.owningFeature = f)))
+               ]]>
+            </constraint>
+            <constraint
+                  id="noBothRequireAndMutexOnSameFeature"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noBothRequireAndMutexOnSameFeature"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints5">
+               <message>
+                  There cannot have both mutex and require constraints between the same pair of features, {0} and {1}.
+               </message>
+               <description>
+                  There cannot have both mutex and require constraints between the same pair of features, {0} and {1}.
+               </description>
+               <target
+                     class="Feature">
+               </target>
+               <![CDATA[
+            	not self.owningFeatureDiagram.constraintEdges->exists ( req, mutex | req.constraint.oclIsTypeOf(Require) and mutex.constraint.oclIsTypeOf(Mutex) and ((req.source = self and req.target = mutex.source and mutex.target = self) or (req.source = self and req.target = mutex.target and mutex.source = self) or (req.target = self and req.source = mutex.source and mutex.target = self) or (req.target = self and req.source = mutex.target and mutex.source = self)))
+               ]]>
+            </constraint>
+            <constraint
+                  id="noConstraintReflexive"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noConstraintReflexive"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints6">
+               <message>
+                  The feature  {0} cannot be mutually exclusive with itself.
+               </message>
+               <description>
+                  The feature  {0} cannot be mutually exclusive with itself.
+               </description>
+               <target
+                     class="Feature">
+               </target>
+                <![CDATA[
+            	not (self.owningFeatureDiagram.constraintEdges->exists(ce | ce.source = self and ce.target = self))
+               ]]>
+            </constraint>
+            <constraint
+                  id="noCyclesOnRequire"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noCyclesOnRequire"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints7">
+               <message>
+                  If feature {2} requires feature {3}, feature {3} cannot requires feature {2}
+               </message>
+               <target
+                     class="Feature">
+               </target>
+               <description>
+                  If feature {2} requires feature {3}, feature {3} cannot requires feature {2}
+               </description>
+               <![CDATA[
+            	true
+               ]]>
+            </constraint>
+            <constraint
+                  id="noMaxLessThenMinusOne"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noMaxLessThenMinusOne"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints8">
+               <message>
+                  Cardinality maximum on operator card on feature {0} must be greater and equal than minus one.
+               </message>
+               <description>
+                  Cardinality maximum on operator card on feature {0} must be greater and equal than minus one.
+               </description>
+               <target
+                     class="Card">
+               </target>
+                <![CDATA[
+            	self.max >= -1
+               ]]>
+            </constraint>
+            <constraint
+                  id="noMinGreaterThanMax"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noMinGreaterThanMax"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints9">
+               <message>
+                  Cardinality maximum on operator card  must be equal and greater than cardinality minimum.
+               </message>
+               <description>
+                  Cardinality maximum on operator card  must be equal and greater than cardinality minimum.
+               </description>
+               <target
+                     class="Card">
+               </target>
+               <![CDATA[
+            	not (self.min > self.max and self.max <> -1)
+               ]]>
+            </constraint>
+            <constraint
+                  id="noMutexBetweenMandatoryFeature"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noMutexBetweenMandatoryFeature"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints10">
+               <message>
+                  A feature woned by a mandatory operator cannot be mutually exclusive with  another contained in a mandatory operator.
+               </message>
+               <description>
+                  A feature woned by a mandatory operator cannot be mutually exclusive with  another contained in a mandatory operator.
+               </description>
+               <target
+                     class="Feature">
+               </target>
+                <![CDATA[
+            	true
+               ]]>
+            </constraint>
+            <constraint
+                  id="noMutexBetweenParentAndChild"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noMutexBetweenParentAndChild"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints11">
+               <message>
+                  There cannot have a mutex between a parent feature and one of its child.
+               </message>
+               <description>
+                  There cannot have a mutex between a parent feature and one of its child.
+               </description>
+               <target
+                     class="Feature">
+               </target>
+                <![CDATA[
+            	true
+               ]]>
+            </constraint>
+            <constraint
+                  id="noParentFeatureAsChildren"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noParentFeatureAsChildren"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints12">
+               <message>
+                  The feature {0} cannot contains one of its parent as child.
+               </message>
+               <target
+                     class="Feature">
+               </target>
+               <description>
+                  The feature {0} cannot contains one of its parent as child.
+               </description>
+                <![CDATA[
+            	not (self.operator->exists (op | op.features->exists ( f | self.owningOperator->exists(owningOp | owningOp.owningFeature = f))))
+               ]]>
+            </constraint>
+            <constraint
+                  id="noSeveralMutexOnSameFeature"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noSeveralMutexOnSameFeature"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints13">
+               <message>
+                  There cannot have several mutex between the same pair of features.
+               </message>
+               <description>
+                  There cannot have several mutex between the same pair of features.
+               </description>
+               <target
+                     class="Feature">
+               </target>
+                <![CDATA[
+            	not (self.owningFeatureDiagram.constraintEdges->exists (mutex1, mutex2 | mutex1.constraint.oclIsTypeOf(Mutex)and mutex1 <> mutex2 and mutex2.constraint.oclIsTypeOf(Mutex) and mutex1.source = self and ((mutex1.source = mutex2.source and mutex1.target = mutex2.target) or ( mutex1.source = mutex2.target and mutex1.target = mutex2.source)) ))
+               ]]>
+            </constraint>
+            <constraint
+                  id="noTrueCycleOnRequire1"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="noTrueCycleOnRequire1"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints14">
+               <message>
+                  We cannot have a require cycle.
+               </message>
+               <target
+                     class="Feature">
+               </target>
+               <description>
+                  We cannot have a require cycle.
+               </description>
+               <![CDATA[
+            	true
+               ]]>
+            </constraint>
+            <constraint
+                  id="orOperatorMustHaveAtLeastTwoOperands"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="orOperatorMustHaveAtLeastTwoOperands"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints15">
+               <message>
+                  The or operator {0} must have at least two features  children.
+               </message>
+               <target
+                     class="Or">
+               </target>
+               <description>
+                  The or operator {0} must have at least two features  children.
+               </description>
+               <![CDATA[
+            	not (self.features->size() < 2)
+               ]]>
+            </constraint>
+            <constraint
+                  id="altOperatorMustHaveAtLeasttwoOperators"
+                  isEnabledByDefault="true"
+                  lang="OCL"
+                  mode="Batch"
+                  name="altOperatorMustHaveAtLeasttwoOperators"
+                  severity="ERROR"
+                  statusCode="fr.inria.featureDiagramEditor.OCLConstraints15">
+               <message>
+                  The alternative operator {0} must have at least two features  children.
+               </message>
+               <target
+                     class="Alternative">
+               </target>
+               <description>
+                  The alternative operator {0} must have at least two features  children.
+               </description>
+               <![CDATA[
+            	not (self.features->size()<2)
+               ]]>
+            </constraint>
+            
+         </constraints>
+      </constraintProvider>
+   </extension>
+
+</plugin>

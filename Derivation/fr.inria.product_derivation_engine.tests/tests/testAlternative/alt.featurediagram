@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_fKg5YHSaEeC5PIpZsyyy_A" root="_gTi-AHSaEeC5PIpZsyyy_A">
+  <features xmi:id="_gTi-AHSaEeC5PIpZsyyy_A" name="Car">
+    <operator xsi:type="featureDiagram:Alternative" xmi:id="_kKxHMHSaEeC5PIpZsyyy_A" features="_iIY_wHSaEeC5PIpZsyyy_A _jM2GYHSaEeC5PIpZsyyy_A" name="Alternative"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_Ck0HAPQMEeC2eLtYW_lBCA" features="_DyXfQPQMEeC2eLtYW_lBCA" name="Opt"/>
+    <modelElements href="car.ecore#//Car"/>
+  </features>
+  <features xmi:id="_iIY_wHSaEeC5PIpZsyyy_A" name="petrol" owningOperator="_kKxHMHSaEeC5PIpZsyyy_A">
+    <modelElements href="car.ecore#//Petrol"/>
+  </features>
+  <features xmi:id="_jM2GYHSaEeC5PIpZsyyy_A" name="diesel" owningOperator="_kKxHMHSaEeC5PIpZsyyy_A">
+    <modelElements href="car.ecore#//Diesel"/>
+  </features>
+  <features xmi:id="_DyXfQPQMEeC2eLtYW_lBCA" name="option" owningOperator="_Ck0HAPQMEeC2eLtYW_lBCA">
+    <modelElements href="car.ecore#//AirCond"/>
+  </features>
+</featureDiagram:FeatureDiagram>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_utEPEGBTEeCKsc_3ohU3og" root="_xJeAEGBTEeCKsc_3ohU3og">
+  <features xmi:id="_xJeAEGBTEeCKsc_3ohU3og" name="root Feature">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_7kvsIGBTEeCKsc_3ohU3og" features="_xhfegGBTEeCKsc_3ohU3og _x3nfgGBTEeCKsc_3ohU3og" name="Or"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_9WUXcGBTEeCKsc_3ohU3og" features="_yNmWkGBTEeCKsc_3ohU3og" name="Opt"/>
+  </features>
+  <features xmi:id="_xhfegGBTEeCKsc_3ohU3og" name="a" owningOperator="_7kvsIGBTEeCKsc_3ohU3og _HEqsEGBUEeCKsc_3ohU3og _LzImUGBUEeCKsc_3ohU3og">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_C9RY4GBUEeCKsc_3ohU3og" features="_y7IK8GBTEeCKsc_3ohU3og _zWAwIGBTEeCKsc_3ohU3og" name="Card" max="3"/>
+  </features>
+  <features xmi:id="_x3nfgGBTEeCKsc_3ohU3og" name="b" owningOperator="_7kvsIGBTEeCKsc_3ohU3og"/>
+  <features xmi:id="_yNmWkGBTEeCKsc_3ohU3og" name="c" owningOperator="_9WUXcGBTEeCKsc_3ohU3og">
+    <operator xsi:type="featureDiagram:Card" xmi:id="__3y1sGBTEeCKsc_3ohU3og" features="_zxhncGBTEeCKsc_3ohU3og _0JjF4GBTEeCKsc_3ohU3og" name="Card" max="6"/>
+  </features>
+  <features xmi:id="_y7IK8GBTEeCKsc_3ohU3og" name="d" owningOperator="_C9RY4GBUEeCKsc_3ohU3og">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_JtJxQGBUEeCKsc_3ohU3og" features="_0iRH4GBTEeCKsc_3ohU3og _07guUGBTEeCKsc_3ohU3og" name="Or"/>
+  </features>
+  <features xmi:id="_zWAwIGBTEeCKsc_3ohU3og" name="e" owningOperator="_C9RY4GBUEeCKsc_3ohU3og">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_HEqsEGBUEeCKsc_3ohU3og" features="_xhfegGBTEeCKsc_3ohU3og" name="Card" max="1"/>
+  </features>
+  <features xmi:id="_zxhncGBTEeCKsc_3ohU3og" name="f" owningOperator="__3y1sGBTEeCKsc_3ohU3og"/>
+  <features xmi:id="_0JjF4GBTEeCKsc_3ohU3og" name="g" owningOperator="__3y1sGBTEeCKsc_3ohU3og"/>
+  <features xmi:id="_0iRH4GBTEeCKsc_3ohU3og" name="h" owningOperator="_JtJxQGBUEeCKsc_3ohU3og">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_LzImUGBUEeCKsc_3ohU3og" features="_xhfegGBTEeCKsc_3ohU3og" name="Card" max="3"/>
+  </features>
+  <features xmi:id="_07guUGBTEeCKsc_3ohU3og" name="i" owningOperator="_JtJxQGBUEeCKsc_3ohU3og"/>
+</featureDiagram:FeatureDiagram>

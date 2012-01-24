@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.obeo.fr/dsl/designer/sample/flow" consumption="330">
+  <elements xsi:type="flow:CompositeProcessor" name="camera2">
+    <elements xsi:type="flow:DataSource" volume="5" name="outdoor sensor">
+      <outgoingFlows usage="low" load="5" target="//@elements.1/@elements.0"/>
+    </elements>
+  </elements>
+  <elements xsi:type="flow:CompositeProcessor" consumption="480" name="processing unit" temperature="50" weight="80">
+    <elements xsi:type="flow:Processor" usage="low" incomingFlows="//@elements.0/@elements.0/@outgoingFlows.0" load="5" consumption="100" name="input controller" volume="10">
+      <outgoingFlows usage="standard" load="10" target="//@elements.1/@elements.1"/>
+    </elements>
+    <elements xsi:type="flow:Processor" usage="standard" incomingFlows="//@elements.1/@elements.0/@outgoingFlows.0 //@elements.1/@elements.4/@outgoingFlows.0" capacity="15" load="15" consumption="150" name="data pocessor" volume="15">
+      <outgoingFlows usage="high" load="15" target="//@elements.1/@elements.2"/>
+    </elements>
+    <elements xsi:type="flow:Processor" usage="standard" incomingFlows="//@elements.1/@elements.1/@outgoingFlows.0" capacity="15" load="15" consumption="150" name="output controller" volume="15"/>
+    <elements xsi:type="flow:Fan" consumption="30" speed="3000" weight="40"/>
+    <elements xsi:type="flow:Processor" usage="standard" incomingFlows="//@elements.3/@elements.0/@outgoingFlows.0" capacity="5" load="5" consumption="50" name="input controller" volume="5">
+      <outgoingFlows usage="low" load="5" target="//@elements.1/@elements.1"/>
+    </elements>
+    <powerInputs/>
+  </elements>
+  <elements xsi:type="flow:CompositeProcessor" name="alimentation controller">
+    <powerOutputs>
+      <links target="//@elements.1/@powerInputs.0"/>
+    </powerOutputs>
+  </elements>
+  <elements xsi:type="flow:CompositeProcessor" name="camera1">
+    <elements xsi:type="flow:DataSource" volume="5" name="outdoor">
+      <outgoingFlows usage="low" load="5" target="//@elements.1/@elements.4"/>
+    </elements>
+  </elements>
+</flow:System>

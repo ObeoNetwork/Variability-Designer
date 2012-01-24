@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_IIwrwHMrEeCwJaOc55_Wcg" root="_K9FNgHMrEeCwJaOc55_Wcg">
+  <features xmi:id="_K9FNgHMrEeCwJaOc55_Wcg" name="root Feature">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_TR9NwHMrEeCwJaOc55_Wcg" features="_LojzcHMrEeCwJaOc55_Wcg _Meeu0HMrEeCwJaOc55_Wcg" name="Or"/>
+    <operator xsi:type="featureDiagram:Alternative" xmi:id="_ViRqkHMrEeCwJaOc55_Wcg" features="_Xwz-sHMrEeCwJaOc55_Wcg _YisHkHMrEeCwJaOc55_Wcg" name="Alternative"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_iHs6AHMrEeCwJaOc55_Wcg" features="_mpHPsHMrEeCwJaOc55_Wcg" name="Opt"/>
+  </features>
+  <features xmi:id="_LojzcHMrEeCwJaOc55_Wcg" name="a" owningOperator="_TR9NwHMrEeCwJaOc55_Wcg"/>
+  <features xmi:id="_Meeu0HMrEeCwJaOc55_Wcg" name="b" owningOperator="_TR9NwHMrEeCwJaOc55_Wcg"/>
+  <features xmi:id="_Xwz-sHMrEeCwJaOc55_Wcg" name="c" owningOperator="_ViRqkHMrEeCwJaOc55_Wcg"/>
+  <features xmi:id="_YisHkHMrEeCwJaOc55_Wcg" name="d" owningOperator="_ViRqkHMrEeCwJaOc55_Wcg"/>
+  <features xmi:id="_mpHPsHMrEeCwJaOc55_Wcg" name="e" owningOperator="_iHs6AHMrEeCwJaOc55_Wcg"/>
+  <constraintEdges xmi:id="_xEaw8HMrEeCwJaOc55_Wcg" target="_Xwz-sHMrEeCwJaOc55_Wcg" source="_Meeu0HMrEeCwJaOc55_Wcg">
+    <constraint xsi:type="featureDiagram:Require" xmi:id="_xEj64HMrEeCwJaOc55_Wcg"/>
+  </constraintEdges>
+  <constraintEdges xmi:id="_x6mLAHMrEeCwJaOc55_Wcg" target="_mpHPsHMrEeCwJaOc55_Wcg" source="_Xwz-sHMrEeCwJaOc55_Wcg">
+    <constraint xsi:type="featureDiagram:Require" xmi:id="_x6v8AHMrEeCwJaOc55_Wcg"/>
+  </constraintEdges>
+  <constraintEdges xmi:id="_y_gkoHMrEeCwJaOc55_Wcg" target="_Meeu0HMrEeCwJaOc55_Wcg" source="_mpHPsHMrEeCwJaOc55_Wcg">
+    <constraint xsi:type="featureDiagram:Require" xmi:id="_y_gkoXMrEeCwJaOc55_Wcg"/>
+  </constraintEdges>
+</featureDiagram:FeatureDiagram>

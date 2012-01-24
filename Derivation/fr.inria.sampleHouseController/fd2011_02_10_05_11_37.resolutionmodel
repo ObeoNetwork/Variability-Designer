@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ASCII"?>
+<resolutionmodel:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmlns:resolutionmodel="http://www.kermeta.org/resolutionModel">
+  <featureSelections state="selected" featureName="Light">
+    <feature name="Light" owningOperator="//@featureSelections.4/@feature/@operator.0">
+      <modelElements href="Package%20vierge.uml#_LeMp1TUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMp6jUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqGDUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqCzUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqDDUsEeCmhPV0TuQaTg"/>
+    </feature>
+  </featureSelections>
+  <featureSelections featureName="Shutter">
+    <feature name="Shutter" owningOperator="//@featureSelections.4/@feature/@operator.0">
+      <modelElements href="Package%20vierge.uml#_LeMp1zUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMp6zUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqGTUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqDzUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqEDUsEeCmhPV0TuQaTg"/>
+    </feature>
+  </featureSelections>
+  <featureSelections featureName="Heating">
+    <feature name="Heating" owningOperator="//@featureSelections.4/@feature/@operator.0">
+      <modelElements href="Package%20vierge.uml#_LeMp2TUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMp7DUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqGjUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqEzUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqFDUsEeCmhPV0TuQaTg"/>
+    </feature>
+  </featureSelections>
+  <featureSelections state="selected" featureName="authorizedChanges">
+    <feature name="authorizedChanges" owningOperator="//@featureSelections.4/@feature/@operator.1">
+      <modelElements href="Package%20vierge.uml#_LeMqDTUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqDjUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqETUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqFTUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqEjUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqFjUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMp0jUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqJDUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqLjUsEeCmhPV0TuQaTg"/>
+      <modelElements href="Package%20vierge.uml#_LeMqLzUsEeCmhPV0TuQaTg"/>
+    </feature>
+  </featureSelections>
+  <featureSelections state="selected" featureName="House">
+    <feature name="House">
+      <operator xsi:type="featureDiagram:Or" features="//@featureSelections.0/@feature //@featureSelections.1/@feature //@featureSelections.2/@feature" name="Or"/>
+      <operator xsi:type="featureDiagram:Opt" features="//@featureSelections.3/@feature" name="Opt"/>
+    </feature>
+  </featureSelections>
+</resolutionmodel:ResolutionModel>

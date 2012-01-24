@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_4ajeQMcXEd-x3epmXulT2A" root="_6b1ZgMcXEd-x3epmXulT2A">
+  <features xmi:id="_6b1ZgMcXEd-x3epmXulT2A" name="Car">
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_kjdtIMcZEd-x3epmXulT2A" features="_luRI0McYEd-x3epmXulT2A _Kz7pUMcYEd-x3epmXulT2A" name="Opt"/>
+    <operator xsi:type="featureDiagram:Card" xmi:id="_ympUAMcZEd-x3epmXulT2A" features="_su2aMMcZEd-x3epmXulT2A _uDpp8McZEd-x3epmXulT2A" name="Card" max="2"/>
+    <operator xsi:type="featureDiagram:Alternative" xmi:id="_1n6R8HQ2EeC61rmfF0x_wA" features="_ozsosMcYEd-x3epmXulT2A _p4uXEMcYEd-x3epmXulT2A" name="Alternative"/>
+    <operator xsi:type="featureDiagram:Mandatory" xmi:id="_tNmm8PQNEeC2eLtYW_lBCA" features="_nDhEgMcYEd-x3epmXulT2A" name="Mandatory"/>
+    <modelElements href="exampleCar.ecore#//Car"/>
+    <modelElements href="exampleCar.ecore#//Motor"/>
+  </features>
+  <features xmi:id="_8SG-oMcXEd-x3epmXulT2A" name="Radio" owningOperator="_4Yy40McZEd-x3epmXulT2A">
+    <modelElements href="exampleCar.ecore#//Radio"/>
+  </features>
+  <features xmi:id="_-1KxQMcXEd-x3epmXulT2A" name="Airbag" owningOperator="_4Yy40McZEd-x3epmXulT2A">
+    <modelElements href="exampleCar.ecore#//Airbag"/>
+  </features>
+  <features xmi:id="_Am08IMcYEd-x3epmXulT2A" name="ABS" owningOperator="_4Yy40McZEd-x3epmXulT2A">
+    <modelElements href="exampleCar.ecore#//ABS"/>
+  </features>
+  <features xmi:id="_CYV9EMcYEd-x3epmXulT2A" name="Parking Assistance" owningOperator="_8PA8cMcZEd-x3epmXulT2A">
+    <modelElements href="exampleCar.ecore#//Parking%20assistance"/>
+  </features>
+  <features xmi:id="_EB9mQMcYEd-x3epmXulT2A" name="Central Locking" owningOperator="_8PA8cMcZEd-x3epmXulT2A">
+    <modelElements href="exampleCar.ecore#//Central%20Locking"/>
+  </features>
+  <features xmi:id="_FWd7EMcYEd-x3epmXulT2A" name="Electric Window" owningOperator="_8PA8cMcZEd-x3epmXulT2A">
+    <modelElements href="exampleCar.ecore#//Electric%20Window"/>
+  </features>
+  <features xmi:id="_Kz7pUMcYEd-x3epmXulT2A" name="GPS" owningOperator="_kjdtIMcZEd-x3epmXulT2A">
+    <modelElements href="exampleCar.ecore#//GPS"/>
+  </features>
+  <features xmi:id="_luRI0McYEd-x3epmXulT2A" name="AirCond" owningOperator="_kjdtIMcZEd-x3epmXulT2A">
+    <modelElements href="exampleCar.ecore#//AirCond"/>
+  </features>
+  <features xmi:id="_nDhEgMcYEd-x3epmXulT2A" name="Tyre" owningOperator="_tNmm8PQNEeC2eLtYW_lBCA">
+    <modelElements href="exampleCar.ecore#//Tyre"/>
+  </features>
+  <features xmi:id="_ozsosMcYEd-x3epmXulT2A" name="Petrol" owningOperator="_1n6R8HQ2EeC61rmfF0x_wA">
+    <modelElements href="exampleCar.ecore#//Petrol"/>
+  </features>
+  <features xmi:id="_p4uXEMcYEd-x3epmXulT2A" name="Diesel" owningOperator="_1n6R8HQ2EeC61rmfF0x_wA">
+    <modelElements href="exampleCar.ecore#//Diesel"/>
+  </features>
+  <features xmi:id="_su2aMMcZEd-x3epmXulT2A" name="Option1" owningOperator="_ympUAMcZEd-x3epmXulT2A">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_4Yy40McZEd-x3epmXulT2A" features="_Am08IMcYEd-x3epmXulT2A _8SG-oMcXEd-x3epmXulT2A _-1KxQMcXEd-x3epmXulT2A" name="Or"/>
+  </features>
+  <features xmi:id="_uDpp8McZEd-x3epmXulT2A" name="Option2" owningOperator="_ympUAMcZEd-x3epmXulT2A">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_8PA8cMcZEd-x3epmXulT2A" features="_FWd7EMcYEd-x3epmXulT2A _EB9mQMcYEd-x3epmXulT2A _CYV9EMcYEd-x3epmXulT2A" name="Or"/>
+  </features>
+</featureDiagram:FeatureDiagram>

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: File_methods
+Bundle-SymbolicName: fr.inria.file_methods
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: fr.inria.file_methods.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.eclipse.core.resources,
+ org.eclipse.emf.common.notify,
+ org.eclipse.emf.common.util,
+ org.eclipse.emf.ecore.resource,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.ecore.xmi.impl
+Export-Package: fr.inria.file_methods.method

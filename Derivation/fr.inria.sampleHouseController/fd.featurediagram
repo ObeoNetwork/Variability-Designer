@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_HHYvMDUuEeC59rGWxtkwKg" root="_KFh7UDUuEeC59rGWxtkwKg">
+  <features xmi:id="_KFh7UDUuEeC59rGWxtkwKg" name="House">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_U9gKcDUuEeC59rGWxtkwKg" features="_MKYvADUuEeC59rGWxtkwKg _NH1OsDUuEeC59rGWxtkwKg _OVf7sDUuEeC59rGWxtkwKg" name="Or"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_XGrdcDUuEeC59rGWxtkwKg" features="_QZnIgDUuEeC59rGWxtkwKg" name="Opt"/>
+  </features>
+  <features xmi:id="_MKYvADUuEeC59rGWxtkwKg" name="Light" owningOperator="_U9gKcDUuEeC59rGWxtkwKg">
+    <modelElements href="Package%20vierge.uml#_LeMp1TUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMp6jUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqGDUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqCzUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqDDUsEeCmhPV0TuQaTg"/>
+  </features>
+  <features xmi:id="_NH1OsDUuEeC59rGWxtkwKg" name="Shutter" owningOperator="_U9gKcDUuEeC59rGWxtkwKg">
+    <modelElements href="Package%20vierge.uml#_LeMp1zUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMp6zUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqGTUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqDzUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqEDUsEeCmhPV0TuQaTg"/>
+  </features>
+  <features xmi:id="_OVf7sDUuEeC59rGWxtkwKg" name="Heating" owningOperator="_U9gKcDUuEeC59rGWxtkwKg">
+    <modelElements href="Package%20vierge.uml#_LeMp2TUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMp7DUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqGjUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqEzUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqFDUsEeCmhPV0TuQaTg"/>
+  </features>
+  <features xmi:id="_QZnIgDUuEeC59rGWxtkwKg" name="authorizedChanges" owningOperator="_XGrdcDUuEeC59rGWxtkwKg">
+    <modelElements href="Package%20vierge.uml#_LeMqDTUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqDjUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqETUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqFTUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqEjUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqFjUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMp0jUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqJDUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqLjUsEeCmhPV0TuQaTg"/>
+    <modelElements href="Package%20vierge.uml#_LeMqLzUsEeCmhPV0TuQaTg"/>
+  </features>
+</featureDiagram:FeatureDiagram>

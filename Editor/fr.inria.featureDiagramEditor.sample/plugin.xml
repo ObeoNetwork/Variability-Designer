@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!-- 
+ * Copyright (c) 2010-2012 Marie Gouyette.
+ * INRIA-IRISA- Triskell
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     INRIA-IRISA- Triskell
+ *     Marie Gouyette - initial API and implementation
+ *     contact marie.gouyette@gmail.com
+-->
+<plugin
+>
+   <extension
+         id="id1"
+         name="Wizard1"
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="fr.inria.featureDiagramEditor.sample.category"
+            name="Feature Diagram Editor Sample"
+            parentCategory="org.eclipse.ui.Examples">
+      </category>
+      <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/fr.inria.featureDiagramEditor.sample.category"
+            class="fr.inria.featurediagrameditor.sample.wizard.FDSampleExampleWizard"
+            finalPerspective="fr.obeo.dsl.viewpoint.ui.tools.perspective.design"
+            hasPages="false"
+            icon="icons/Feature.png"
+            id="fr.inria.featureDiagramEditor.sample.wizard"
+            name="Feature Diagram Editor Test Constraints">
+      </wizard>
+   </extension>
+</plugin>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<resolutionmodel:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmlns:resolutionmodel="http://www.kermeta.org/resolutionModel">
+  <featureDiagram href="fd.featurediagram#_hWU64HNAEeCuwcHQaxOk8Q"/>
+  <featureSelections state="selected" featureName="System" operator="">
+    <feature name="System">
+      <operator xsi:type="featureDiagram:Mandatory" features="//@featureSelections.0/@owningSelection.0/@feature" name="Mandatory"/>
+      <modelElements href="MovidaUseCase2and3.flow#/"/>
+    </feature>
+    <owningSelection state="selected" featureName="global architecture" operator="">
+      <feature name="global architecture" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <operator xsi:type="featureDiagram:Alternative" features="//@featureSelections.0/@owningSelection.0/@owningSelection.0/@feature //@featureSelections.0/@owningSelection.0/@owningSelection.1/@feature" name="Alternative"/>
+        <operator xsi:type="featureDiagram:Opt" features="//@featureSelections.0/@owningSelection.0/@owningSelection.2/@feature" name="Opt"/>
+        <attributes name="maxConsumption" value="500" type="EInteger"/>
+      </feature>
+      <owningSelection featureName="twoInputs" operator="Alternative">
+        <feature name="twoInputs" owningOperator="//@featureSelections.0/@owningSelection.0/@feature/@operator.0">
+          <modelElements href="MovidaUseCase2and3.flow#//@elements.1/@elements.4"/>
+          <modelElements href="MovidaUseCase2and3.flow#//@elements.0/@elements.0/@outgoingFlows.1"/>
+        </feature>
+      </owningSelection>
+      <owningSelection state="selected" featureName="powered" operator="Alternative">
+        <feature name="powered" owningOperator="//@featureSelections.0/@owningSelection.0/@feature/@operator.0">
+          <modelElements href="MovidaUseCase2and3.flow#//@elements.2/@powerOutputs.0"/>
+          <modelElements href="MovidaUseCase2and3.flow#//@elements.1/@powerInputs.0"/>
+          <modelElements href="MovidaUseCase2and3.flow#//@elements.3/@elements.0/@outgoingFlows.0"/>
+        </feature>
+      </owningSelection>
+      <owningSelection state="selected" featureName="addFan" operator="Opt">
+        <feature name="addFan" owningOperator="//@featureSelections.0/@owningSelection.0/@feature/@operator.1">
+          <modelElements href="MovidaUseCase2and3.flow#//@elements.1/@elements.5"/>
+        </feature>
+      </owningSelection>
+    </owningSelection>
+  </featureSelections>
+</resolutionmodel:ResolutionModel>

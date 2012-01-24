@@ -1,0 +1,35 @@
+<!-- 
+ * Copyright (c) 2010-2012 Marie Gouyette.
+ * INRIA-IRISA- Triskell
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     INRIA-IRISA- Triskell
+ *     Marie Gouyette - initial API and implementation
+ *     contact marie.gouyette@gmail.com
+-->
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>3.2.&nbsp; Create model elements with the palette</title><link rel="stylesheet" href="css/docbook.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><meta name="keywords" content="Feature Diagram Editor, metamodeling, Domain specific language (DSL)"><link rel="home" href="index.html" title="Feature Diagram Editor End-User documentation"><link rel="up" href="ch03.html" title="Chapter&nbsp;3.&nbsp; Feature Diagram Editor : Quick presentation"><link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp; Feature Diagram Editor : Quick presentation"><link rel="next" href="ch03s03.html" title="3.3.&nbsp; Add domain model elements into features"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.2.&nbsp; Create model elements with the palette </th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch03.html">Prev</a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;3.&nbsp; Feature Diagram Editor : Quick presentation</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch03s03.html">Next</a></td></tr></table><hr></div><div class="section" lang="en-US"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e356"></a>3.2.&nbsp; Create model elements with the palette </h2></div></div></div><p>To add graphical element on the feature diagram simply click on the desired tool on drag
+        and drop it in the feature diagram. The following figure presents the feature diagram
+        editor.</p><p><img src="FDEEnd_figures/exampleFD.png"></p><p>Now, we present the elements that we can see on the palette : </p><div class="orderedlist"><ol type="1"><li><p><span class="bold"><strong>Root feature </strong></span>: in case of features model as a
+              tree (boolean graphStyleTree at true on FeatureDiagram element) , this feature is the
+              top node parent of any other features.</p></li><li><p><span class="bold"><strong>Feature</strong></span> : a simple feature. Features are used to
+              represent different alternatives.</p></li><li><p><span class="bold"><strong>Attribute</strong></span> : an attribute (with a name, a value
+              and a type) can be added into Features adding information.</p></li><li><p><span class="bold"><strong>Opt </strong></span>: the feature children of this operator are
+              optional. in term of choices of alternatives. The optional features ( like feature a
+              of the example) are colored in orange.</p></li><li><p><span class="bold"><strong>Or</strong></span> : this operator means that at least on of its
+              features must be chosen.</p></li><li><p><span class="bold"><strong>Alternative</strong></span> : (Xor) this operator means that only
+              one feature must be chosen between its features. It corresponds to the "Xor" operator
+              in the previous version.</p></li><li><p><span class="bold"><strong>Mandatory</strong></span> : (And) all features contained on this
+              operator must be chosen. This operator corresponds to a"and" operator of the previous
+              version.</p></li><li><p><span class="bold"><strong>Card</strong></span> : this operator permits to choose a given
+              number of features children included between a lower bound (cardinality minimum) and a
+              upper bound (cardinality maximum).</p></li><li><p><span class="bold"><strong>Require</strong></span> : this graphical constraint represents a
+              feature that require another one.</p></li><li><p><span class="bold"><strong>Mutex</strong></span> : this graphical constraint link the
+              features that are mutually exclusive each other. It means that these two features
+              cannot be chosen together.</p></li><li><p><span class="bold"><strong>Operator to features </strong></span>: it is a link that rely
+              operators to their features.</p></li></ol></div><p> The next section presents how to add domain model element into features.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ch03.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch03s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;3.&nbsp; Feature Diagram Editor : Quick presentation&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;3.3.&nbsp; Add domain model elements into features</td></tr></table></div></body></html>

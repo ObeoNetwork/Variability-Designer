@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/fr.inria.featureDiagramEditor.OCLConstraints.feature_1.0.0.201201201139.jar" id="fr.inria.featureDiagramEditor.OCLConstraints.feature" version="1.0.0.201201201139">
+      <category name="OCL Constraints for Feature Diagram Editor"/>
+   </feature>
+   <category-def name="OCL Constraints for Feature Diagram Editor" label="OCL Constraints for Feature Diagram Editor"/>
+</site>

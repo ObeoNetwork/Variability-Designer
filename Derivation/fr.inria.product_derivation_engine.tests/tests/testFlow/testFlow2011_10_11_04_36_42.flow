@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flow:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flow="http://www.obeo.fr/dsl/designer/sample/flow" consumption="200" weight="20">
+  <elements xsi:type="flow:Processor" consumption="100" name="proc1"/>
+  <elements xsi:type="flow:Processor" consumption="100" name="c"/>
+</flow:System>

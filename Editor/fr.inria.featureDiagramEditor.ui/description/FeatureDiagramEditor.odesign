@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="ASCII"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:filter="http://www.obeo.fr/dsl/viewpoint/description/filter/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="FeatureDiagramEditor">
+  <eAnnotations source="Migration">
+    <details key="SemanticCandidatesExpressionBehaviorChange" value=""/>
+    <details key="LabelAlignmentForDNodeListElementMappingMigrationForBehaviourPresevation" value=""/>
+    <details key="SVG.BundledImageDescription.BorderColor" value=""/>
+  </eAnnotations>
+  <ownedViewpoints name="Feature Diagram">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Feature Diagram Editor" initialisation="true" showOnStartup="true" domainClass="FeatureDiagram" enablePopupBars="true">
+      <metamodel href="platform:/plugin/fr.inria.featureDiagramEditor.emf/model/featureDiagram.ecore#/"/>
+      <filters xsi:type="filter:CompositeFilterDescription" name="Attribute">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@subNodeMappings[name='Attribute']"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="Model Elements">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@subNodeMappings[name='ModelElements']"/>
+      </filters>
+      <concerns>
+        <ownedConcernDescriptions name="Hide Model" filters="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@filters[name='Model%20Elements']"/>
+        <ownedConcernDescriptions name="Hide Attribute" filters="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@filters[name='Attribute']"/>
+      </concerns>
+      <defaultLayer name="Default">
+        <edgeMappings name="Operator to feature" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']" targetMapping="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']" targetFinderExpression="&lt;%features%>" sourceFinderExpression="&lt;%owningOperator%>">
+          <style targetArrow="NoDecoration" foldingStyle="SOURCE">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ConstraintEdge" semanticCandidatesExpression="&lt;%constraintEdges%>" sourceMapping="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']" targetMapping="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']" targetFinderExpression="&lt;%target%>" sourceFinderExpression="&lt;%source%>" domainClass="ConstraintEdge" useDomainElement="true">
+          <style lineStyle="dash">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="&lt;%self.constraint.filter(&quot;Require&quot;)%>">
+            <style lineStyle="dash" routingStyle="tree">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <centerLabelStyleDescription showIcon="false">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%self.constraint.filter(&quot;Mutex&quot;)%>">
+            <style lineStyle="dash" sourceArrow="InputArrow" routingStyle="tree">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+              <centerLabelStyleDescription showIcon="false">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings useDomainElement="true"/>
+        <containerMappings name="Feature" labelDirectEdit="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@toolSections.1/@ownedTools[name='Label%20Feature']" semanticCandidatesExpression="&lt;%features%>" domainClass="Feature" reusedBorderedNodeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']" dropDescriptions="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@toolSections.0/@ownedTools[name='Elements']/@tools.0" reusedNodeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@subNodeMappings[name='Attribute']" listContainer="true">
+          <borderedNodeMappings name="Operator" labelDirectEdit="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@toolSections.3/@ownedTools[name='Label%20Operator%20']" semanticCandidatesExpression="&lt;%operator%>" domainClass="Operator">
+            <style xsi:type="style:BundledImageDescription" tooltipExpression="Feature">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+            <conditionnalStyles predicateExpression="&lt;%filter(&quot;Opt&quot;)%>">
+              <style xsi:type="style:BundledImageDescription" showIcon="false" sizeComputationExpression="2" shape="ring">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%filter(&quot;Or&quot;)%>">
+              <style xsi:type="style:BundledImageDescription" showIcon="false" sizeComputationExpression="2" shape="triangle">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%filter(&quot;Alternative&quot;)%>">
+              <style xsi:type="style:BundledImageDescription" showIcon="false" sizeComputationExpression="2" shape="triangle">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%filter(&quot;Mandatory&quot;)%>">
+              <style xsi:type="style:BundledImageDescription" showIcon="false" sizeComputationExpression="2" shape="dot">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%filter(&quot;Card&quot;)%>">
+              <style xsi:type="style:BundledImageDescription" labelSize="7" showIcon="false" labelExpression="&lt;%min + &quot; : &quot; + max%>" labelPosition="node">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='chocolate']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='chocolate']"/>
+              </style>
+            </conditionnalStyles>
+          </borderedNodeMappings>
+          <subNodeMappings name="Attribute" semanticCandidatesExpression="&lt;%attributes%>" domainClass="Attribute">
+            <style xsi:type="style:BundledImageDescription" labelFormat="bold" showIcon="false" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="ModelElements" deletionDescription="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@toolSections.0/@ownedTools[name='Elements']/@tools.1" semanticCandidatesExpression="&lt;%modelElements%>" domainClass="EObject">
+            <style xsi:type="style:BundledImageDescription" labelFormat="bold" showIcon="false" labelExpression="&lt;%getNameIfExist()%>" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" showIcon="false" roundedCorner="true" backgroundStyle="GradientTopToBottom">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+          <conditionnalStyles predicateExpression="&lt;%eContainer(&quot;FeatureDiagram&quot;).root == self %>">
+            <style xsi:type="style:FlatContainerStyleDescription" showIcon="false" tooltipExpression="Root feature" roundedCorner="true" backgroundStyle="GradientTopToBottom">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%self.owningOperator.filter(&quot;Opt&quot;) %>">
+            <style xsi:type="style:FlatContainerStyleDescription" showIcon="false" tooltipExpression="Optional Feature" roundedCorner="true" backgroundStyle="GradientTopToBottom">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <toolSections name="Domain Model Elements">
+          <ownedTools xsi:type="tool:ToolGroup" name="Elements">
+            <tools xsi:type="tool:ContainerDropDescription" name="Drop Model Elements" forceRefresh="true" mappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@subNodeMappings[name='ModelElements']" dragSource="BOTH" moveEdges="true">
+              <oldContainer name="oldSemanticContainer"/>
+              <newContainer name="newSemanticContainer"/>
+              <element name="element"/>
+              <newViewContainer name="newContainerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="modelElements" valueExpression="&lt;%$element%>"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:DeleteElementDescription" name="ModelElements" forceRefresh="true">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <containerView name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.target%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="modelElements" elementExpression="&lt;%$element%>">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                      <subModelOperations xsi:type="tool:DeleteView"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+          <subSections name="Add Domain model element">
+            <ownedTools xsi:type="tool:PopupMenu" name="Add Domain Model Element" forceRefresh="true">
+              <menuItemDescription xsi:type="tool:OperationAction" name="Add Domain Model Element" precondition="&lt;%filter(&quot;Feature&quot;)%>" forceRefresh="true">
+                <view name="views"/>
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ExternalJavaActionCall" name="Add Domain Model Element" forceRefresh="true" action="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@toolSections.0/@subSections[name='Add%20Domain%20model%20element']/@ownedTools[name='Add%20Domain%20Model%20Element']/@menuItemDescription.0/@initialOperation/@firstModelOperations/@subModelOperations.0">
+                    <subModelOperations xsi:type="tool:ExternalJavaAction" name="Add Model Element" forceRefresh="true" id="fr.inria.featureDiagramEditor.ui.wizard.Call">
+                      <parameters name="Model" value="&lt;%self%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="modelElements" valueExpression="&lt;%$wizardReturnedElement%>"/>
+                    </subModelOperations>
+                  </firstModelOperations>
+                </initialOperation>
+              </menuItemDescription>
+            </ownedTools>
+          </subSections>
+        </toolSections>
+        <toolSections name="FeatureSection" label="Features">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Feature" containerMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/Feature.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Feature" referenceName="features">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="new Feature"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="Label Feature">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="root Feature" containerMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/RootFeature.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Feature" referenceName="features" variableName="feature">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="root Feature">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self.owningFeatureDiagram%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="root" valueExpression="&lt;%$feature%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Features" mappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']" dragSource="BOTH" moveEdges="true">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="features" valueExpression="&lt;%$element%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteFeature">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:RemoveElement"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="Focus on feature" forceRefresh="true">
+            <filters elementsToListen="&lt;%self%>"/>
+            <containerViewVariable name="containerView"/>
+            <containerVariable name="container"/>
+            <representationNameVariable name="diagramName"/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="AttributesSection" label="Attributes">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Attribute" nodeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@subNodeMappings[name='Attribute']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/Attribute.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Attribute" referenceName="attributes">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="new att"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="Label Attribute">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Attribute" dragSource="BOTH">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="attributes" valueExpression="&lt;%$element%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="OperatorsSection" label="Operators">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Opt" nodeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/Optional.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Opt" referenceName="operator">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Opt"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="Label Operator ">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Or" nodeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/Or.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Or" referenceName="operator">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Or"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Alternative" nodeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/Xor.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Alternative" referenceName="operator">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Alternative"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Mandatory" nodeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/Mandatory.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Mandatory" referenceName="operator">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Mandatory"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Card" nodeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@containerMappings[name='Feature']/@borderedNodeMappings[name='Operator']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/Card.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Card" referenceName="operator">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Card"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="ConnectorsSection" label="Connectors">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Require" edgeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='ConstraintEdge']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/Require.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer(&quot;FeatureDiagram&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="ConstraintEdge" referenceName="constraintEdges">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="Require" referenceName="constraint" variableName="require"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="&lt;%$source%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="&lt;%$target%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Mutex" edgeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='ConstraintEdge']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/Mutex.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer(&quot;FeatureDiagram&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="ConstraintEdge" referenceName="constraintEdges">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="Mutex" referenceName="constraint"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="&lt;%$source%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="&lt;%$target%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Operators to features " edgeMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Diagram%20Editor']/@defaultLayer/@edgeMappings[name='Operator%20to%20feature']" iconPath="/fr.inria.featureDiagramEditor.ui/icons/OperatorConnection.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="features" valueExpression="&lt;%$target%>">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="owningOperator" valueExpression="&lt;%$source%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteOperatorToFeatures">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.sourceNode.target%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="features" elementExpression="&lt;%$elementView.targetNode.target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Feature Tree" domainClass="FeatureDiagram">
+      <ownedLineMappings name="Root line" domainClass="Feature" semanticCandidatesExpression="&lt;%root%>">
+        <ownedSubLines name="aFeatures" reusedSubLines="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Tree']/@ownedLineMappings[name='Root%20line']/@ownedSubLines[name='aFeatures']" reusedInMappings="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Feature%20Tree']/@ownedLineMappings[name='Root%20line']/@ownedSubLines[name='aFeatures']" domainClass="Feature" semanticCandidatesExpression="&lt;%operator.features%>"/>
+      </ownedLineMappings>
+      <ownedColumnMappings name="FD.Operator" label="Operator" headerLabelExpression="Operator" featureName="operator" labelExpression="&lt;%owningOperator.eClass.name%>"/>
+      <ownedColumnMappings name="Feature.Name" label="Name" headerLabelExpression="Feature Name" featureName="name"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Features RelationShip" domainClass="FeatureDiagram">
+      <ownedLineMappings name="FD.FeaturesRelationship.line" domainClass="Feature" semanticCandidatesExpression="&lt;%features%>"/>
+      <ownedColumnMappings name="FD.FeaturesRelationship.column" domainClass="Feature" semanticCandidatesExpression="&lt;%features%>"/>
+      <intersection name="FD.FeaturesRelationship" lineMapping="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Features%20RelationShip']/@ownedLineMappings[name='FD.FeaturesRelationship.line']" columnMapping="//@ownedViewpoints[name='Feature%20Diagram']/@ownedRepresentations[name='Features%20RelationShip']/@ownedColumnMappings.0" labelExpression="&lt;%constraint.eClass.name%>" useDomainClass="true" columnFinderExpression="&lt;%target%>" lineFinderExpression="&lt;%source%>" domainClass="ConstraintEdge"/>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="fr.inria.featureDiagramEditor.ui.FeatureServices"/>
+  </ownedViewpoints>
+</description:Group>

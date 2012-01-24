@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmlns:flow="http://www.obeo.fr/dsl/designer/sample/flow" xmi:id="_wF3H8IgQEd-qoa95QEXxIw" root="_xzcEEIgQEd-qoa95QEXxIw">
+  <features xmi:id="_xzcEEIgQEd-qoa95QEXxIw" name="System">
+    <operator xsi:type="featureDiagram:And" xmi:id="_5rlsEIgQEd-qoa95QEXxIw" features="_zt2iUIgQEd-qoa95QEXxIw" name="And"/>
+  </features>
+  <features xmi:id="_zt2iUIgQEd-qoa95QEXxIw" name="Global Architecture" owningOperator="_5rlsEIgQEd-qoa95QEXxIw">
+    <operator xsi:type="featureDiagram:Xor" xmi:id="_BBN10IgREd-qoa95QEXxIw" features="_2E__4IgQEd-qoa95QEXxIw _302z8IgQEd-qoa95QEXxIw" name="Xor"/>
+    <models xmi:id="_D3IdkIgSEd-qoa95QEXxIw" name="new model">
+      <elements xsi:type="flow:CompositeProcessor" xmi:id="_GHyRkIgSEd-qoa95QEXxIw" name="camera1">
+        <elements xsi:type="flow:DataSource" xmi:id="_GHyRkYgSEd-qoa95QEXxIw" volume="5" name="outdoor">
+          <outgoingFlows xmi:id="_GHyRkogSEd-qoa95QEXxIw" usage="low" load="5">
+            <target xsi:type="flow:Processor" href="file:/C:/Users/mgouyett/Desktop/TestFD3/runtime-EclipseApplicationFlow/fr.inria.featureDiagramEditor.sampleFlow/samples/twoArchitectures.flow#_Tpt-OzpCEd-5SZ8AQ2heng"/>
+          </outgoingFlows>
+        </elements>
+      </elements>
+      <elements xsi:type="flow:CompositeProcessor" xmi:id="_JFlfcIgSEd-qoa95QEXxIw" name="camera2">
+        <elements xsi:type="flow:DataSource" xmi:id="_JFlfcYgSEd-qoa95QEXxIw" volume="5" name="outdoor sensor">
+          <outgoingFlows xmi:id="_JFlfcogSEd-qoa95QEXxIw" usage="low" load="5">
+            <target xsi:type="flow:Processor" href="file:/C:/Users/mgouyett/Desktop/TestFD3/runtime-EclipseApplicationFlow/fr.inria.featureDiagramEditor.sampleFlow/samples/twoArchitectures.flow#_Tpt-OzpCEd-5SZ8AQ2heng"/>
+          </outgoingFlows>
+        </elements>
+      </elements>
+      <elements xsi:type="flow:CompositeProcessor" xmi:id="_ZK9AgIgSEd-qoa95QEXxIw" consumption="480" name="processing unit" temperature="50" weight="80">
+        <elements xsi:type="flow:Processor" xmi:id="_ZK9Ag4gSEd-qoa95QEXxIw" capacity="5" load="5" consumption="50" name="input controller" volume="5">
+          <outgoingFlows xmi:id="_ZK9AhIgSEd-qoa95QEXxIw" usage="low" load="5" target="_ZK9AhogSEd-qoa95QEXxIw"/>
+        </elements>
+        <elements xsi:type="flow:Processor" xmi:id="_ZK9AhYgSEd-qoa95QEXxIw" incomingFlows="_ZK9AiIgSEd-qoa95QEXxIw" capacity="15" load="15" consumption="150" name="output controller" volume="15"/>
+        <elements xsi:type="flow:Processor" xmi:id="_ZK9AhogSEd-qoa95QEXxIw" incomingFlows="_ZK9AhIgSEd-qoa95QEXxIw" capacity="15" load="15" consumption="150" name="data pocessor" volume="15">
+          <outgoingFlows xmi:id="_ZK9Ah4gSEd-qoa95QEXxIw" usage="high" load="15"/>
+          <outgoingFlows xmi:id="_ZK9AiIgSEd-qoa95QEXxIw" usage="high" load="15" target="_ZK9AhYgSEd-qoa95QEXxIw"/>
+        </elements>
+        <elements xsi:type="flow:Fan" xmi:id="_ZK9AiYgSEd-qoa95QEXxIw" consumption="30" speed="3000" weight="40"/>
+      </elements>
+    </models>
+  </features>
+  <features xmi:id="_2E__4IgQEd-qoa95QEXxIw" name="powered" owningOperator="_BBN10IgREd-qoa95QEXxIw">
+    <models xmi:id="_On2DkIgREd-qoa95QEXxIw" name="new model">
+      <elements xsi:type="flow:Processor" xmi:id="_s7MtUIgREd-qoa95QEXxIw" capacity="5" load="5" consumption="50" name="input controller" volume="5">
+        <outgoingFlows xmi:id="_s7MtUYgREd-qoa95QEXxIw" usage="low" load="5">
+          <target xsi:type="flow:Processor" href="file:/C:/Users/mgouyett/Desktop/TestFD3/runtime-EclipseApplicationFlow/fr.inria.featureDiagramEditor.sampleFlow/samples/twoArchitectures.flow#_Tpt-QDpCEd-5SZ8AQ2heng"/>
+        </outgoingFlows>
+      </elements>
+    </models>
+  </features>
+  <features xmi:id="_302z8IgQEd-qoa95QEXxIw" name="twoInputs" owningOperator="_BBN10IgREd-qoa95QEXxIw">
+    <models xmi:id="_O4P3EIgREd-qoa95QEXxIw" name="new model">
+      <elements xsi:type="flow:PowerOutput" xmi:id="_yS-DQIgREd-qoa95QEXxIw"/>
+      <elements xsi:type="flow:PowerLink" xmi:id="_yS-DQYgREd-qoa95QEXxIw"/>
+      <elements xsi:type="flow:PowerInput" xmi:id="_yS-DQogREd-qoa95QEXxIw"/>
+    </models>
+  </features>
+</featureDiagram:FeatureDiagram>

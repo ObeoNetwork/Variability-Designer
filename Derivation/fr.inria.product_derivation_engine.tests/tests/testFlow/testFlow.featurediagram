@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_196K8HSVEeCKbIkGdwPQ-A" root="_7ocE0HSVEeCKbIkGdwPQ-A">
+  <features xmi:id="_7ocE0HSVEeCKbIkGdwPQ-A" name="System">
+    <operator xsi:type="featureDiagram:Alternative" xmi:id="__UECAHSVEeCKbIkGdwPQ-A" features="_8-WH0HSVEeCKbIkGdwPQ-A _9y0RsHSVEeCKbIkGdwPQ-A" name="Alternative"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_-mj50PPsEeCdM6T_ndn6SA" features="_94XXEPPsEeCdM6T_ndn6SA" name="Opt"/>
+    <modelElements href="My.flow#/"/>
+  </features>
+  <features xmi:id="_8-WH0HSVEeCKbIkGdwPQ-A" name="a" owningOperator="__UECAHSVEeCKbIkGdwPQ-A">
+    <modelElements href="My.flow#//@elements.0"/>
+  </features>
+  <features xmi:id="_9y0RsHSVEeCKbIkGdwPQ-A" name="b" owningOperator="__UECAHSVEeCKbIkGdwPQ-A">
+    <modelElements href="My.flow#//@elements.1"/>
+  </features>
+  <features xmi:id="_94XXEPPsEeCdM6T_ndn6SA" name="c" owningOperator="_-mj50PPsEeCdM6T_ndn6SA">
+    <modelElements href="My.flow#//@elements.2"/>
+  </features>
+</featureDiagram:FeatureDiagram>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_lilm4JMbEd-pb_XvB-Fkqw" root="_m6z-EJMbEd-pb_XvB-Fkqw">
+  <features xmi:id="_m6z-EJMbEd-pb_XvB-Fkqw" name="root Feature">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_ontkwJMbEd-pb_XvB-Fkqw" features="_neONIJMbEd-pb_XvB-Fkqw _oC0H8JMbEd-pb_XvB-Fkqw" name="Or"/>
+  </features>
+  <features xmi:id="_neONIJMbEd-pb_XvB-Fkqw" name="a" owningOperator="_ontkwJMbEd-pb_XvB-Fkqw _bdPSEJMcEd-ZRqY9TJa-1Q">
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_wJ48wJMbEd-pb_XvB-Fkqw" features="_ur3fkJMbEd-pb_XvB-Fkqw" name="Opt"/>
+  </features>
+  <features xmi:id="_oC0H8JMbEd-pb_XvB-Fkqw" name="b" owningOperator="_ontkwJMbEd-pb_XvB-Fkqw"/>
+  <features xmi:id="_ur3fkJMbEd-pb_XvB-Fkqw" name="c" owningOperator="_wJ48wJMbEd-pb_XvB-Fkqw">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_bdPSEJMcEd-ZRqY9TJa-1Q" features="_neONIJMbEd-pb_XvB-Fkqw" name="Card" max="1"/>
+  </features>
+</featureDiagram:FeatureDiagram>

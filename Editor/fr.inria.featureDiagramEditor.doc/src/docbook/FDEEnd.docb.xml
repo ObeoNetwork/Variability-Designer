@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2010-2012 Marie Gouyette.
+  INRIA-IRISA- Triskell
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+  
+  Contributors:
+      INRIA-IRISA- Triskell
+      Marie Gouyette - initial API and implementation
+      contact marie.gouyette@gmail.com
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<book lang="en-US">
+  <?ooogenerator OpenOffice.org/2.0$Linux OpenOffice.org_project/680m1$Build-8990?>
+  <?oooversion?>
+  <bookinfo>
+    <pubdate>Build date: @BUILD.DATE@</pubdate>
+    <date>Last modification: $Date:: 2010-05-25 08:39:54#$</date>
+    <author>
+      <firstname> Marie Gouyette</firstname>
+      <firstname/>
+    </author>
+    <title>Feature Diagram Editor End-User documentation</title>
+    <keywordset>
+      <keyword>Feature Diagram Editor</keyword>
+      <keyword>metamodeling</keyword>
+      <keyword>Domain specific language (DSL)</keyword>
+    </keywordset>
+    <subtitle> </subtitle>
+    <bibliomisc>Licence EPL</bibliomisc>
+    <bibliomisc/>
+    <abstract>
+      <para>This documentation presents the use of the feature diagram editor to create feature
+        diagrams that respect some constraints. This feature diagram editor takes part of the ANR
+        Project Movida. </para>
+    </abstract>
+    <publisher>
+      <publishername>INRIA</publishername>
+      <address>
+        <state>France</state>
+        <otheraddr>
+          <ulink url="http://www.inria.fr">http://www.inria.fr</ulink>
+        </otheraddr>
+      </address>
+    </publisher>
+    <confgroup>
+      <conftitle>title</conftitle>
+      <confnum>Reference</confnum>
+      <confsponsor>sponsor</confsponsor>
+    </confgroup>
+  </bookinfo>
+  <preface>
+    <?print-orientation portrait?>
+    <title>Preface</title>
+    <para>Feature models are a way to add variability on models. By variability, we mean to model
+      common and variable parts of a given architecture. An example of use of variability is given
+      by <emphasis role="italic">Software Product Line (SPL)</emphasis> which consists in derive
+      different family of products according to their similarities and differences. Another use is
+      to model different software architecture possible choices. A sample for the feature diagram
+      editor details this aspect. This document present quickly how to install and use the feature
+      diagram editor with a<ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/FeatureDiagramEditorDemo.htm"> sample wink
+        video</ulink>. For more information about this editor please refer to the <ulink
+        url="@ONLINE.OR.LOCAL@/fr.inria.featureDiagramEditor.doc/build/@OUTPUT.VERSION@/Movida-FeatureDiagramEditor-Technical-Documentation/index.html"
+        > technical documentation</ulink>.</para>
+  </preface>
+  <chapter>
+    <title>Feature Diagram Editor Overview</title>
+    <para>Many notations exist for feature diagram. The notation used on this feature diagram editor
+      to take into account different needs appears on the different notations. So, features can be
+      linked each other with Mandatory (And), Alternative (Xor) , Or, Cardinality and Optional
+      operators. For technical reasons, the graphical notation for this feature diagram editor is
+      simplified. This tool separate modeling of architecture and modeling of feature diagram that
+      describes the variability of this architecture. However, this tool permits to add Domain Model
+      Elements into the features in the Feature Diagram model. The next section will present the
+      installation of the Feature Diagram Editor, a quickly presentation of use and a <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/FeatureDiagramEditorDemo.htm"> sample wink
+        video</ulink>.</para>
+  </chapter>
+  <chapter>
+    <title>Installation </title>
+    <para>Before installing new Eclipse plugin, you need to install <ulink
+        url="http://www.swi-prolog.org/"> SWI-Prolog</ulink> on your computer. The current version
+      used is the 5.8.3. The next sections can be used only if you do not have a full complete
+      eclipse with the Movida projects such as<emphasis role="bold"> Movida studio</emphasis>. In
+      this case simply open your Eclipse.</para>
+    <para/>
+    <section>
+      <title> Install feature diagram with the Movida studio update site </title>
+      <para>Open your Eclipse and go to <emphasis role="bold">Help -> Install New
+          Software</emphasis>. Before adding the Movida studio update site we need to add the
+        MofScript update site which is used by Praxis.</para>
+      <para>On the new wizard, click on <emphasis role="bold">Add</emphasis> and then fill name as
+          <emphasis role="bold">MofScript</emphasis> and location as <emphasis role="bold"
+          >http://download.eclipse.org/modeling/gmt/mofscript/update/</emphasis> as in the following
+        figure :</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/MofScriptUpdate.png"/></para>
+      <para>Check MofScript on the next wizard, click on Newt on all the following wizards, accept
+        the license and click on<emphasis role="bold"> Finish</emphasis>. Then click on<emphasis
+          role="bold"> Restart Now</emphasis>. </para>
+      <para>When the Eclipse is started again, go again to Help -> Install New Software and click on
+          <emphasis role="bold">Add</emphasis>. Name your new update site <emphasis role="bold"
+          >Movida update site </emphasis> and search the zipped update site <emphasis role="bold">
+          movida_update-5.0.zip</emphasis> through the <emphasis role="bold">Archive</emphasis>
+        button . </para>
+      <para>Check the features as in the following figure : </para>
+      <para><inlinegraphic fileref="FDEEnd_figures/selectFeatureFD.png"/></para>
+      <para>Click on Next on all of the following wizard, accept the license ansd click on Finish.
+        You also need to restart your Eclipse.</para>
+    </section>
+    <section>
+      <title> Install feature diagram editor separately </title>
+      <para/>
+      <para> To install the Feature Diagram Editor you need to have an Eclipse with Obeo Designer
+        and the Praxis Constraints installed :<orderedlist>
+          <listitem>
+            <para>Install Acceleo update site</para>
+          </listitem>
+          <listitem>
+            <para>Install Obeo Designer Architect update site</para>
+          </listitem>
+          <listitem>
+            <para>Install the license for Obeo Designer (it is a commercial product)</para>
+          </listitem>
+          <listitem>
+            <para>Install Mofscript update site :
+              http://download.eclipse.org/modeling/gmt/mofscript/update/</para>
+          </listitem>
+          <listitem>
+            <para>Then install Praxis update site</para>
+          </listitem>
+        </orderedlist>
+      </para>
+      <para>To install the Feature Diagram editor unzip the update site , open Eclipse and go to
+        Help -> Install New Software. On the new wizard, click on <emphasis role="bold"
+          >Add</emphasis> name your new update site <emphasis role="bold">Feature Diagram Editor
+        </emphasis> and search the zipped update site <emphasis role="bold">
+          fr.inria.featureDiagramEditorOD6.updatesite</emphasis> . </para>
+    </section>
+  </chapter>
+  <chapter>
+    <title> Feature Diagram Editor : Quick presentation</title>
+    <para>This chapter present a very quick of use of Feature Diagram Editor. For more information
+      please refer to the <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/FeatureDiagramEditorDemo.htm"> sample wink
+        video</ulink>.</para>
+    <section>
+      <title>Create a new Feature Diagram Model</title>
+      <para>Our editor needs the use of the <emphasis role="italic">Design</emphasis> perspective
+        like in Obeo Designer to create or use a Domain Specific Language (DSL). So, go to<emphasis
+          role="italic"> Window</emphasis>-><emphasis role="italic"> Open Perspective</emphasis>
+          -><emphasis role="italic"> Other</emphasis> -><emphasis role="italic"> Design</emphasis>.
+        A new view<emphasis role="italic"> Model Explorer </emphasis>appears. </para>
+      <para>To create a new feature model , you can create a new viewpoint project in the<emphasis
+          role="italic"> Model Explorer</emphasis> view (<emphasis role="italic">File</emphasis>
+          -><emphasis role="italic"> New</emphasis> -><emphasis role="italic">Other</emphasis>
+          -><emphasis role="italic"> General</emphasis> -><emphasis role="italic">
+          Project</emphasis>. Call it <emphasis role="bold">featureModel</emphasis>.</para>
+      <para>Then, create a new Session (<emphasis role="italic">File </emphasis>-<emphasis
+          role="italic">> New</emphasis> -><emphasis role="italic"> Other</emphasis>-> <emphasis
+          role="italic">Viewpoint</emphasis> -> <emphasis role="italic">Representation
+          File</emphasis>) .</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/RepresentationFileWizard.PNG"/></para>
+      <para> Click on<emphasis role="italic"> Next</emphasis> and check<emphasis role="italic">
+          empty file</emphasis>.</para>
+      <para>You obtain a wizard as in the following figure :</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/SessionName.png"/></para>
+      <para>Click on<emphasis role="italic"> Finish</emphasis>.</para>
+      <para>Then, your Eclipse 's view looks like this: </para>
+      <para><inlinegraphic fileref="FDEEnd_figures/DesignPerspective.png"/></para>
+      <para>
+        <important>
+          <title> Session need to be opened</title>
+          <para> Here session is opened. To open a closed session simply double click on the .aird
+            file in the<emphasis role="italic"> Model Explorer</emphasis> view.</para>
+        </important>
+      </para>
+      <para> Next, right click on the session (here<emphasis role="bold"> mySession.aird</emphasis>
+        ) -><emphasis role="italic"> Add Model</emphasis> . You obtain the following wizard : </para>
+      <para/>
+      <para><inlinegraphic fileref="FDEEnd_figures/AddSemanticResource.png"/></para>
+      <para/>
+      <para>You can choose a EMF feature diagram model ever created with the feature diagram EMF
+        editor proposed with this graphical editor or create a new EMF model selecting<emphasis
+          role="italic"> Create resource</emphasis>, <emphasis role="italic">Next</emphasis> and
+          <emphasis role="bold">http://www.kermeta.org/featureDiagram</emphasis> as metamodel URI as
+        shown in the following figure.</para>
+      <para/>
+      <para><inlinegraphic fileref="FDEEnd_figures/chooseUri.png"/></para>
+      <para>Select<emphasis role="italic"> FeatureDiagram </emphasis>as Model Object as shown on the
+        following figure : </para>
+      <para><inlinegraphic fileref="FDEEnd_figures/selectRoot.png"/></para>
+      <para>Now, you can choose the name of your new feature model, on the following figure it is
+        fd.featurediagram :</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/nameFeatureModel.png"/></para>
+      <para>
+        <important>
+          <title> Use .featurediagram extension</title>
+          <para> Do no forget to give the extension <emphasis role="bold">
+              .featurediagram</emphasis> to the new EMF file created by this way. Otherwise, you
+            could not use the Praxis contraints associated to this feature diagram editor on
+            it.</para>
+        </important>
+      </para>
+      <para>Click on Finish. A new wizard appears as in the following figure, select the
+          viewpoint<emphasis role="italic"> Design </emphasis>on it.</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/selectFDViewpoint.png"/></para>
+      <para>Then click on the little arrow at the left of the session file (.aird) in the<emphasis
+          role="italic"> Model Explorer</emphasis> view. You obtain the following figure : </para>
+      <para><inlinegraphic fileref="FDEEnd_figures/OpenFeatureDiagramEditor.png"/></para>
+      <para>Right click on<emphasis role="bold"> Feature Diagram true </emphasis>selected in the
+        wizard above, <emphasis role="italic">New Representation </emphasis>-> <emphasis
+          role="italic"> new Feature Diagram Editor</emphasis>.</para>
+      <para> Double click on <emphasis role="italic"> new Feature Diagram Editor</emphasis>, you
+        obtain a graphical editor as in the following figure : </para>
+      <para><inlinegraphic fileref="FDEEnd_figures/FeatureDiagramGraphicalEditor.PNG"/></para>
+      <para> </para>
+    </section>
+    <section>
+      <title> Create model elements with the palette </title>
+      <para>To add graphical element on the feature diagram simply click on the desired tool on drag
+        and drop it in the feature diagram. The following figure presents the feature diagram
+        editor.</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/exampleFD.png"/></para>
+      <para>Now, we present the elements that we can see on the palette : <orderedlist>
+          <listitem>
+            <para><emphasis role="bold">Root feature </emphasis>: in case of features model as a
+              tree (boolean graphStyleTree at true on FeatureDiagram element) , this feature is the
+              top node parent of any other features.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Feature</emphasis> : a simple feature. Features are used to
+              represent different alternatives.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Attribute</emphasis> : an attribute (with a name, a value
+              and a type) can be added into Features adding information.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Opt </emphasis>: the feature children of this operator are
+              optional. in term of choices of alternatives. The optional features ( like feature a
+              of the example) are colored in orange.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Or</emphasis> : this operator means that at least on of its
+              features must be chosen.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Alternative</emphasis> : (Xor) this operator means that only
+              one feature must be chosen between its features. It corresponds to the "Xor" operator
+              in the previous version.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Mandatory</emphasis> : (And) all features contained on this
+              operator must be chosen. This operator corresponds to a"and" operator of the previous
+              version.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Card</emphasis> : this operator permits to choose a given
+              number of features children included between a lower bound (cardinality minimum) and a
+              upper bound (cardinality maximum).</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Require</emphasis> : this graphical constraint represents a
+              feature that require another one.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Mutex</emphasis> : this graphical constraint link the
+              features that are mutually exclusive each other. It means that these two features
+              cannot be chosen together.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Operator to features </emphasis>: it is a link that rely
+              operators to their features.</para>
+          </listitem>
+        </orderedlist></para>
+      <para> The next section presents how to add domain model element into features.</para>
+    </section>
+    <section>
+      <title> Add domain model elements into features</title>
+      <para>You can use two different ways to add Domain Model Element into feature. However, in
+        many cases we prefer add Domain Model Elements by Drag and Drop.</para>
+      <section>
+        <title> Add Domain Model Elements by Drag and Drop </title>
+        <para>A first step before adding Domain Model Elements by Drag and Drop into Feature model
+          is adding Domain model in the session. We suppose to have the following flow model called
+          system.flow in our<emphasis role="bold"> featureModel project</emphasis>.</para>
+        <para><inlinegraphic fileref="FDEEnd_figures/flowmodel.png"/></para>
+        <para>To add this model into the session, right click on mySession.aird -> <emphasis
+            role="italic">Add Model</emphasis>. Check <emphasis role="italic">Add existing
+            resource</emphasis> and click on<emphasis role="italic"> Finish</emphasis>. Then click
+            on<emphasis role="italic"> Browse Workspace</emphasis> and search <emphasis role="bold"
+            >session.flow</emphasis> in the<emphasis role="bold"> featureModel
+          project.</emphasis></para>
+        <para/>
+        <para>Your Eclipse seems to be like in the following figure : </para>
+        <para><inlinegraphic fileref="FDEEnd_figures/SelectDomainModelElements.png"/></para>
+        <para>To add a Domain Model Element on a given feature (here adding Composite Processor
+          proc1 on feature b), simply click on Composite Processor proc1 and drag it into feature b.
+          You obtain the following figure : </para>
+        <para><inlinegraphic fileref="FDEEnd_figures/addDomainModelElement.png"/></para>
+      </section>
+      <section>
+        <title> Another way to add Domain Model Elements</title>
+        <para>Domain model elements are directly referenced by the features. So, to add Domain model
+          element on a feature, simply right click on the Feature -> Add Domain Model Element -> Add
+          Domain Model Element. A wizard appears. Click on load button to select a domain model
+          element model. The next wizard page permits to select the desired Domain Model elements
+          and add it into the feature. </para>
+        <para>At the moment, the editor display the metaclass' name of the added object. </para>
+        <para>The following wizard permits to select any model file based on EMF by clicking on Load
+          and search the file.</para>
+        <para><inlinegraphic fileref="FDEEnd_figures/wizardLoad.png"/></para>
+        <para>Then a second wizard page permits to select a domain model element. </para>
+        <para><inlinegraphic fileref="FDEEnd_figures/wizardSelectDomainModelElement.png"/></para>
+        <para>So, the composite processor and the Fan are added directly on the feature.</para>
+        <para>You obtain the same as the last figure of the section 3.3.1.</para>
+      </section>
+    </section>
+    <section>
+      <title> Filter elements to display in the graphical editor </title>
+      <para>You can filter elements you want to display or not in the Outline view. You can hide two
+        elements : attributes and all domain model elements (Model Elements) . To do this, click on
+        the icon outlined in blue, and select elements that you do not want to appear. You can also
+        fold and operator by clicking on the - outlined in red in the following figure.</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/filter.png"/></para>
+      <para>So, features d and e are hidden and a + is displayed near theAlternative operator to
+        present that it can be unfolded as in the following picture.</para>
+      <para>
+        <inlinegraphic fileref="FDEEnd_figures/operatordeplie.png"/></para>
+      <para>So, we have presented how to add Domain Model Element to the features. </para>
+      <para>The next section shows how to another view on the feature diagram. </para>
+    </section>
+    <section id="TreeAndMatrixView">
+      <title>Use Tree and RelationShip representation</title>
+      <para> Feature Diagram Editor not contains not only a graphical representation, it also
+        contains a tree and relationship representation (used to define what features are linked
+        with a given mutex or require).</para>
+      <para>Fpr this part, we have added a require constraint (in blue) and a mutex constraint (in
+        red) :</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/otherRepresentations.PNG"/></para>
+      <para>To create respectively a tree and relationship representation, right click on the
+          <emphasis role="italic">Feature Diagram true</emphasis> (selected in the figure above)
+          -><emphasis role="italic"> New Representation</emphasis> -><emphasis role="italic"> new
+          Feature Tree </emphasis>(respectively <emphasis role="italic">new Feature
+          Relationship</emphasis>).</para>
+      <para>You obtain the following in your Eclipse :</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/addIOtherRepresentations.PNG"/></para>
+      <section>
+        <title> Use tree representation</title>
+        <para>Double click on new Feature Tree. You obtain the following representation in your
+          Eclipse :</para>
+        <para><inlinegraphic fileref="FDEEnd_figures/FeatureTreeRepresentation.PNG"/></para>
+      </section>
+      <section>
+        <title> Use relationship representation</title>
+        <para>Double click on<emphasis role="italic"> new Feature RelationShip</emphasis>. You
+          obtain the following representation in your Eclipse : </para>
+        <para><inlinegraphic fileref="FDEEnd_figures/RelationShipRepresentation.PNG"/></para>
+        <para>We found here a require between  g and h and a mutex between  e and f.</para>
+      </section>
+      <para> We have presented all Feature Diagram Editor Representations.The next section shows how
+        to check Praxis constraints on the feature model.</para>
+    </section>
+    <section id="CheckPraxisConstraints">
+      <title> Check Praxis Constraints </title>
+      <para> To check the Praxis constraints written for feature diagram go to the <emphasis
+          role="italic">Project Explorer </emphasis> view and right click on the EMF model contained
+        by the session (file .aird) , -><emphasis role="italic"> Praxis</emphasis>-> <emphasis
+          role="italic">Activate Consistency Management.</emphasis> We have added a second feature
+        called "a" and the error is explained on the Eclipse Problem view. In our case two features
+        cannot have the same name.</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/erreurPraxis.png"/></para>
+      <para>If you have installed the OCL constraints, you can also retrieve this error with these
+        constraints as presented in the following section.</para>
+      <para/>
+    </section>
+    <section>
+      <title> Check OCL constraints</title>
+      <para>If you have installed the OCL constraints, you need to check before if the constraints
+        are enabled going on Window-> Preferences -> Model Validation -> Constraints as in the
+        following figure : </para>
+      <para><inlinegraphic fileref="FDEEnd_figures/ModelValidationPreferences.png"/></para>
+      <para>All constraints should be checked. Then, click on the graphical feature diagram and go
+        the the Eclipse menu bar -><emphasis role="italic"> Diagram</emphasis> -><emphasis
+          role="italic"> Validate</emphasis>. You obtain a red decorator on the error as in nthe
+        following figure :</para>
+      <para><inlinegraphic fileref="FDEEnd_figures/OCLConstraints.png"/></para>
+      <para>The two first errors in the Problem view are for the OCL constraiints and the third is
+        the error detected by Praxis.</para>
+    </section>
+  </chapter>
+  <chapter>
+    <title> Conclusion</title>
+    <para> This document made a quick tour of the Feature Diagram Editor functionalities. For more
+      details please refer to the <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/FeatureDiagramEditorDemo.htm"> wink
+        video</ulink> . An example is also available on <emphasis role="bold">
+        fr.inria.featureDiagramEditor.praxisConstraints.tests</emphasis> (which is the contraints
+      test project). To retrieve this project go to<emphasis role="italic">
+        File</emphasis>-><emphasis role="italic"> New</emphasis> -><emphasis role="italic">
+        Example</emphasis> -><emphasis role="italic"> Feature Diagram Editor Sample</emphasis> ->
+        <emphasis role="italic">Feature Diagram Editor Test Constraints</emphasis>. Then you can
+      click on the session files (.aird) and open it. If it does not work, select <emphasis
+        role="italic">ViewPoint Selection </emphasis>and click on<emphasis role="italic">
+        Design</emphasis>. Then you can test the Praxis Constraints as shown in the section <link
+        linkend="CheckPraxisConstraints"> Check Praxis Constraints </link>.</para>
+  </chapter>
+</book>

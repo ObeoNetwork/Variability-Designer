@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- 
+ * Copyright (c) 2010-2012 Marie Gouyette.
+ * INRIA-IRISA- Triskell
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     INRIA-IRISA- Triskell
+ *     Marie Gouyette - initial API and implementation
+ *     contact marie.gouyette@gmail.com
+-->
+
+<toc label="Feature Diagram Editor End-User documentation" topic="build/eclipse.help/FDEEnd/index.html">
+   <topic label="Preface" href="build/eclipse.help/FDEEnd/pr01.html"/>
+   <topic label="Feature Diagram Editor Overview" href="build/eclipse.help/FDEEnd/ch01.html"/>
+   <topic label="Installation " href="build/eclipse.help/FDEEnd/ch02.html">
+      <topic label=" Install feature diagram with the Movida studio update site " href="build/eclipse.help/FDEEnd/ch02.html#d0e86"/>
+      <topic label=" Install feature diagram editor separately " href="build/eclipse.help/FDEEnd/ch02s02.html"/>
+   </topic>
+   <topic label=" Feature Diagram Editor : Quick presentation" href="build/eclipse.help/FDEEnd/ch03.html">
+      <topic label="Create a new Feature Diagram Model" href="build/eclipse.help/FDEEnd/ch03.html#d0e177"/>
+      <topic label=" Create model elements with the palette " href="build/eclipse.help/FDEEnd/ch03s02.html"/>
+      <topic label=" Add domain model elements into features" href="build/eclipse.help/FDEEnd/ch03s03.html">
+         <topic label=" Add Domain Model Elements by Drag and Drop " href="build/eclipse.help/FDEEnd/ch03s03.html#d0e428"/>
+         <topic label=" Another way to add Domain Model Elements" href="build/eclipse.help/FDEEnd/ch03s03.html#d0e466"/>
+      </topic>
+      <topic label=" Filter elements to display in the graphical editor " href="build/eclipse.help/FDEEnd/ch03s04.html"/>
+      <topic label="Use Tree and RelationShip representation" href="build/eclipse.help/FDEEnd/ch03s05.html">
+         <topic label=" Use tree representation" href="build/eclipse.help/FDEEnd/ch03s05.html#d0e528"/>
+         <topic label=" Use relationship representation" href="build/eclipse.help/FDEEnd/ch03s05.html#d0e535"/>
+      </topic>
+      <topic label=" Check Praxis Constraints " href="build/eclipse.help/FDEEnd/ch03s06.html"/>
+      <topic label=" Check OCL constraints" href="build/eclipse.help/FDEEnd/ch03s07.html"/>
+   </topic>
+   <topic label=" Conclusion" href="build/eclipse.help/FDEEnd/ch04.html"/>
+</toc>

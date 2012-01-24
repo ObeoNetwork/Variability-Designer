@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="ASCII"?>
+<rsm:RuleSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rsm="fr.lip6.src.MBB" name="featureDiagramEditorPraxisConstraints">
+  <rules name="noTwoFeaturesHaveSameName" callname="noTwoFeaturesHaveSameName" arity="1" description="Feature has the same name {1} of another feature in the feature diagram ">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,feature , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,feature , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,features , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,features , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,featurediagram , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noMutexReflexive" callname="noMutexReflexive" arity="2" description="The feature  {2} cannot be mutually exclusive with itself">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,mutex , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noRequireReflexive" callname="noRequireReflexive" arity="2" description="The feature  {2} cannot require  itself">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,require , D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noCyclesOnRequire" callname="noCyclesOnRequire" arity="3" description="If feature {2} requires feature {3}, feature {3} cannot requires feature {2}">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,features , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,features , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,constraintedge , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,constraintedge , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraintedges , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraintedges , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,featurediagram , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,require , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,require , D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noBothRequireAndMutexOnSameFeatures" callname="noBothRequireAndMutexOnSameFeatures" arity="5" description="There cannot have both mutex and require constraints between the same pair of features, {4} and {5}">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,mutex , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraintedges , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraintedges , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,constraintedges , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,constraintedge , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,constraintedge , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,constraintedge , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,require , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="create(A,require , D)"/>
+    </dependencies>
+  </rules>
+  <rules name="minCardLargerThanZero" callname="minCardLargerThanZero" arity="4" description=" cardinality minimum on  operator card on feature {4}  must be equal or larger than zero ">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,operator , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,min , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noMinGreaterThanMax" callname="noMinGreaterThanMax" arity="3" description=" Cardinality maximum on operator card on feature {3} must be equal and greater than cardinality minimum">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,max , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,operator , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,min , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noMaxLessThanMinusOne" callname="noMaxLessThanMinusOne" arity="3" description=" Cardinality maximum on operator card on feature {3} must be greater and equal than minus one">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,max , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,operator , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="nbFeaturesMustBeMoreThanMin" callname="nbFeaturesMustBeMoreThanMin" arity="3" description="The number of children features of the operator Card on the feature {3} must be equal or more than the minimum cardinality">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,operator , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,min , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="orOperatorMustHaveAtLeastTwoOperands" callname="orOperatorMustHaveAtLeastTwoOperands" arity="3" description="The or operator on the feature {3} must have at least two features  children">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noAncestorFeatureAsChildren" callname="noAncestorFeatureAsChildren" arity="5" description="The feature {4} cannot contains one of its ancestors {3} as child">
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,operator , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,features , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,operator , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:InstanceEventDependency">
+      <patterns code="addReference(A,owningOperator , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="altOperatorMustHaveAtLeastTwoOperands" callname="altOperatorMustHaveAtLeastTwoOperands" arity="3" description="The Alternative operator on the feature {3} must have at least two features  children">
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,operator , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noMutexBetweenMandatoryFeatureChildren" callname="noMutexBetweenMandatoryFeatureChildren" arity="7" description="We cannot have a mutex between Feature {4} and Feature {5} both referenced by a mandatory operator ">
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noMutexBetweenFeatureAndAncestor" callname="noMutexBetweenFeatureAndAncestor" arity="5" description="We cannot have a mutex between a Feature {4} and one of its ancestor {3} ">
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="create(A,mutex , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="create(A,mutex , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+  </rules>
+  <rules name="noSeveralMutexOnSameFeature" callname="noSeveralMutexOnSameFeature" arity="6" description="There cannot have several mutex between the same pair of features {3} {4}">
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addProperty(A,name , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="create(A,mutex , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="create(A,mutex , D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,constraint , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,target , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+    <dependencies xsi:type="rsm:EventDependency">
+      <patterns code="addReference(A,source , C, D)"/>
+    </dependencies>
+  </rules>
+</rsm:RuleSet>

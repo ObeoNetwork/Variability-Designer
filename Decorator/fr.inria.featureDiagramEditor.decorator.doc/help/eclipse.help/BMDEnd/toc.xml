@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<toc label="Generic Decorator End-User documentation" topic="build/eclipse.help/BMDEnd/index.html">
+   <topic label="Preface" href="build/eclipse.help/BMDEnd/pr01.html"/>
+   <topic label="Installation " href="build/eclipse.help/BMDEnd/ch01.html"/>
+   <topic label=" Generic Decorator Engine : Quick presentation" href="build/eclipse.help/BMDEnd/ch02.html">
+      <topic label="Flow Example presentation" href="build/eclipse.help/BMDEnd/ch02.html#d0e107"/>
+      <topic label=" Enable Base Model and Derivation Decorator" href="build/eclipse.help/BMDEnd/ch02s02.html"/>
+      <topic label=" How to use Base Model Decorator" href="build/eclipse.help/BMDEnd/ch02s03.html"/>
+      <topic label=" How to use Derivation Decorator" href="build/eclipse.help/BMDEnd/ch02s04.html"/>
+   </topic>
+   <topic label=" Conclusion" href="build/eclipse.help/BMDEnd/ch03.html"/>
+</toc>

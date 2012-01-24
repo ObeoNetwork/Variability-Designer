@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_JtHA0HSTEeCKbIkGdwPQ-A" root="_NUMcQHSTEeCKbIkGdwPQ-A">
+  <features xmi:id="_NUMcQHSTEeCKbIkGdwPQ-A" name="Car">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_Ufu14HSTEeCKbIkGdwPQ-A" features="_OonRgHSTEeCKbIkGdwPQ-A _O4F38HSTEeCKbIkGdwPQ-A _PHkeYHSTEeCKbIkGdwPQ-A" name="Card" max="3"/>
+    <modelElements href="car.ecore#//Car"/>
+  </features>
+  <features xmi:id="_OonRgHSTEeCKbIkGdwPQ-A" name="GPS" owningOperator="_Ufu14HSTEeCKbIkGdwPQ-A">
+    <modelElements href="car.ecore#//GPS"/>
+  </features>
+  <features xmi:id="_O4F38HSTEeCKbIkGdwPQ-A" name="Radio" owningOperator="_Ufu14HSTEeCKbIkGdwPQ-A">
+    <modelElements href="car.ecore#//Radio"/>
+  </features>
+  <features xmi:id="_PHkeYHSTEeCKbIkGdwPQ-A" name="ABS" owningOperator="_Ufu14HSTEeCKbIkGdwPQ-A">
+    <modelElements href="car.ecore#//ABS"/>
+  </features>
+</featureDiagram:FeatureDiagram>

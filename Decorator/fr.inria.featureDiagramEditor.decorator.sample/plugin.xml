@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!-- 
+ * Copyright (c) 2010-2012 Marie Gouyette.
+ * INRIA-IRISA- Triskell
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     INRIA-IRISA- Triskell
+ *     Marie Gouyette - initial API and implementation
+ *     contact marie.gouyette@gmail.com
+-->
+
+<!-- This plugin deploy an example for the decorator engine -->
+<plugin
+>
+   <extension
+         id="id1"
+         name="Wizard1"
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="fr.inria.featureDiagramEditor.decorator.sample.category"
+            name="Base Model Decorator Sample for Flow "
+            parentCategory="org.eclipse.ui.Examples">
+      </category>
+      <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/fr.inria.featureDiagramEditor.decorator.sample.category"
+            class="fr.inria.featurediagrameditor.decorator.sample.wizard.BaseModelDecoratorFlowSampleWizard"
+            finalPerspective="fr.obeo.dsl.viewpoint.ui.tools.perspective.design"
+            hasPages="false"
+            icon="icons/Feature.png"
+            id="fr.inria.featureDiagramEditor.sample.wizard"
+            name="Sample Flow">
+      </wizard>
+   </extension>
+</plugin>

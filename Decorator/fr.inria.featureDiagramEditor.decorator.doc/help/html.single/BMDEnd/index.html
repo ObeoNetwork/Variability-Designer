@@ -1,0 +1,71 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Generic Decorator End-User documentation</title><link rel="stylesheet" href="css/docbook.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><meta name="description" content="This documentation presents the use of a generic decorator in association with a feature diagram editor. This feature diagram editor permit to model variability of a given architecture model (base model) on a variability model (here feature model). In particular, it presents two kind of generic decorator : a base model decorator that decorates Domain Model Elements (elements from base model) referenced by an optional feature and a derivation decorator that decorates domain model elements referenced by unselected features for derivation.These two decorators are added in the base model modeler. This generic decorator tool and feature diagram editor take part of the ANR Project MOVIDA."><meta name="keywords" content="Base Model Decorator, metamodeling, Software Product Line (SPL)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" lang="en-US"><div class="titlepage"><div><div><h1 class="title"><a name="d0e1"></a>Generic Decorator End-User documentation</h1></div><div><h2 class="subtitle"> </h2></div><div><div class="author"><h3 class="author"><span class="firstname"> Marie Gouyette</span></h3></div></div><div><p class="pubdate">Build date: 17-October-2011</p></div><div><span class="date">Last modification: $Date:: 2010-05-25 08:39:54#$<br></span></div><div><div class="abstract"><p class="title"><b>Abstract</b></p><p>This documentation presents the use of a generic decorator in association with a feature
+        diagram editor. This feature diagram editor permit to model variability of a given
+        architecture model (base model) on a variability model (here feature model). In particular,
+        it presents two kind of generic decorator : a<span class="bold"><strong> base model
+          decorator</strong></span> that decorates Domain Model Elements (elements from base model)
+        referenced by an optional feature and a <span class="bold"><strong>derivation
+          decorator</strong></span> that decorates domain model elements referenced by unselected
+        features for derivation.These two decorators are added in the base model modeler. This
+        generic decorator tool and feature diagram editor take part of the ANR Project MOVIDA.
+      </p></div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="preface"><a href="#d0e57">Preface</a></span></dt><dt><span class="chapter"><a href="#d0e85">1. Installation </a></span></dt><dt><span class="chapter"><a href="#d0e96">2.  Generic Decorator Engine : Quick presentation</a></span></dt><dd><dl><dt><span class="section"><a href="#d0e107">2.1. Flow Example presentation</a></span></dt><dt><span class="section"><a href="#d0e143">2.2.  Enable Base Model and Derivation Decorator</a></span></dt><dt><span class="section"><a href="#d0e188">2.3.  How to use Base Model Decorator</a></span></dt><dt><span class="section"><a href="#d0e210">2.4.  How to use Derivation Decorator</a></span></dt></dl></dd><dt><span class="chapter"><a href="#d0e217">3.  Conclusion</a></span></dt></dl></div><div class="preface" lang="en-US"><div class="titlepage"><div><div><h2 class="title"><a name="d0e57"></a>Preface</h2></div></div></div><p>Feature models are a way to add variability on models. By variability, we mean to model
+      common and variable parts of a given architecture. An example of use of variability is given
+      by <span class="italic">Software Product Line (SPL)</span> which consists in derive
+      different family of products according to their similarities and differences. Another use is
+      to model different software architecture possible choices. The aim of the Base Model Decorator
+      Engine is adding variability information on the base model modeler by adding a decorator on
+      Domain Model Elements added on an optional feature. So, we have developped a tool that permit
+      to create feature model (cf Feature Diagram Editor Documentation and <a class="ulink" href="http://movida.gforge.inria.fr/uploads/Demos/FeatureDiagramEditorDemo.htm" target="_top"> sample wink
+        video</a>. ), a product derivation tool to derive a given base model according to a
+      given feature model and another tool that permit to use this generic decorator on this Feature
+      Diagram Editor. This document present quickly how to install and use the generic decorator
+      engine for feature diagram editor with a<a class="ulink" href="http://movida.gforge.inria.fr/uploads/Demos/BaseModelDecoratorDemo.htm" target="_top"> sample wink
+        video</a>. For more information about this editor please refer to the <a class="ulink" href="../../../..//fr.inria.featureDiagramEditor.decorator.doc/build/html.single/Movida-BaseModelDecoratorEngineForFlow-Technical-Documentation/index.html" target="_top"> technical documentation</a>.</p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important: Generic Decorator engine depends of Feature Diagram Editor and Product Derivation&#xA;        Tool"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="gfx/admonitions/important.gif"></td><th align="left">Generic Decorator engine depends of Feature Diagram Editor and Product Derivation
+        Tool</th></tr><tr><td align="left" valign="top"><p> Thisgeneric engine constitutes an extension of the Feature Diagram Editor and the
+        Product Derivation Tool. You must have installed the Feature Diagram Editor and the Product
+        Derivation tool before install it.</p></td></tr></table></div><p> The next section will present the installation of the product derivation engine, a
+      quickly presentation of use and a <a class="ulink" href="http://movida.gforge.inria.fr/uploads/Demos/BaseModelDecoratorDemo.htm" target="_top"> sample wink
+        video</a>.</p></div><div class="chapter" lang="en-US"><div class="titlepage"><div><div><h2 class="title"><a name="d0e85"></a>Chapter&nbsp;1.&nbsp;Installation </h2></div></div></div><p>To install Base Model Decorator Engine you need to select the Feature Diagram Editor
+      category on the <span class="italic">Movida Studio update site</span> and all of its
+      dependencies and select<span class="italic"> Base Model Decorator for Flow
+        Model.</span> In this case, Base Model Decorator Engine is dependant from Feature
+      Diagram Editor. </p></div><div class="chapter" lang="en-US"><div class="titlepage"><div><div><h2 class="title"><a name="d0e96"></a>Chapter&nbsp;2.&nbsp; Generic Decorator Engine : Quick presentation</h2></div></div></div><p>This chapter present a very quick of use of Generic Decorator Engine. For more information
+      please refer to the <a class="ulink" href="http://movida.gforge.inria.fr/uploads/Demos/BaseModelDecoratorDemo.htm" target="_top"> sample wink
+        video</a> and the <a class="ulink" href="http://movida.gforge.inria.fr/uploads/Demos/FeatureDiagramEditorDemo.htm" target="_top"> sample wink
+        video</a> of the Feature Diagram Editor. To start with, we present an example of use of
+      the base model and derivation decorators .</p><div class="section" lang="en-US"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e107"></a>2.1.&nbsp;Flow Example presentation</h2></div></div></div><p> </p><p>To introduce use of generic decorator we can use an example of architecture where a Fan
+        can be optional On this example we introduced variability on an architecture modeled also
+        with Obeo Designer by the following feature model. This example is available on the Eclipse
+        Example <span class="italic">File</span>-&gt;<span class="italic">New</span>-&gt;<span class="italic"> Example</span> -&gt;<span class="italic">
+          Generic Decorator Sample</span> -&gt; <span class="italic">Sample </span>.</p><p><img src="BMDEnd_figures/architecture.png"></p><p>
+        <span class="bold"><strong> Global architecture on which we want to add
+        variability</strong></span></p><p><img src="BMDEnd_figures/featureDiagramEditor2.png"></p><p>
+        <span class="bold"><strong>Feature diagram used to model variability on the global
+          architecture</strong></span></p><p>Note that on this feature model a Fan from the base model architecture is added on an
+        optional feature. The next section will present how to use the base model decorator engine
+        to display information about Domain Model Element added on an optional feature on the Domain
+        Modeler.</p></div><div class="section" lang="en-US"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e143"></a>2.2.&nbsp; Enable Base Model and Derivation Decorator</h2></div></div></div><p>To enable base model and derivation decorator we need to add a specific layer to the
+        base model layer through two popup menus in the feature modeler. However, these popup menus
+        needs to be activated through the following instructions :</p><p>Right click on the session <span class="bold"><strong>fd.aird</strong></span> -&gt; <span class="italic">Viewpoints selection</span>. You obtain the following wizard : </p><p><img src="BMDEnd_figures/AddGenericDecoratorsWizard.PNG"></p><p>In the feature diagram editor modeler click on the layer icon (outlined in the feature
+        diagram editor picture of the section above) and check <span class="italic">Add
+          Derivation Decorator</span> and <span class="italic">Add Optional
+          Decorator</span>. Then click on the Feature Diagram element (white part of the feature
+        diagram modeler) -&gt;<span class="italic"> Derivation Decorator</span> -&gt;<span class="italic"> Add Derivation Decorator </span>and <span class="italic">Optional
+          Decorator </span>-&gt; <span class="italic">Add Optional Decorator</span>. You
+        obtain the following in your Eclipse :</p><p><img src="BMDEnd_figures/AddDerivationDecorator.PNG"></p><p>
+        </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important: "><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="gfx/admonitions/important.gif"></td><th align="left"></th></tr><tr><td align="left" valign="top"><p></p></td></tr></table></div><p>
+      </p><p>The next sections present how to use these enabled decorators.</p></div><div class="section" lang="en-US"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e188"></a>2.3.&nbsp; How to use Base Model Decorator</h2></div></div></div><p>Now, we want to use the base model decorator to express that this Fan is added on an
+        optional feature directly on the base model graphical view. To do this, you need to activate
+        the layer &lt;viewpoint name &gt;<span class="italic"> Optional Decorator </span> on
+        Obeo Designer. To do this, click on the icon outlined in red on the following and then check
+        Optional Domain Model Element. </p><p><img src="BMDEnd_figures/addOptionalLayer.png"></p><p>As shown on the following figure an orange square decorator is added on the Fan element. </p><p>
+        <img src="BMDEnd_figures/BaseModelDecorator.png"></p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important:  Use Refresh"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="gfx/admonitions/important.gif"></td><th align="left"> Use Refresh</th></tr><tr><td align="left" valign="top"><p> You need sometimes to use Refresh icon outlined in blue on the figure above. If it
+          does not work, close the Topography diagram and open it again.</p></td></tr></table></div><p> So, you have obtained a way to display variability information on base model.</p></div><div class="section" lang="en-US"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e210"></a>2.4.&nbsp; How to use Derivation Decorator</h2></div></div></div><p>We suppose we use the Product Derivation Engine to obtain the powered archictecture. So,
+        we use a resolution model on which twoInputs and addFan features are unselected. The
+        derivation decorator permits to add a decorator on Domain Model Elements referenced by an
+        unselected feature.</p><p>To add the derivation decorator check whether the resolution model created by the
+        selection engine is on the session and on the layer icon check &lt;viewpoint name&gt;
+        Derivation Decorator.</p></div></div><div class="chapter" lang="en-US"><div class="titlepage"><div><div><h2 class="title"><a name="d0e217"></a>Chapter&nbsp;3.&nbsp; Conclusion</h2></div></div></div><p> This tool permits to decorate any  model from EMF with information about what elements
+      are added on an optional feature and if the element is referenced by an unselected feature.
+    </p></div></div></body></html>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2010-2012  mgouyett.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+  
+  Contributors:
+      Marie Gouyette - initial API and implementation
+       contact marie.gouyette@gmail.com
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<book lang="en-US">
+  <?ooogenerator OpenOffice.org/2.0$Linux OpenOffice.org_project/680m1$Build-8990?>
+  <?oooversion?>
+  <bookinfo>
+    <pubdate>Build date: @BUILD.DATE@</pubdate>
+    <date>Last modification: $Date:: 2010-05-25 08:39:54#$</date>
+    <author>
+      <firstname> Marie Gouyette</firstname>
+      <firstname/>
+    </author>
+    <title>Generic Decorator Technical documentation</title>
+    <keywordset>
+      <keyword>Base Model Decorator</keyword>
+      <keyword>metamodeling</keyword>
+      <keyword>Domain specific language (DSL)</keyword>
+    </keywordset>
+    <subtitle> </subtitle>
+    <bibliomisc>Licence EPL</bibliomisc>
+    <bibliomisc/>
+    <abstract>
+      <para>This documentation presents the technical documentation of a base model decorator in
+        association with a feature diagram editor. This feature diagram editor permit to model
+        variability of a given architecture model (base model) on a variability model (here feature
+        model). The aim of the base model decorator is to add a graphical decorator on Domain Model
+        Elements from base model added on an optional feature in the base model modeler. This base
+        model decorator tool and feature diagram editor take part of the ANR Project MOVIDA. </para>
+    </abstract>
+    <publisher>
+      <publishername>INRIA</publishername>
+      <address>
+        <state>France</state>
+        <otheraddr>
+          <ulink url="http://www.inria.fr">http://www.inria.fr</ulink>
+        </otheraddr>
+      </address>
+    </publisher>
+    <confgroup>
+      <conftitle>title</conftitle>
+      <confnum>Reference</confnum>
+      <confsponsor>sponsor</confsponsor>
+    </confgroup>
+  </bookinfo>
+  <preface>
+    <?print-orientation portrait?>
+    <title>Preface</title>
+    <para> Feature models are a way to add variability on models. By variability, we mean to model
+      common and variable parts of a given architecture. An example of use of variability is given
+      by <emphasis role="italic">Software Product Line (SPL)</emphasis> which consists in derive
+      different family of products according to their similarities and differences. Another use is
+      to model different software architecture possible choices. The aim of the Generic Decorator
+      Engine is adding variability information on the base model modeler by adding a decorator on
+      Domain Model Elements. For more information about it please refer to the <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/BaseModelDecoratorDemo.htm"> sample wink
+        video </ulink>. </para>
+    <para>Please also refer to <ulink
+        url="@ONLINE.OR.LOCAL@/fr.inria.featureDiagramEditor.decorator.doc/build/@OUTPUT.VERSION@/Movida-BaseModelDecoratorEngineForFlow-End-User-Documentation/index.html"
+        > end-user documentation</ulink> .</para>
+  </preface>
+  <chapter>
+    <title>Installation</title>
+    <para>To install Base Model Decorator Engine you need to select the Feature Diagram Editor
+      category on the <emphasis role="italic">Movida Studio update site</emphasis> and all of its
+      dependencies and select<emphasis role="italic"> Base Model Decorator for Flow
+        Model.</emphasis> In this case, Base Model Decorator Engine is dependant from Feature
+      Diagram Editor. </para>
+  </chapter>
+  <chapter>
+    <title> Test of Base Model Decorator Engine</title>
+    <para>Derivation tests are available on the project<emphasis role="bold">
+        fr.inria.featureDiagramEditor.flow.demo</emphasis>. To retrieve this project go to<emphasis
+        role="italic"> File</emphasis>-><emphasis role="italic"> New</emphasis> -><emphasis
+        role="italic"> Example</emphasis> -><emphasis role="italic">Generic Decorator
+        Sample</emphasis> -> <emphasis role="italic">Sample </emphasis>. Then you can click on the
+      session files (.aird) and open it. If it does not work, select Viewpoint Selection and click
+      on Design.</para>
+  </chapter>
+  <chapter>
+    <title> How to create a new Generic decorator</title>
+    <para>This section presents how to create a new generic decorator. </para>
+    <para>To create a generic decorator you need to retrieve a session that contains a feature
+      diagram. This can be made by creating a new Obeo Designer viewpoint example that extends the
+      feature Diagram editor that enables a popup menu. This popup menu retrieve the current session
+      and add the new decorator. It must have<emphasis role="bold">
+        fr.inria.generic_decorator.core</emphasis> has on of its dependencies and call the class
+      AddDecorator.</para>
+    <para>Then this popup menu will contains a code to call the creation of the new decorator such
+      as in the following figure :</para>
+    <para><inlinegraphic fileref="BMDTech_figures/GenericCode.PNG"/></para>
+  </chapter>
+  <chapter>
+    <title> Conclusion</title>
+    <para> This document has presented the technical documentation and the tests of the generic
+      decorator. This version works on every model based on EMF.</para>
+  </chapter>
+</book>

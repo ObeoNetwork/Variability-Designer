@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/fr.inria.product_derivation_engine.feature_1.0.0.201201191651.jar" id="fr.inria.product_derivation_engine.feature" version="1.0.0.201201191651">
+      <category name="Selection and Derivation"/>
+   </feature>
+   <category-def name="Selection and Derivation" label="Selection and Derivation"/>
+</site>

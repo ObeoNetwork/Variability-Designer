@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Demo
+Bundle-SymbolicName: fr.inria.featureDiagramEditor.flow.demo
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: fr.inria.featurediagrameditor.flow.demo.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

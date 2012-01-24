@@ -1,0 +1,138 @@
+:- style_check(-discontiguous).
+
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//epackage',epackage),[0,1303912227398,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'resolutionmodel' ,[0,1303912227399,'lip6']).
+addProperty(xmiid_unknownxmiid,nsuri, 'http://www.kermeta.org/resolutionModel' ,[0,1303912227400,'lip6']).
+addProperty(xmiid_unknownxmiid,nsprefix, 'resolutionmodel' ,[0,1303912227401,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//eclass',eclass),[0,1303912227402,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'ResolutionModel' ,[0,1303912227403,'lip6']).
+addProperty(xmiid_unknownxmiid,abstract, 'false' ,[0,1303912227404,'lip6']).
+addProperty(xmiid_unknownxmiid,interface, 'false' ,[0,1303912227405,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//eattribute',eattribute),[0,1303912227406,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'version' ,[0,1303912227407,'lip6']).
+addProperty(xmiid_unknownxmiid,ordered, 'true' ,[0,1303912227408,'lip6']).
+addProperty(xmiid_unknownxmiid,unique, 'true' ,[0,1303912227409,'lip6']).
+addProperty(xmiid_unknownxmiid,lowerbound, '0' ,[0,1303912227410,'lip6']).
+addProperty(xmiid_unknownxmiid,upperbound, '1' ,[0,1303912227411,'lip6']).
+addProperty(xmiid_unknownxmiid,many, 'false' ,[0,1303912227412,'lip6']).
+addProperty(xmiid_unknownxmiid,required, 'false' ,[0,1303912227413,'lip6']).
+addProperty(xmiid_unknownxmiid,changeable, 'true' ,[0,1303912227414,'lip6']).
+addProperty(xmiid_unknownxmiid,volatile, 'false' ,[0,1303912227415,'lip6']).
+addProperty(xmiid_unknownxmiid,transient, 'false' ,[0,1303912227416,'lip6']).
+addProperty(xmiid_unknownxmiid,unsettable, 'false' ,[0,1303912227417,'lip6']).
+addProperty(xmiid_unknownxmiid,derived, 'false' ,[0,1303912227418,'lip6']).
+addProperty(xmiid_unknownxmiid,id, 'false' ,[0,1303912227419,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//egenerictype',egenerictype),[0,1303912227420,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//ereference',ereference),[0,1303912227421,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'attributes' ,[0,1303912227422,'lip6']).
+addProperty(xmiid_unknownxmiid,ordered, 'true' ,[0,1303912227423,'lip6']).
+addProperty(xmiid_unknownxmiid,unique, 'true' ,[0,1303912227424,'lip6']).
+addProperty(xmiid_unknownxmiid,lowerbound, '0' ,[0,1303912227425,'lip6']).
+addProperty(xmiid_unknownxmiid,upperbound, '1' ,[0,1303912227426,'lip6']).
+addProperty(xmiid_unknownxmiid,many, 'false' ,[0,1303912227427,'lip6']).
+addProperty(xmiid_unknownxmiid,required, 'false' ,[0,1303912227428,'lip6']).
+addProperty(xmiid_unknownxmiid,changeable, 'true' ,[0,1303912227429,'lip6']).
+addProperty(xmiid_unknownxmiid,volatile, 'false' ,[0,1303912227430,'lip6']).
+addProperty(xmiid_unknownxmiid,transient, 'false' ,[0,1303912227431,'lip6']).
+addProperty(xmiid_unknownxmiid,unsettable, 'false' ,[0,1303912227432,'lip6']).
+addProperty(xmiid_unknownxmiid,derived, 'false' ,[0,1303912227433,'lip6']).
+addProperty(xmiid_unknownxmiid,containment, 'true' ,[0,1303912227434,'lip6']).
+addProperty(xmiid_unknownxmiid,container, 'false' ,[0,1303912227435,'lip6']).
+addProperty(xmiid_unknownxmiid,resolveproxies, 'true' ,[0,1303912227436,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//egenerictype',egenerictype),[0,1303912227437,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//ereference',ereference),[0,1303912227438,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'featureDiagram' ,[0,1303912227439,'lip6']).
+addProperty(xmiid_unknownxmiid,ordered, 'true' ,[0,1303912227440,'lip6']).
+addProperty(xmiid_unknownxmiid,unique, 'true' ,[0,1303912227441,'lip6']).
+addProperty(xmiid_unknownxmiid,lowerbound, '1' ,[0,1303912227442,'lip6']).
+addProperty(xmiid_unknownxmiid,upperbound, '1' ,[0,1303912227443,'lip6']).
+addProperty(xmiid_unknownxmiid,many, 'false' ,[0,1303912227444,'lip6']).
+addProperty(xmiid_unknownxmiid,required, 'true' ,[0,1303912227445,'lip6']).
+addProperty(xmiid_unknownxmiid,changeable, 'true' ,[0,1303912227446,'lip6']).
+addProperty(xmiid_unknownxmiid,volatile, 'false' ,[0,1303912227447,'lip6']).
+addProperty(xmiid_unknownxmiid,transient, 'false' ,[0,1303912227448,'lip6']).
+addProperty(xmiid_unknownxmiid,unsettable, 'false' ,[0,1303912227449,'lip6']).
+addProperty(xmiid_unknownxmiid,derived, 'false' ,[0,1303912227450,'lip6']).
+addProperty(xmiid_unknownxmiid,containment, 'false' ,[0,1303912227451,'lip6']).
+addProperty(xmiid_unknownxmiid,container, 'false' ,[0,1303912227452,'lip6']).
+addProperty(xmiid_unknownxmiid,resolveproxies, 'true' ,[0,1303912227453,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//egenerictype',egenerictype),[0,1303912227454,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//ereference',ereference),[0,1303912227455,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'featureSelections' ,[0,1303912227456,'lip6']).
+addProperty(xmiid_unknownxmiid,ordered, 'true' ,[0,1303912227457,'lip6']).
+addProperty(xmiid_unknownxmiid,unique, 'true' ,[0,1303912227458,'lip6']).
+addProperty(xmiid_unknownxmiid,lowerbound, '0' ,[0,1303912227459,'lip6']).
+addProperty(xmiid_unknownxmiid,upperbound, '-1' ,[0,1303912227460,'lip6']).
+addProperty(xmiid_unknownxmiid,many, 'true' ,[0,1303912227461,'lip6']).
+addProperty(xmiid_unknownxmiid,required, 'false' ,[0,1303912227462,'lip6']).
+addProperty(xmiid_unknownxmiid,changeable, 'true' ,[0,1303912227463,'lip6']).
+addProperty(xmiid_unknownxmiid,volatile, 'false' ,[0,1303912227464,'lip6']).
+addProperty(xmiid_unknownxmiid,transient, 'false' ,[0,1303912227465,'lip6']).
+addProperty(xmiid_unknownxmiid,unsettable, 'false' ,[0,1303912227466,'lip6']).
+addProperty(xmiid_unknownxmiid,derived, 'false' ,[0,1303912227467,'lip6']).
+addProperty(xmiid_unknownxmiid,containment, 'true' ,[0,1303912227468,'lip6']).
+addProperty(xmiid_unknownxmiid,container, 'false' ,[0,1303912227469,'lip6']).
+addProperty(xmiid_unknownxmiid,resolveproxies, 'true' ,[0,1303912227470,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//egenerictype',egenerictype),[0,1303912227471,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//eclass',eclass),[0,1303912227472,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'FeatureSelection' ,[0,1303912227473,'lip6']).
+addProperty(xmiid_unknownxmiid,abstract, 'false' ,[0,1303912227474,'lip6']).
+addProperty(xmiid_unknownxmiid,interface, 'false' ,[0,1303912227475,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//eattribute',eattribute),[0,1303912227476,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'state' ,[0,1303912227477,'lip6']).
+addProperty(xmiid_unknownxmiid,ordered, 'true' ,[0,1303912227478,'lip6']).
+addProperty(xmiid_unknownxmiid,unique, 'true' ,[0,1303912227479,'lip6']).
+addProperty(xmiid_unknownxmiid,lowerbound, '1' ,[0,1303912227480,'lip6']).
+addProperty(xmiid_unknownxmiid,upperbound, '1' ,[0,1303912227481,'lip6']).
+addProperty(xmiid_unknownxmiid,many, 'false' ,[0,1303912227482,'lip6']).
+addProperty(xmiid_unknownxmiid,required, 'true' ,[0,1303912227483,'lip6']).
+addProperty(xmiid_unknownxmiid,changeable, 'true' ,[0,1303912227484,'lip6']).
+addProperty(xmiid_unknownxmiid,volatile, 'false' ,[0,1303912227485,'lip6']).
+addProperty(xmiid_unknownxmiid,transient, 'false' ,[0,1303912227486,'lip6']).
+addProperty(xmiid_unknownxmiid,unsettable, 'false' ,[0,1303912227487,'lip6']).
+addProperty(xmiid_unknownxmiid,derived, 'false' ,[0,1303912227488,'lip6']).
+addProperty(xmiid_unknownxmiid,id, 'false' ,[0,1303912227489,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//egenerictype',egenerictype),[0,1303912227490,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//ereference',ereference),[0,1303912227491,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'feature' ,[0,1303912227492,'lip6']).
+addProperty(xmiid_unknownxmiid,ordered, 'true' ,[0,1303912227493,'lip6']).
+addProperty(xmiid_unknownxmiid,unique, 'true' ,[0,1303912227494,'lip6']).
+addProperty(xmiid_unknownxmiid,lowerbound, '1' ,[0,1303912227495,'lip6']).
+addProperty(xmiid_unknownxmiid,upperbound, '1' ,[0,1303912227496,'lip6']).
+addProperty(xmiid_unknownxmiid,many, 'false' ,[0,1303912227497,'lip6']).
+addProperty(xmiid_unknownxmiid,required, 'true' ,[0,1303912227498,'lip6']).
+addProperty(xmiid_unknownxmiid,changeable, 'true' ,[0,1303912227499,'lip6']).
+addProperty(xmiid_unknownxmiid,volatile, 'false' ,[0,1303912227500,'lip6']).
+addProperty(xmiid_unknownxmiid,transient, 'false' ,[0,1303912227501,'lip6']).
+addProperty(xmiid_unknownxmiid,unsettable, 'false' ,[0,1303912227502,'lip6']).
+addProperty(xmiid_unknownxmiid,derived, 'false' ,[0,1303912227503,'lip6']).
+addProperty(xmiid_unknownxmiid,containment, 'true' ,[0,1303912227504,'lip6']).
+addProperty(xmiid_unknownxmiid,container, 'false' ,[0,1303912227505,'lip6']).
+addProperty(xmiid_unknownxmiid,resolveproxies, 'true' ,[0,1303912227506,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//egenerictype',egenerictype),[0,1303912227507,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//eattribute',eattribute),[0,1303912227508,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'featureName' ,[0,1303912227509,'lip6']).
+addProperty(xmiid_unknownxmiid,ordered, 'true' ,[0,1303912227510,'lip6']).
+addProperty(xmiid_unknownxmiid,unique, 'true' ,[0,1303912227511,'lip6']).
+addProperty(xmiid_unknownxmiid,lowerbound, '0' ,[0,1303912227512,'lip6']).
+addProperty(xmiid_unknownxmiid,upperbound, '1' ,[0,1303912227513,'lip6']).
+addProperty(xmiid_unknownxmiid,many, 'false' ,[0,1303912227514,'lip6']).
+addProperty(xmiid_unknownxmiid,required, 'false' ,[0,1303912227515,'lip6']).
+addProperty(xmiid_unknownxmiid,changeable, 'true' ,[0,1303912227516,'lip6']).
+addProperty(xmiid_unknownxmiid,volatile, 'false' ,[0,1303912227517,'lip6']).
+addProperty(xmiid_unknownxmiid,transient, 'false' ,[0,1303912227518,'lip6']).
+addProperty(xmiid_unknownxmiid,unsettable, 'false' ,[0,1303912227519,'lip6']).
+addProperty(xmiid_unknownxmiid,derived, 'false' ,[0,1303912227520,'lip6']).
+addProperty(xmiid_unknownxmiid,id, 'false' ,[0,1303912227521,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//egenerictype',egenerictype),[0,1303912227522,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//eenum',eenum),[0,1303912227523,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'SelectionState' ,[0,1303912227524,'lip6']).
+addProperty(xmiid_unknownxmiid,serializable, 'true' ,[0,1303912227525,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//eenumliteral',eenumliteral),[0,1303912227526,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'unselected' ,[0,1303912227527,'lip6']).
+addProperty(xmiid_unknownxmiid,value, '0' ,[0,1303912227528,'lip6']).
+addProperty(xmiid_unknownxmiid,literal, 'unselected' ,[0,1303912227529,'lip6']).
+create(xmiid_unknownxmiid,metaclass('http://www.eclipse.org/emf/2002/ecore', '//eenumliteral',eenumliteral),[0,1303912227530,'lip6']).
+addProperty(xmiid_unknownxmiid,name, 'selected' ,[0,1303912227531,'lip6']).
+addProperty(xmiid_unknownxmiid,value, '1' ,[0,1303912227532,'lip6']).
+addProperty(xmiid_unknownxmiid,literal, 'selected' ,[0,1303912227533,'lip6']).

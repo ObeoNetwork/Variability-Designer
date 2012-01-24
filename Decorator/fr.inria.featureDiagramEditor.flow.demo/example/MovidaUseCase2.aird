@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ad="platform:/resource/org.movida.d1.3.viewpoint/model/ViewPointAD.ecore#/org/movida/d13/viewpoint/ad" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:flow="http://www.obeo.fr/dsl/designer/sample/flow" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:viewpoint="http://www.obeo.fr/dsl/viewpoint/1.1.0" xsi:schemaLocation="platform:/resource/org.movida.d1.3.viewpoint/model/ViewPointAD.ecore#/org/movida/d13/viewpoint/ad platform:/resource/org.movida.d1.3.viewpoint/model/ViewPointAD.ecore#//ad http://www.obeo.fr/dsl/viewpoint/description/1.1.0 http://www.obeo.fr/dsl/viewpoint/1.1.0#//description" xmi:id="_eqe0MPjNEeCpOPcwiPntmw" selectedViews="_lOessPjNEeCpOPcwiPntmw _lSzzEPjNEeCpOPcwiPntmw _lTLmgPjNEeCpOPcwiPntmw _lTdTUPjNEeCpOPcwiPntmw _lTkoEPjNEeCpOPcwiPntmw _lTpgkPjNEeCpOPcwiPntmw">
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_lOessPjNEeCpOPcwiPntmw" initialized="true">
+    <ownedRepresentations xmi:type="viewpoint:DSemanticDiagram" xmi:id="_lSaxgPjNEeCpOPcwiPntmw" name="Overview">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_lSaxgvjNEeCpOPcwiPntmw" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_lSaxg_jNEeCpOPcwiPntmw" type="Viewpoint" element="_lSaxgPjNEeCpOPcwiPntmw" measurementUnit="Pixel">
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_lSaxhPjNEeCpOPcwiPntmw"/>
+        </data>
+      </ownedAnnotationEntries>
+      <description xmi:type="description:DiagramDescription" href="platform:/plugin/org.movida.d13.viewpoint.ad.ui/description/ad.odesign#//@ownedViewpoints[name='Movida']/@ownedRepresentations[name='Overview']"/>
+      <filterVariableHistory xmi:type="viewpoint:FilterVariableHistory" xmi:id="_lSaxgfjNEeCpOPcwiPntmw"/>
+      <activatedLayers xmi:type="description:Layer" href="platform:/plugin/org.movida.d13.viewpoint.ad.ui/description/ad.odesign#//@ownedViewpoints[name='Movida']/@ownedRepresentations[name='Overview']/@defaultLayer"/>
+      <target xmi:type="ad:ArchitectureDescription" href="MovidaUseCase2.ad#_euubAPjNEeCpOPcwiPntmw"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.movida.d13.viewpoint.ad.ui/description/ad.odesign#//@ownedViewpoints[name='Movida']"/>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_lSzzEPjNEeCpOPcwiPntmw" initialized="true">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.inria.featureDiagramEditor.ui/description/FeatureDiagramEditor.odesign#//@ownedViewpoints[name='Feature%20Diagram']"/>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_lTLmgPjNEeCpOPcwiPntmw" initialized="true">
+    <ownedRepresentations xmi:type="viewpoint:DSemanticDiagram" xmi:id="_lTM0oPjNEeCpOPcwiPntmw" name="MetricObservationByView">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_lTM0ovjNEeCpOPcwiPntmw" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_lTM0o_jNEeCpOPcwiPntmw" type="Viewpoint" element="_lTM0oPjNEeCpOPcwiPntmw" measurementUnit="Pixel">
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_lTM0pPjNEeCpOPcwiPntmw"/>
+        </data>
+      </ownedAnnotationEntries>
+      <description xmi:type="description:DiagramDescription" href="platform:/plugin/org.movida.d13.viewpoint.ad.ui/description/adView.odesign#//@ownedViewpoints[name='AD%20View']/@ownedRepresentations[name='MetricObservationByView']"/>
+      <filterVariableHistory xmi:type="viewpoint:FilterVariableHistory" xmi:id="_lTM0ofjNEeCpOPcwiPntmw"/>
+      <activatedLayers xmi:type="description:Layer" href="platform:/plugin/org.movida.d13.viewpoint.ad.ui/description/adView.odesign#//@ownedViewpoints[name='AD%20View']/@ownedRepresentations[name='MetricObservationByView']/@defaultLayer"/>
+      <target xmi:type="ad:ArchitectureDescription" href="MovidaUseCase2.ad#_euubAPjNEeCpOPcwiPntmw"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.movida.d13.viewpoint.ad.ui/description/adView.odesign#//@ownedViewpoints[name='AD%20View']"/>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_lTdTUPjNEeCpOPcwiPntmw" initialized="true">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.obeo.dsl.designer.sample.flow.design/description/flow.odesign#//@ownedViewpoints[name='Performance']"/>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_lTkoEPjNEeCpOPcwiPntmw" initialized="true">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.obeo.dsl.designer.sample.flow.design/description/flow.odesign#//@ownedViewpoints[name='Safety']"/>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_lTpgkPjNEeCpOPcwiPntmw" initialized="true">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.obeo.dsl.designer.sample.flow.design/description/flow.odesign#//@ownedViewpoints[name='Exchanges']"/>
+  </ownedViews>
+  <models xmi:type="ad:ArchitectureDescription" href="MovidaUseCase2.ad#_euubAPjNEeCpOPcwiPntmw"/>
+  <models xmi:type="flow:System" href="MovidaUseCase2.flow#/"/>
+  <eAnnotations xmi:type="description:DAnnotationEntry" xmi:id="_eqe0MfjNEeCpOPcwiPntmw" source="Migration">
+    <details>style</details>
+    <details>someViewsAreHiddenDeactivation</details>
+    <details>edgeLabels</details>
+    <details>LabelAlignmentForDNodeListElementMigrationForNotHavingSessionDirtyAtOpening</details>
+    <details>sequenceAbsoluteBoundsFlag</details>
+  </eAnnotations>
+</viewpoint:DAnalysis>

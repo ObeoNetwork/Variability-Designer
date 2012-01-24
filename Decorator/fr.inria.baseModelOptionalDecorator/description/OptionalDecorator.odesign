@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="OptionalDecorator">
+  <ownedViewpoints name="Add Optional Decorator">
+    <ownedRepresentationExtensions xsi:type="description:DiagramExtensionDescription" name="Feature Diagram Editor" viewpointURI="viewpoint:/fr.inria.featureDiagramEditor.ui/Feature Diagram" representationName="Feature Diagram Editor">
+      <layers name="Add Optional Decorator">
+        <toolSections name="AddDecoratorSection">
+          <ownedTools xsi:type="tool:PopupMenu" name="Optional Decorator">
+            <menuItemDescription xsi:type="tool:OperationAction" name="Add optional decorator">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ExternalJavaActionCall" name="Add Optional Decorator" action="//@ownedViewpoints[name='Add%20Optional%20Decorator']/@ownedRepresentationExtensions[name='Feature%20Diagram%20Editor']/@layers[name='Add%20Optional%20Decorator']/@toolSections.0/@ownedTools[name='Optional%20Decorator']/@menuItemDescription.0/@initialOperation/@firstModelOperations/@subModelOperations.0">
+                  <subModelOperations xsi:type="tool:ExternalJavaAction" name="AddOptionalDecoratorAction" id="fr.inria.baseModelOptionalDecorator.actions.OptionalDecoratorAction">
+                    <parameters name="FeatureDiagram" value="&lt;%self%>"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+        </toolSections>
+      </layers>
+    </ownedRepresentationExtensions>
+  </ownedViewpoints>
+</description:Group>

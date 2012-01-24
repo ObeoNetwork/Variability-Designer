@@ -1,0 +1,54 @@
+:- style_check(-discontiguous).
+
+create(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,metaclass('http://www.kermeta.org/featurediagram', '//featurediagram',featurediagram),[0,1318342306433,'lip6']).
+addProperty(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,graphtypetree, 'true' ,[0,1318342306434,'lip6']).
+create(xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid,metaclass('http://www.kermeta.org/featurediagram', '//feature',feature),[0,1318342306435,'lip6']).
+addProperty(xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid,name, 'Car' ,[0,1318342306436,'lip6']).
+addProperty(xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid,selected, 'false' ,[0,1318342306437,'lip6']).
+create(xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid,metaclass('http://www.kermeta.org/featurediagram', '//feature',feature),[0,1318342306439,'lip6']).
+addProperty(xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid,name, 'GPS' ,[0,1318342306440,'lip6']).
+addProperty(xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid,selected, 'false' ,[0,1318342306441,'lip6']).
+create(xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid,metaclass('http://www.kermeta.org/featurediagram', '//feature',feature),[0,1318342306443,'lip6']).
+addProperty(xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid,name, 'Radio' ,[0,1318342306444,'lip6']).
+addProperty(xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid,selected, 'false' ,[0,1318342306445,'lip6']).
+create(xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid,metaclass('http://www.kermeta.org/featurediagram', '//feature',feature),[0,1318342306447,'lip6']).
+addProperty(xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid,name, 'ABS' ,[0,1318342306448,'lip6']).
+addProperty(xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid,selected, 'false' ,[0,1318342306449,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306438,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306442,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306446,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306450,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,root, xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306451,'lip6']).
+create(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,metaclass('http://www.kermeta.org/featurediagram', '//card',card),[0,1318342306453,'lip6']).
+addProperty(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,name, 'Card' ,[0,1318342306454,'lip6']).
+addProperty(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,min, '0' ,[0,1318342306455,'lip6']).
+addProperty(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,max, '3' ,[0,1318342306456,'lip6']).
+addReference(xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid,owningfeaturediagram, xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306452,'lip6']).
+addReference(xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid,operator, xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306457,'lip6']).
+addReference(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,owningfeature, xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306462,'lip6']).
+addReference(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306463,'lip6']).
+addReference(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306464,'lip6']).
+addReference(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306465,'lip6']).
+addReference(xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid,owningfeaturediagram, xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306466,'lip6']).
+addReference(xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid,owningoperator, xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306467,'lip6']).
+addReference(xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid,owningfeaturediagram, xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306472,'lip6']).
+addReference(xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid,owningoperator, xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306473,'lip6']).
+addReference(xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid,owningfeaturediagram, xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306478,'lip6']).
+addReference(xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid,owningoperator, xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306479,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306484,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306485,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306486,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306487,'lip6']).
+addReference(xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid,root, xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306488,'lip6']).
+addReference(xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid,owningfeaturediagram, xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306489,'lip6']).
+addReference(xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid,operator, xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306490,'lip6']).
+addReference(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,owningfeature, xmiid_NUMcQHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306491,'lip6']).
+addReference(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306492,'lip6']).
+addReference(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306493,'lip6']).
+addReference(xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid,features, xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306494,'lip6']).
+addReference(xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid,owningfeaturediagram, xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306495,'lip6']).
+addReference(xmiid_OonRgHSTEeCKbIkGdwPQMxMAxmiid,owningoperator, xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306496,'lip6']).
+addReference(xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid,owningfeaturediagram, xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306497,'lip6']).
+addReference(xmiid_O4F38HSTEeCKbIkGdwPQMxMAxmiid,owningoperator, xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306498,'lip6']).
+addReference(xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid,owningfeaturediagram, xmiid_JtHA0HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306499,'lip6']).
+addReference(xmiid_PHkeYHSTEeCKbIkGdwPQMxMAxmiid,owningoperator, xmiid_Ufu14HSTEeCKbIkGdwPQMxMAxmiid ,[0,1318342306500,'lip6']).

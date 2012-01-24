@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_ABqyEHSaEeC5PIpZsyyy_A" root="_FYZmMHSaEeC5PIpZsyyy_A">
+  <features xmi:id="_FYZmMHSaEeC5PIpZsyyy_A" name="Car">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_NMso8HSaEeC5PIpZsyyy_A" features="_FuACwHSaEeC5PIpZsyyy_A _F-k1YHSaEeC5PIpZsyyy_A" name="Or"/>
+    <modelElements href="car.ecore#//Car"/>
+  </features>
+  <features xmi:id="_FuACwHSaEeC5PIpZsyyy_A" name="petrol" owningOperator="_NMso8HSaEeC5PIpZsyyy_A">
+    <modelElements href="car.ecore#//Petrol"/>
+  </features>
+  <features xmi:id="_F-k1YHSaEeC5PIpZsyyy_A" name="diesel" owningOperator="_NMso8HSaEeC5PIpZsyyy_A">
+    <modelElements href="car.ecore#//Diesel"/>
+  </features>
+</featureDiagram:FeatureDiagram>

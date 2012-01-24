@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core
+Bundle-SymbolicName: fr.inria.generic_decorator.core
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: fr.inria.generic_decorator.core.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;bundle-version="2.6.1"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: fr.obeo.dsl.viewpoint,
+ fr.obeo.dsl.viewpoint.business.api.session,
+ fr.obeo.dsl.viewpoint.description
+Export-Package: fr.inria.generic_decorator.core,
+ fr.inria.generic_decorator.core.addDecorator

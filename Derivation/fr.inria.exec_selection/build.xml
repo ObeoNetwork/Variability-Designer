@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Copyright (c) 2010-2012 mgouyett.
+ * INRIA-IRISA- Triskell Team
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     mgouyett - initial API and implementation
+ * 	INRIA-IRISA- Triskell Team
+ * 	contact : marie.gouyette@gmail.com
+-->
+<project name="fr.inria.exec_selection" default="build.jars" basedir=".">
+
+	<property name="p2.build.repo" value="file:${buildDirectory}/buildRepo"/>
+	<property name="basews" value="${ws}"/>
+	<property name="baseos" value="${os}"/>
+	<property name="basearch" value="${arch}"/>
+	<property name="basenl" value="${nl}"/>
+	<property name="bundleId" value="fr.inria.exec_selection"/>
+	<property name="bundleVersion" value="1.0.0.201103181645"/>
+	<property name="p2.publishonerror" value="false"/>
+
+	<!-- Compiler settings. -->
+	<property name="javacFailOnError" value="false"/>
+	<property name="javacDebugInfo" value="on"/>
+	<property name="javacVerbose" value="false"/>
+	<property name="logExtension" value=".log"/>
+	<property name="compilerArg" value=""/>
+	<property name="javacSource" value="1.3"/>
+	<property name="javacTarget" value="1.2"/>
+	<condition property="dir_bootclasspath" value="${java.home}/../Classes">
+		<os family="mac"/>
+	</condition>
+	<property name="dir_bootclasspath" value="${java.home}/lib"/>
+	<path id="path_bootclasspath">
+		<fileset dir="${dir_bootclasspath}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	<property name="bootclasspath" refid="path_bootclasspath"/>
+	<condition property="bundleBootClasspath" value="${JavaSE-1.6}"	>
+		<isset property="JavaSE-1.6"/>
+	</condition>
+	<condition property="bundleJavacSource" value="1.6"	>
+		<isset property="JavaSE-1.6"/>
+	</condition>
+	<condition property="bundleJavacTarget" value="1.6"	>
+		<isset property="JavaSE-1.6"/>
+	</condition>
+	<property name="bundleJavacSource" value="${javacSource}"/>
+	<property name="bundleJavacTarget" value="${javacTarget}"/>
+	<property name="bundleBootClasspath" value="${bootclasspath}"/>
+
+	<target name="init" depends="properties">
+		<condition property="pluginTemp" value="${buildTempFolder}/plugins"		>
+			<isset property="buildTempFolder"/>
+		</condition>
+		<property name="pluginTemp" value="${basedir}"/>
+		<condition property="build.result.folder" value="${pluginTemp}/fr.inria.exec_selection_1.0.0.201103181645"		>
+			<isset property="buildTempFolder"/>
+		</condition>
+		<property name="build.result.folder" value="${basedir}"/>
+		<property name="temp.folder" value="${basedir}/temp.folder"/>
+		<property name="plugin.destination" value="${basedir}"/>
+		<condition property="p2.publish.parts" value="true"		>
+			<istrue value="${p2.gathering}"/>
+		</condition>
+		<property name="compilation.problem.marker" value="${build.result.folder}/compilation.problem"/>
+		<condition property="compilation.problem.marker.exists" value="true"		>
+			<and>
+			<available file="${compilation.problem.marker}"/>
+			<isfalse value="p2.publishonerror"/>
+			</and>
+		</condition>
+	</target>
+
+	<target name="properties" if="eclipse.running">
+		<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+
+	</target>
+
+	<target name="build.update.jar" depends="init" description="Build the plug-in: fr.inria.exec_selection for an update site.">
+		<delete dir="${temp.folder}"/>
+		<mkdir dir="${temp.folder}"/>
+		<antcall target="build.jars"/>
+		<antcall target="gather.bin.parts">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<jar destfile="${plugin.destination}/fr.inria.exec_selection_1.0.0.201103181645.jar" basedir="${temp.folder}/fr.inria.exec_selection_1.0.0.201103181645" filesetmanifest="merge"/>
+		<delete dir="${temp.folder}"/>
+	</target>
+
+	<target name="@dot" depends="init" unless="@dot" description="Create jar: fr.inria.exec_selection @dot.">
+		<delete dir="${build.result.folder}/@dot"/>
+		<mkdir dir="${build.result.folder}/@dot"/>
+		<path id="@dot.classpath">
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/fr.irisa.triskell.eclipse.util_1.4.0.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.resources_3.5.2.R35x_v20091203-1235.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.resources.compatibility_3.4.1.R35x_v20100113-0530.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.resources.win32.x86_3.5.0.v20081020.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ant.core_3.2.101.v20091110_r352.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.variables_3.2.200.v20090521.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.runtime_3.5.0.v20090525.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.osgi_3.5.2.R35x_v20100126.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/javax.transaction_1.1.1.v201002111330.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.common_3.5.1.R35x_v20090807-1100.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.jobs_3.4.100.v20090429-1800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.runtime.compatibility.registry_3.2.200.v20090429-1800/runtime_registry_compatibility.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.runtime.compatibility.registry_3.2.200.v20090429-1800"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.registry_3.4.100.v20090520-1800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.preferences_3.2.301.R35x_v20091117.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.contenttype_3.4.1.R35x_v20090826-0451.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.runtime.compatibility.auth_3.2.100.v20090413.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.app_1.2.1.R35x_v20091203.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.osgi.services_3.2.0.v20090520-1800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/javax.servlet_2.5.0.v200806031605.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.expressions_3.4.101.R35x_v20100209.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.filesystem_1.2.1.R35x_v20091203-1235.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.filesystem.win32.x86_1.1.0.v20080604-1400.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.console_3.4.0.v20090513.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/com.ibm.icu_4.0.1.v20090822.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui_3.5.2.M20100120-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.swt_3.5.2.v3557f.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.swt.win32.win32.x86_3.5.2.v3557f.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.jface_3.5.2.M20100120-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.commands_3.5.0.I20090525-2000.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.workbench_3.5.2.M20100113-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.workbench.compatibility_3.2.0.I20090429-1800/compatibility.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.workbench.compatibility_3.2.0.I20090429-1800/e4-workbench.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.workbench.compatibility_3.2.0.I20090429-1800"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.help_3.4.1.v20090805_35x.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.jface.databinding_1.3.1.M20090826-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.databinding.observable_1.2.0.M20090902-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.databinding.property_1.2.0.M20090819-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.databinding_1.2.0.M20090819-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.jface.text_3.5.2.r352_v20091118-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.text_3.5.0.v20090513-2000.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.workbench.texteditor_3.5.1.r352_v20100105.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.compare.core_3.5.0.I20090430-0408.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.emf.ecore_2.5.0.v200906151043.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.emf.common_2.5.0.v200906151043.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.5.0.v200906151043.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.cheatsheets_3.3.200.v20090526.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.lucene_1.9.1.v20080530-1600.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.forms_3.4.1.v20090714_35x.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.help.base_3.4.0.v201002111343.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.http.jetty_2.0.0.v20090520-1800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.http.servlet_1.0.200.v20090520-1800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.mortbay.jetty.util_6.1.15.v200905182336.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.kermeta.slf4j.eclipse_1.4.0.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.log4j_1.2.13.v200903072027.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.mortbay.jetty.server_6.1.15.v200905151201.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.jasper_5.5.17.v200903231320.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/javax.servlet.jsp_2.0.0.v200806031607.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.commons.el_1.0.0.v200806031608.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.commons.logging_1.1.1.v200904062255.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-antlr.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-apache-bcel.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-apache-bsf.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-apache-log4j.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-apache-oro.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-apache-regexp.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-apache-resolver.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-commons-logging.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-commons-net.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-jai.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-javamail.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-jdepend.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-jmf.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-jsch.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-junit.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-launcher.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-netrexx.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-nodeps.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-starteam.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-stylebook.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-swing.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-trax.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.ant_1.7.1.v20090120-1145/lib/ant-weblogic.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.apache.lucene.analysis_1.9.1.v20080530-1600.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.help.ui_3.4.1.v20090819_35x.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.ide_3.5.2.M20100113-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.win32_3.2.100.v20090429-1800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.views_3.4.1.M20090826-0800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.p2.engine_1.0.102.R35x_v20091117.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.p2.core_1.0.101.R35x_v20090819.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.p2.metadata_1.0.101.R35x_v20100112.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.p2.metadata.repository_1.0.101.R35x_v20090812.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.p2.repository_1.0.1.R35x_v20100105.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.security_1.0.100.v20090520-1800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.security.win32.x86_1.0.100.v20090520-1800.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ecf.filetransfer_3.0.0.v20090831-1906.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ecf_3.0.0.v20090831-1906.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ecf.ssl_1.0.0.v20090831-1906.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.concurrent_1.0.1.R35x_v20100209.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ecf.identity_3.0.0.v20090831-1906.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ecf.provider.filetransfer_3.0.1.v20090831-1906.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ecf.provider.filetransfer.ssl_1.0.0.v20090831-1906.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.net_1.2.1.r35x_20090812-1200.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.net.win32.x86_1.0.0.I20080909.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.p2.artifact.repository_1.0.101.R35x_v20090721.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.equinox.p2.jarprocessor_1.0.100.v20090520-1905.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.ui.editors_3.5.0.v20090527-2000.jar"/>
+			<pathelement path="../../../../Eclipse/EclipseOD5/eclipse/plugins/org.eclipse.core.filebuffers_3.5.0.v20090526-2000.jar"/>
+			<pathelement path="../fr.inria.console/bin"/>
+			<pathelement path="${build.result.folder}/../fr.inria.console_1.0.0.201103181645/bin"/>
+			<pathelement path="../fr.inria.file_methods/bin"/>
+			<pathelement path="${build.result.folder}/../fr.inria.file_methods_1.0.0.201103181645/bin"/>
+			<pathelement path="bin"/>
+			<pathelement path="${build.result.folder}/../fr.inria.exec_selection_1.0.0.201103181645/bin"/>
+			<pathelement path="lib/ant-1.7.1.jar"/>
+			<pathelement path="lib/antlr-2.7.7.jar"/>
+			<pathelement path="lib/emf.lib-2.6.0.jar"/>
+			<pathelement path="lib/featureadresolution.jar"/>
+			<pathelement path="lib/flow.jar"/>
+			<pathelement path="lib/kermeta.model-1.3.0.jar"/>
+			<pathelement path="lib/kermeta.model-1.4.0.jar"/>
+			<pathelement path="lib/language.framework.scala-0.10.0-SNAPSHOTS.jar"/>
+			<pathelement path="lib/org.eclipse.emf.mapping.ecore2xml_2.5.0.v200906151043.jar"/>
+			<pathelement path="lib/org.eclipse.uml2.common_1.5.0.v200905041045.jar"/>
+			<pathelement path="lib/org.eclipse.uml2.uml_3.0.1.v200908281330.jar"/>
+			<pathelement path="lib/org.eclipse.uml2.uml.resources_3.0.0.v200906011111.jar"/>
+			<pathelement path="lib/org.kermeta.default.output-0.0.1-SNAPSHOT.jar"/>
+			<pathelement path="lib/scala-compiler-2.8.1.jar"/>
+			<pathelement path="lib/scala-library-2.8.1.jar"/>
+			<pathelement path="lib/slf4j-api-1.5.9.RC1.jar"/>
+			<pathelement path="lib/slf4j-log4j12-1.5.9.RC1.jar"/>
+			<pathelement path="lib/stringtemplate-3.2.1.jar"/>
+			<pathelement path="lib/fr.inria.featureDiagramEditor.emf-0.0.1-SNAPSHOT.jar"/>
+		</path>
+		<!-- compile the source code -->
+		<javac destdir="${build.result.folder}/@dot" failonerror="${javacFailOnError}" verbose="${javacVerbose}" debug="${javacDebugInfo}" includeAntRuntime="no" bootclasspath="${bundleBootClasspath}" source="${bundleJavacSource}" target="${bundleJavacTarget}"		>
+			<compilerarg line="${compilerArg}" compiler="${build.compiler}"/>
+			<classpath refid="@dot.classpath" />
+			<src path="src/"			/>
+			<compilerarg value="@${basedir}/javaCompiler...args" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+			<compilerarg line="-log '${build.result.folder}/@dot${logExtension}'" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+		</javac>
+		<antcall target="checkCompilationResults"/>
+		<!-- Copy necessary resources -->
+		<copy todir="${build.result.folder}/@dot" failonerror="true" overwrite="false">
+			<fileset dir="src/">
+				<exclude name="**/*.java"/>
+				<exclude name="**/package.htm*"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="src.zip" depends="init" unless="src.zip">
+		<mkdir dir="${build.result.folder}"/>
+		<antcall target="zip.src.zip"/>
+	</target>
+	<target name="zip.src.zip">
+		<zip destfile="${build.result.folder}/src.zip" filesonly="false" whenempty="skip" update="false">
+			<fileset dir="src/">
+				<include name="**/*.java"/>
+			</fileset>
+		</zip>
+	</target>
+	<target name="copy.src.zip">
+		<copy todir="${source.destination.folder}/" failonerror="true" overwrite="true">
+			<fileset dir="src/">
+				<include name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build.jars" depends="init" description="Compile classes and build nested jars for the plug-in: fr.inria.exec_selection.">
+		<delete file="${compilation.problem.marker}" quiet="true"/>
+		<available property="@dot" file="${build.result.folder}/@dot"/>
+		<antcall target="@dot"/>
+	</target>
+
+	<target name="checkCompilationResults" if="compilation.error.occured">
+		<echo file="${compilation.problem.marker}" message="fr.inria.exec_selection : compilation.error.occured=${compilation.error.occured}"/>
+	</target>
+
+	<target name="build.sources" depends="init">
+		<available property="src.zip" file="${build.result.folder}/src.zip"/>
+		<antcall target="src.zip"/>
+	</target>
+
+	<target name="publish.bin.parts" depends="init" if="p2.publish.parts" unless="compilation.problem.marker.exists">
+		<mkdir dir="${build.result.folder}/fr.inria.exec_selection_1.0.0.201103181645"/>
+		<copy todir="${build.result.folder}" failonerror="true" overwrite="true">
+			<fileset dir="${basedir}">
+				<include name="META-INF/MANIFEST.MF"/>
+				<include name="plugin.xml"/>
+				<include name="fragment.xml"/>
+			</fileset>
+		</copy>
+		<eclipse.versionReplacer path="${build.result.folder}" version="1.0.0.201103181645"/>
+		<antcall target="apitools.generation">
+			<param name="target.folder" value="${build.result.folder}"/>
+			<param name="projectLocation" value="${basedir}"/>
+			<param name="binary.folders" value="${build.result.folder}/@dot;C:\Users\mgouyett\Marie\Work\workspaceMovida53\runtime-New_configuration\fr.inria.exec_selection/bin"/>
+			<param name="projectName" value="${bundleId}_${bundleVersion}"/>
+		</antcall>
+		<eclipse.gatherBundle 
+		   metadataRepository="${p2.build.repo}"
+		   artifactRepository="${p2.build.repo}"
+		   buildResultFolder="${build.result.folder}"
+		   unpack="true"
+		   baseDirectory="${basedir}"
+		/>
+	</target>
+
+	<target name="gather.bin.parts" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645"/>
+		<copy todir="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645" failonerror="true" overwrite="false">
+			<fileset dir="${build.result.folder}/@dot">
+				<include name="**"/>
+			</fileset>
+		</copy>
+		<copy todir="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645" failonerror="true" overwrite="true">
+			<fileset dir="${basedir}">
+				<include name="META-INF/"/>
+				<include name="plugin.xml"/>
+				<include name="src/"/>
+				<include name="build.properties"/>
+				<include name="readMe.txt"/>
+				<include name="lib/"/>
+				<include name="lib/org.eclipse.emf.mapping.ecore2xml_2.5.0.v200906151043.jar"/>
+				<include name="lib/fr.inria.featureDiagramEditor.emf-0.0.1-SNAPSHOT.jar"/>
+			</fileset>
+		</copy>
+		<eclipse.versionReplacer path="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645" version="1.0.0.201103181645"/>
+		<antcall target="apitools.generation">
+			<param name="target.folder" value="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645"/>
+			<param name="projectLocation" value="${basedir}"/>
+			<param name="binary.folders" value="${build.result.folder}/@dot;C:\Users\mgouyett\Marie\Work\workspaceMovida53\runtime-New_configuration\fr.inria.exec_selection/bin"/>
+			<param name="projectName" value="${bundleId}_${bundleVersion}"/>
+		</antcall>
+	</target>
+
+	<target name="build.zips" depends="init">
+	</target>
+
+	<target name="gather.sources" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645"/>
+		<copy file="${build.result.folder}/src.zip" todir="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645" failonerror="false" overwrite="false"/>
+		<antcall target="copy.src.includes">
+			<param name="source.destination.folder" value="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645"/>
+		</antcall>
+	</target>
+
+	<target name="gather.individual.sources" depends="init">
+		<antcall target="copy.src.zip">
+			<param name="source.destination.folder" value="${destination.temp.folder}"/>
+		</antcall>
+		<antcall target="copy.src.includes">
+			<param name="source.destination.folder" value="${destination.temp.folder}"/>
+		</antcall>
+	</target>
+
+	<target name="copy.src.includes" depends="init">
+		<copy todir="${source.destination.folder}" failonerror="false" overwrite="false">
+			<fileset dir="${basedir}">
+				<include name="build.properties"/>
+				<include name="lib/"/>
+				<include name="plugin.xml"/>
+				<include name="src/"/>
+				<include name="readMe.txt"/>
+				<include name="META-INF/"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="gather.logs" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645"/>
+		<copy todir="${destination.temp.folder}/fr.inria.exec_selection_1.0.0.201103181645" failonerror="false" overwrite="false">
+			<fileset dir="${build.result.folder}">
+				<include name="@dot${logExtension}"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean" depends="init" description="Clean the plug-in: fr.inria.exec_selection of all the zips, jars and logs created.">
+		<delete dir="${build.result.folder}/@dot"/>
+		<delete file="${build.result.folder}/src.zip"/>
+		<delete file="${plugin.destination}/fr.inria.exec_selection_1.0.0.201103181645.jar"/>
+		<delete file="${plugin.destination}/fr.inria.exec_selection_1.0.0.201103181645.zip"/>
+		<delete dir="${temp.folder}"/>
+		<delete file="${compilation.problem.marker}" quiet="true"/>
+	</target>
+
+	<target name="refresh" depends="init" if="eclipse.running" description="Refresh this folder.">
+		<eclipse.convertPath fileSystemPath="C:/Users/mgouyett/Marie/Work/workspaceMovida53/runtime-New_configuration/fr.inria.exec_selection" property="resourcePath"/>
+		<eclipse.refreshLocal resource="${resourcePath}" depth="infinite"/>
+	</target>
+
+	<target name="zip.plugin" depends="init" description="Create a zip containing all the elements for the plug-in: fr.inria.exec_selection.">
+		<delete dir="${temp.folder}"/>
+		<mkdir dir="${temp.folder}"/>
+		<antcall target="build.jars"/>
+		<antcall target="build.sources"/>
+		<antcall target="gather.bin.parts">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<antcall target="gather.sources">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<delete>
+			<fileset dir="${temp.folder}">
+				<include name="**/*.bin${logExtension}"/>
+			</fileset>
+		</delete>
+		<zip destfile="${plugin.destination}/fr.inria.exec_selection_1.0.0.201103181645.zip" basedir="${temp.folder}" filesonly="true" whenempty="skip" update="false"/>
+		<delete dir="${temp.folder}"/>
+	</target>
+
+	<target name="apitools.generation" if="generateAPIDescription">
+		<apitooling.apigeneration  projectName="${projectName}" project="${projectLocation}" binary="${binary.folders}" target="${target.folder}"		/>
+	</target>
+
+</project>

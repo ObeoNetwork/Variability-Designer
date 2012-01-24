@@ -1,0 +1,325 @@
+/*******************************************************************************
+ * Copyright (c) 2010-2012 Marie Gouyette
+ * INRIA-IRISA-Triskell Team 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Marie Gouyette - initial API and implementation
+ *     INRIA-IRISA-Triskell Team
+ *     Contact: marie.gouyette@gmail.com
+ ******************************************************************************/
+ 
+/*******************************************************************************
+ * This project contains some constraints written in Praxis for the Feature Diagram Editor.
+ ******************************************************************************/
+
+import <http://www.kermeta.org/featureDiagram>;
+
+rules featureDiagramEditorPraxisConstraints {
+
+["Feature has the same name {1} of another feature in the feature diagram "]
+public noTwoFeaturesHaveSameName(FeatureName) <=> and {
+	create(FeatureDiagram,#featurediagram),
+	
+	addReference(FeatureDiagram,#features,Feature),
+	create (Feature,#feature),
+	
+	addReference(FeatureDiagram,#features,OtherFeature),
+	create (OtherFeature,#feature),
+	not {
+	'equal(Feature, OtherFeature)
+	},
+	addProperty(Feature,#name, FeatureName),
+	addProperty(OtherFeature,#name, FeatureName)
+	}.
+	
+	
+ 
+ ["The feature  {2} cannot be mutually exclusive with itself"]
+public noMutexReflexive(CEDGE, FeatureName) <=> and{
+         addReference(CEDGE, #source, Feature),
+         addReference(CEDGE, #target, Feature),
+         create(Mutex, #mutex),
+         addReference(CEDGE, #constraint, Mutex),
+         /*  Only to display the name of the feature*/
+         addProperty(Feature, #name, FeatureName)    
+}.
+
+["The feature  {2} cannot require  itself"]
+public noRequireReflexive(CEDGE, FeatureName) <=> and{
+         addReference(CEDGE, #source, Feature),
+         addReference(CEDGE, #target, Feature),
+         create(Require, #require),
+         addReference(CEDGE, #constraint, Require),
+          /*  Only to display the name of the feature*/
+         addProperty(Feature, #name, FeatureName)     
+}.
+
+
+
+["There cannot have several mutex between the same pair of features {3} {4}"]
+public noSeveralMutexOnSameFeature(Feature1, Feature2, Feature1Name, Feature2Name, CEMutex1, CEMutex2) <=> and {
+		/*Only to display results */ 
+		addProperty(Feature1, #name, Feature1Name),
+		addProperty(Feature2, #name, Feature2Name),
+		/* Mutex1 between feature1 and feature2 */
+		call isMutex(Feature1, Feature2, CEMutex1),
+	
+		/* Mutex2 between feature1 and feature2 */
+	    call isMutex(Feature1, Feature2, CEMutex2),
+	not {'equal(CEMutex2, CEMutex1)}
+
+}.
+
+["If feature {2} requires feature {3}, feature {3} cannot requires feature {2}"]
+ public noCyclesOnRequire(FeatureDiagram, FeatureName1, FeatureName2) <=> and {
+ 	create(FeatureDiagram, #featurediagram),
+ 	addReference(FeatureDiagram, #features, Feature1),
+ 	
+ 	addReference(FeatureDiagram, #features, Feature2),
+ 	/*  Only to display results*/
+ 	addProperty(Feature1, #name, FeatureName1),
+ 	addProperty(Feature2, #name, FeatureName2),
+ 	
+ 	/*  Create Require 1*/
+ 	addReference (FeatureDiagram, #constraintedges, CE),
+ 	create(CE, #constraintedge),
+ 	addReference(CE, #source, Feature1),
+ 	addReference(CE, #target, Feature2),
+ 	addReference(CE, #constraint, Require),
+ 	create(Require, #require),
+ 	
+ 	/* Create Require 2 */
+ 	addReference (FeatureDiagram, #constraintedges, CE2),
+ 	create(CE2, #constraintedge),
+ 	addReference(CE2, #source, Feature2),
+ 	addReference(CE2, #target, Feature1),
+ 	addReference(CE2, #constraint, Require2),
+ 	create(Require2, #require)
+ 	
+ }.
+ 
+ ["There cannot have both mutex and require constraints between the same pair of features, {4} and {5}"]
+public noBothRequireAndMutexOnSameFeatures(FeatureDiagram, Feature1, Feature2, FeatureName1, FeatureName2) <=> and {
+	/* Only to display feature name */
+	addProperty(Feature1, #name, FeatureName1),
+	addProperty (Feature2, #name, FeatureName2),
+	
+		/* Mutex1 between feature1 and feature2 */
+	create(CEMutex1, #constraintedge),
+	addReference(FeatureDiagram, #constraintedges, CEMutex1),
+	create(Mutex1, #mutex),
+	addReference(CEMutex1, #source, Feature1),
+	addReference(CEMutex1, #target, Feature2),
+	addReference(CEMutex1, #constraint, Mutex1),
+	
+		/* Mutex2 between feature1 and feature2 */
+	or {
+	and {
+	create(CERequire1, #constraintedge),
+	addReference(FeatureDiagram, #constraintedges, CERequire1),
+	create(Require1, #require),
+	addReference(CERequire1, #source, Feature1),
+	addReference(CERequire1, #target, Feature2),
+	addReference(CERequire1, #constraint, Require1)
+	},
+	and {
+	create(CERequire2, #constraintedge),
+	addReference(FeatureDiagram, #constraintedges, CERequire2),
+	create(Require2, #require),
+	addReference(CERequire2, #source, Feature2),
+	addReference(CERequire2, #target, Feature1),
+	addReference(CERequire2, #constraint,Require2)
+	}
+	}
+}. 
+
+[" cardinality minimum on  operator card on feature {4}  must be equal or larger than zero "]
+public minCardLargerThanZero (Op, Min, Feature, FeatureName) <=> and {
+	/* Only to display name of the feature*/
+	addReference(Feature,#operator, Op),
+	addProperty(Feature , #name, FeatureName),
+	addProperty(Op, #min, Min),
+	'lt(Min ,0)
+}.
+
+[" Cardinality maximum on operator card on feature {3} must be equal and greater than cardinality minimum"]
+public noMinGreaterThanMax(Op, Feature, FeatureName) <=>  and {
+	/* Only to display name of the feature*/
+	addReference(Feature,#operator, Op),
+	addProperty(Feature , #name, FeatureName),
+	addProperty(Op, #min, Min),
+	addProperty(Op, #max, Max),
+	'lt(Max, Min),
+	not {'eq(Max, -1)}
+}.
+
+[" Cardinality maximum on operator card on feature {3} must be greater and equal than minus one"]
+public noMaxLessThanMinusOne(Op, Feature, FeatureName) <=> and {
+	/* Only to display name of the feature*/
+	addReference(Feature,#operator, Op),
+	addProperty(Feature , #name, FeatureName),
+	addProperty(Op, #max, Max),
+	'lt(Max ,-1)
+}.
+
+["The number of children features of the operator Card on the feature {3} must be equal or more than the minimum cardinality" ]
+public nbFeaturesMustBeMoreThanMin (Op, FeatureParent, FeatureName) <=> and {
+	/* Only to display name of the feature*/
+	addReference(FeatureParent,#operator, Op),
+	addProperty(FeatureParent , #name, FeatureName),
+	
+	'setof(FeatureChild, inOperator (FeatureParent,FeatureChild, Op), Features) ,
+	addProperty(Op, #min, Min),
+	'length(Features, L),
+	'lt(L, Min)
+}.
+
+
+	// Determines whether a feature is contained in a given operator or not
+	inOperator (FeatureParent, FeatureChild, Operator) <=> and {
+		addReference(FeatureParent,#operator, Operator),
+		addReference(Operator, #features, FeatureChild)
+	}.
+	
+	["The or operator on the feature {3} must have at least two features  children" ]
+public orOperatorMustHaveAtLeastTwoOperands (Op, FeatureParent, FeatureName) <=> and {
+	/* Only to display name of the feature*/
+	addProperty(FeatureParent , #name, FeatureName),
+	call mustHavaMoreThanTwoOperands (Op, FeatureParent),
+	'isTypeOf(Op, #or)
+}.
+
+	// Determines whether the operator have less than two operands
+	mustHavaMoreThanTwoOperands (Op, FeatureParent) <=> and {
+		addReference(FeatureParent,#operator, Op),
+		'setof(FeatureChild, inOperator (FeatureParent,FeatureChild, Op), Features) ,
+		'length(Features, L),
+		'lt(L, 2)
+	}.
+	
+	["The Alternative operator on the feature {3} must have at least two features  children" ]
+public altOperatorMustHaveAtLeastTwoOperands (Op, FeatureParent, FeatureName) <=> and {
+	/* Only to display name of the feature*/
+	addProperty(FeatureParent , #name, FeatureName),
+	call mustHavaMoreThanTwoOperands (Op, FeatureParent),
+	'isTypeOf(Op, #alternative)
+}.
+
+// No mutex between two distinct features 
+	isMutex(Feature1, Feature2,CEMutex) <=> or {
+		and {
+		/* Feature1 source of Mutex */
+		addReference(CEMutex, #source, Feature1),
+		addReference(CEMutex, #target, Feature2),
+		create(Mutex, #mutex),
+		addReference(CEMutex, #constraint, Mutex)
+		},
+		and {
+		/*  Feature2 source of mutex*/
+		addReference(CEMutex, #source, Feature2),
+		addReference(CEMutex, #target, Feature1),
+		create(Mutex2, #mutex),
+		addReference(CEMutex, #constraint, Mutex2)
+		}
+	}.
+	
+	// FeatureParent is a parent of  Feature
+	isParent(FeatureParent, Feature) <=> and {
+	addReference(Feature, #owningOperator, Op),
+	addReference(FeatureParent, #operator,Op)
+	}.
+	
+	
+	// FeatureAscendant is a descendant of feature
+	// You need to instanciate the list L with the Feature
+	isAncestor(SearchedFeature,L,CurrentFeature) <=>  or {
+		and { // Base case
+			call isParent(SearchedFeature, CurrentFeature )
+		},  
+		and { // inductive case 
+			// add childen into the list
+			'setof(FParent, isParent(FParent, CurrentFeature), FeatureParents),
+			'append(L, FeatureParents, L2),
+			L2 = [CurrentFeature | T],
+			T = [NextFeature | T1],
+			call isAncestor(SearchedFeature, T, NextFeature)
+		} 
+	}.
+	
+	
+	
+	["The feature {4} cannot contains one of its ancestors {3} as child"]
+	public noAncestorFeatureAsChildren(FeatureAncestor, Feature, FeatureAncestorName, FeatureName, Op) <=> and {
+		/* Only to display the name of the features */
+		addProperty(FeatureAncestor, #name, FeatureAncestorName),
+		
+		// FeatureAncestor ancestor of feature
+		addProperty(Feature, #name, FeatureName),
+		L = [Feature | T],
+		T = [],
+		call isAncestor(FeatureAncestor,L,Feature),	
+		
+		// Feature parent of FeatureAncestor
+		addReference(Feature, #operator, Op),
+		addReference(Op, #features, FeatureAncestor)
+	}.
+	
+	["We cannot have a mutex between Feature {4} and Feature {5} both referenced by a mandatory operator "]
+	public noMutexBetweenMandatoryFeatureChildren(FeatureDiagram, Feature1, Feature2, FeatureName1, FeatureName2, Op, Op2) <=> and {
+	/* Only to display the name of the features */
+	addProperty(Feature1, #name, FeatureName1),
+	addProperty(Feature2, #name, FeatureName2),
+	not {
+	'equal(Feature1, Feature2)
+	},
+	
+	
+	/* Feature 1 and Feature 2 in mandatory operators*/
+	'isTypeOf(Op, #mandatory),
+	addReference(Op, #features, Feature1),
+	
+	'isTypeOf(Op2, #mandatory),
+	addReference(Op2, #features, Feature2),
+	
+	/* Create Mutex constraint */
+	create(CEMutex, #constraintedge),
+	addReference(FeatureDiagram, #constraintedges, CEMutex),
+	create(Mutex, #mutex),
+	addReference(CEMutex, #source, Feature1),
+	addReference(CEMutex, #target, Feature2),
+	addReference(CEMutex, #constraint,Mutex)
+	}.
+	
+	
+	["We cannot have a mutex between a Feature {4} and one of its ancestor {3} "]
+	 public noMutexBetweenFeatureAndAncestor(FeatureDiagram,Feature1, Feature2, Feature1Name, Feature2Name) <=> and { 
+	
+		/* Only to display the name of the features */
+		addProperty(Feature2, #name, Feature2Name),
+		
+		// FeatureAncestor ancestor of feature
+		addProperty(Feature1, #name, Feature1Name),
+		
+		/* Create Mutex */
+		addReference(FeatureDiagram, #constraintEdges, CEMutex),
+		create(CEMutex, #constraintEdge),
+		call isMutex(Feature1, Feature2, CEMutex) ,
+		
+		L = [Feature2 | T],
+		T = [],
+		call isAncestor(Feature1,L,Feature2)
+		
+		
+		
+		
+	}. 
+	
+
+
+
+}
+

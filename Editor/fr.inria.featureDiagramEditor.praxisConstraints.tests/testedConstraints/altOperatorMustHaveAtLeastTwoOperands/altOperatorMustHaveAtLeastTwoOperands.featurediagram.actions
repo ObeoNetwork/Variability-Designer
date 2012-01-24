@@ -1,0 +1,47 @@
+:- style_check(-discontiguous).
+
+create(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,metaclass('http://www.kermeta.org/featurediagram', '//featurediagram',featurediagram),[0,1318606220730,'lip6']).
+addProperty(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,graphtypetree, 'true' ,[0,1318606220731,'lip6']).
+create(xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid,metaclass('http://www.kermeta.org/featurediagram', '//feature',feature),[0,1318606220732,'lip6']).
+addProperty(xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid,name, 'root Feature' ,[0,1318606220733,'lip6']).
+addProperty(xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid,selected, 'false' ,[0,1318606220734,'lip6']).
+create(xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid,metaclass('http://www.kermeta.org/featurediagram', '//feature',feature),[0,1318606220736,'lip6']).
+addProperty(xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid,name, 'a' ,[0,1318606220737,'lip6']).
+addProperty(xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid,selected, 'false' ,[0,1318606220738,'lip6']).
+create(xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid,metaclass('http://www.kermeta.org/featurediagram', '//feature',feature),[0,1318606220740,'lip6']).
+addProperty(xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid,name, 'c' ,[0,1318606220741,'lip6']).
+addProperty(xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid,selected, 'false' ,[0,1318606220742,'lip6']).
+addReference(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,features, xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220735,'lip6']).
+addReference(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,features, xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220739,'lip6']).
+addReference(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,features, xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220743,'lip6']).
+addReference(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,root, xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220744,'lip6']).
+create(xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid,metaclass('http://www.kermeta.org/featurediagram', '//alternative',alternative),[0,1318606220746,'lip6']).
+addProperty(xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid,name, 'Alternative' ,[0,1318606220747,'lip6']).
+create(xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid,metaclass('http://www.kermeta.org/featurediagram', '//opt',opt),[0,1318606220749,'lip6']).
+addProperty(xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid,name, 'Opt' ,[0,1318606220750,'lip6']).
+addReference(xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid,owningfeaturediagram, xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220745,'lip6']).
+addReference(xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid,operator, xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220748,'lip6']).
+addReference(xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid,operator, xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220751,'lip6']).
+addReference(xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid,owningfeature, xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220752,'lip6']).
+addReference(xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid,features, xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220753,'lip6']).
+addReference(xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid,owningfeaturediagram, xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220754,'lip6']).
+addReference(xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid,owningoperator, xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220755,'lip6']).
+addReference(xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid,owningfeature, xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220756,'lip6']).
+addReference(xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid,features, xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220757,'lip6']).
+addReference(xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid,owningfeaturediagram, xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220758,'lip6']).
+addReference(xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid,owningoperator, xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220759,'lip6']).
+addReference(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,features, xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220760,'lip6']).
+addReference(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,features, xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220761,'lip6']).
+addReference(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,features, xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220762,'lip6']).
+addReference(xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid,root, xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220763,'lip6']).
+addReference(xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid,owningfeaturediagram, xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220764,'lip6']).
+addReference(xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid,operator, xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220765,'lip6']).
+addReference(xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid,operator, xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220766,'lip6']).
+addReference(xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid,owningfeature, xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220767,'lip6']).
+addReference(xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid,features, xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220768,'lip6']).
+addReference(xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid,owningfeature, xmiid_qSH58Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220769,'lip6']).
+addReference(xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid,features, xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220770,'lip6']).
+addReference(xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid,owningfeaturediagram, xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220771,'lip6']).
+addReference(xmiid_q_MbUGm4EeCi_o5q62Kpkgxmiid,owningoperator, xmiid_quiJIGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220772,'lip6']).
+addReference(xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid,owningfeaturediagram, xmiid_nrLs4Gm4EeCi_o5q62Kpkgxmiid ,[0,1318606220773,'lip6']).
+addReference(xmiid_rUn4wGm4EeCi_o5q62Kpkgxmiid,owningoperator, xmiid_rp5lMGm4EeCi_o5q62Kpkgxmiid ,[0,1318606220774,'lip6']).

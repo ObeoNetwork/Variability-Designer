@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<toc label="Product Derivation Engine End-User documentation" topic="build/eclipse.help/PEnd/index.html">
+   <topic label="Preface" href="build/eclipse.help/PEnd/pr01.html"/>
+   <topic label="Product Derivation overview" href="build/eclipse.help/PEnd/ch01.html"/>
+   <topic label="Installation " href="build/eclipse.help/PEnd/ch02.html">
+      <topic label="Install Product Derivation Engine from the Movida studio update site" href="build/eclipse.help/PEnd/ch02.html#d0e109"/>
+      <topic label="Install Product Derivation Engine separately" href="build/eclipse.help/PEnd/ch02s02.html"/>
+   </topic>
+   <topic label=" Product Derivation Engine : Quick presentation" href="build/eclipse.help/PEnd/ch03.html">
+      <topic label=" Derivation example presentation" href="build/eclipse.help/PEnd/ch03.html#d0e155"/>
+      <topic label="How to use selection engine" href="build/eclipse.help/PEnd/ch03s02.html"/>
+      <topic label=" How to use Product Derivation Engine" href="build/eclipse.help/PEnd/ch03s03.html"/>
+   </topic>
+   <topic label=" Conclusion" href="build/eclipse.help/PEnd/ch04.html"/>
+</toc>

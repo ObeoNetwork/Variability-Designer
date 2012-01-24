@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_VRhz0GmeEeCWOd8XxGvLYw" root="_mSlhEGmeEeCWOd8XxGvLYw">
+  <features xmi:id="_mSlhEGmeEeCWOd8XxGvLYw" name="root Feature">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_xE5NEGmeEeCWOd8XxGvLYw" features="_m4XusGmeEeCWOd8XxGvLYw _nUMIAGmeEeCWOd8XxGvLYw" name="Or"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_yHsG0GmeEeCWOd8XxGvLYw" features="_nu9_gGmeEeCWOd8XxGvLYw" name="Opt"/>
+  </features>
+  <features xmi:id="_m4XusGmeEeCWOd8XxGvLYw" name="a" owningOperator="_xE5NEGmeEeCWOd8XxGvLYw">
+    <operator xsi:type="featureDiagram:Mandatory" xmi:id="_zNdcEGmeEeCWOd8XxGvLYw" features="_oWi84GmeEeCWOd8XxGvLYw _o3H6YGmeEeCWOd8XxGvLYw" name="Mandatory"/>
+  </features>
+  <features xmi:id="_nUMIAGmeEeCWOd8XxGvLYw" name="b" owningOperator="_xE5NEGmeEeCWOd8XxGvLYw">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_0oNi0GmeEeCWOd8XxGvLYw" features="_qLoPMGmeEeCWOd8XxGvLYw _q39wwGmeEeCWOd8XxGvLYw" name="Card" max="6"/>
+  </features>
+  <features xmi:id="_nu9_gGmeEeCWOd8XxGvLYw" name="c" owningOperator="_yHsG0GmeEeCWOd8XxGvLYw">
+    <operator xsi:type="featureDiagram:Card" xmi:id="_2ru5wGmeEeCWOd8XxGvLYw" features="_rfY9IGmeEeCWOd8XxGvLYw _r-7Y0GmeEeCWOd8XxGvLYw" name="Card" max="8"/>
+  </features>
+  <features xmi:id="_oWi84GmeEeCWOd8XxGvLYw" name="d" owningOperator="_zNdcEGmeEeCWOd8XxGvLYw"/>
+  <features xmi:id="_o3H6YGmeEeCWOd8XxGvLYw" name="e" owningOperator="_zNdcEGmeEeCWOd8XxGvLYw"/>
+  <features xmi:id="_qLoPMGmeEeCWOd8XxGvLYw" name="f" owningOperator="_0oNi0GmeEeCWOd8XxGvLYw"/>
+  <features xmi:id="_q39wwGmeEeCWOd8XxGvLYw" name="g" owningOperator="_0oNi0GmeEeCWOd8XxGvLYw"/>
+  <features xmi:id="_rfY9IGmeEeCWOd8XxGvLYw" name="h" owningOperator="_2ru5wGmeEeCWOd8XxGvLYw"/>
+  <features xmi:id="_r-7Y0GmeEeCWOd8XxGvLYw" name="i" owningOperator="_2ru5wGmeEeCWOd8XxGvLYw"/>
+  <constraintEdges xmi:id="_5FHL8GmeEeCWOd8XxGvLYw" target="_o3H6YGmeEeCWOd8XxGvLYw" source="_oWi84GmeEeCWOd8XxGvLYw">
+    <constraint xsi:type="featureDiagram:Mutex" xmi:id="_5FQ88GmeEeCWOd8XxGvLYw"/>
+  </constraintEdges>
+</featureDiagram:FeatureDiagram>

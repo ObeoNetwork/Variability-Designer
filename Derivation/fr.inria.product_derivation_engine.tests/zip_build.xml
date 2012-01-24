@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Copyright (c) 2010-2012 mgouyett.
+ * INRIA-IRISA- Triskell Team
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     mgouyett - initial API and implementation
+ * 	INRIA-IRISA- Triskell Team
+ * 	contact : marie.gouyette@gmail.com
+-->
+<project name="fr.inria.product_derivation_engine.tests" default="gather.bin.parts" basedir=".">
+
+	<!-- This script patches the way the plugin is created, otherwise some files are not added in the distribution and make it incorrect 
+	-->
+	<target name="gather.bin.parts" >
+		<tstamp>
+			<format property="TODAY_UK" pattern="d-MMMM-yyyy" locale="en"/>
+		</tstamp>
+		<filter token="BUILD.DATE" value="${TODAY_UK}"/>
+		<mkdir dir="mytemp"/>
+		<copy todir="mytemp" failonerror="true" overwrite="true">
+			<fileset dir="." includes="**" excludes="*zip_build.xml , *mytemp,*javaCompiler...args, *build.xml, fr.inria.featureDiagramEditor.praxisConstraints.tests.zip"/>
+		</copy>
+		<delete file="../fr.inria.product_derivation_engine.sample/zips/fr.inria.product_derivation_engine.tests.zip"/>
+		<zip destfile="../fr.inria.product_derivation_engine.sample/zips/fr.inria.product_derivation_engine.tests.zip" basedir="mytemp" includes="**" filesonly="false" whenempty="skip" update="false"/>
+		<delete dir="mytemp"/>
+	</target>
+
+</project>

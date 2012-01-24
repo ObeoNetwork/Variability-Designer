@@ -1,0 +1,4 @@
+:- style_check(-discontiguous).
+
+create(xmiid_unknownxmiid,featurediagram,[0,1303120679265,'lip6']).
+addProperty(xmiid_unknownxmiid,graphtypetree, 'true' ,[0,1303120679266,'lip6']).

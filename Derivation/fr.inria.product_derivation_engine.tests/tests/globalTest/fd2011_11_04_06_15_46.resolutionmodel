@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ASCII"?>
+<resolutionmodel:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmlns:resolutionmodel="http://www.kermeta.org/resolutionModel">
+  <featureDiagram href="fd.featurediagram#_4ajeQMcXEd-x3epmXulT2A"/>
+  <featureSelections state="selected" featureName="Car" operator="">
+    <feature name="Car">
+      <operator xsi:type="featureDiagram:Opt" features="//@featureSelections.0/@owningSelection.0/@feature //@featureSelections.0/@owningSelection.1/@feature" name="Opt"/>
+      <operator xsi:type="featureDiagram:Card" features="//@featureSelections.0/@owningSelection.2/@feature //@featureSelections.0/@owningSelection.3/@feature" name="Card" max="2"/>
+      <operator xsi:type="featureDiagram:Alternative" features="//@featureSelections.0/@owningSelection.4/@feature //@featureSelections.0/@owningSelection.5/@feature" name="Alternative"/>
+      <operator xsi:type="featureDiagram:Mandatory" features="//@featureSelections.0/@owningSelection.6/@feature" name="Mandatory"/>
+      <modelElements href="exampleCar.ecore#//Car"/>
+      <modelElements href="exampleCar.ecore#//Motor"/>
+    </feature>
+    <owningSelection featureName="AirCond" operator="Opt">
+      <feature name="AirCond" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <modelElements href="exampleCar.ecore#//AirCond"/>
+      </feature>
+    </owningSelection>
+    <owningSelection featureName="GPS" operator="Opt">
+      <feature name="GPS" owningOperator="//@featureSelections.0/@feature/@operator.0">
+        <modelElements href="exampleCar.ecore#//GPS"/>
+      </feature>
+    </owningSelection>
+    <owningSelection featureName="Option1" operator="Card">
+      <feature name="Option1" owningOperator="//@featureSelections.0/@feature/@operator.1">
+        <operator xsi:type="featureDiagram:Or" features="//@featureSelections.0/@owningSelection.2/@owningSelection.0/@feature //@featureSelections.0/@owningSelection.2/@owningSelection.1/@feature //@featureSelections.0/@owningSelection.2/@owningSelection.2/@feature" name="Or"/>
+      </feature>
+      <owningSelection featureName="ABS">
+        <feature name="ABS" owningOperator="//@featureSelections.0/@owningSelection.2/@feature/@operator.0">
+          <modelElements href="exampleCar.ecore#//ABS"/>
+        </feature>
+      </owningSelection>
+      <owningSelection state="selected" featureName="Radio">
+        <feature name="Radio" owningOperator="//@featureSelections.0/@owningSelection.2/@feature/@operator.0">
+          <modelElements href="exampleCar.ecore#//Radio"/>
+        </feature>
+      </owningSelection>
+      <owningSelection featureName="Airbag">
+        <feature name="Airbag" owningOperator="//@featureSelections.0/@owningSelection.2/@feature/@operator.0">
+          <modelElements href="exampleCar.ecore#//Airbag"/>
+        </feature>
+      </owningSelection>
+    </owningSelection>
+    <owningSelection featureName="Option2">
+      <feature name="Option2" owningOperator="//@featureSelections.0/@feature/@operator.1">
+        <operator xsi:type="featureDiagram:Or" features="//@featureSelections.0/@owningSelection.3/@owningSelection.0/@feature //@featureSelections.0/@owningSelection.3/@owningSelection.1/@feature //@featureSelections.0/@owningSelection.3/@owningSelection.2/@feature" name="Or"/>
+      </feature>
+      <owningSelection featureName="Electric Window">
+        <feature name="Electric Window" owningOperator="//@featureSelections.0/@owningSelection.3/@feature/@operator.0">
+          <modelElements href="exampleCar.ecore#//Electric%20Window"/>
+        </feature>
+      </owningSelection>
+      <owningSelection state="selected" featureName="Central Locking">
+        <feature name="Central Locking" owningOperator="//@featureSelections.0/@owningSelection.3/@feature/@operator.0">
+          <modelElements href="exampleCar.ecore#//Central%20Locking"/>
+        </feature>
+      </owningSelection>
+      <owningSelection featureName="Parking Assistance">
+        <feature name="Parking Assistance" owningOperator="//@featureSelections.0/@owningSelection.3/@feature/@operator.0">
+          <modelElements href="exampleCar.ecore#//Parking%20assistance"/>
+        </feature>
+      </owningSelection>
+    </owningSelection>
+    <owningSelection featureName="Petrol" operator="Alternative">
+      <feature name="Petrol" owningOperator="//@featureSelections.0/@feature/@operator.2">
+        <modelElements href="exampleCar.ecore#//Petrol"/>
+      </feature>
+    </owningSelection>
+    <owningSelection state="selected" featureName="Diesel" operator="Alternative">
+      <feature name="Diesel" owningOperator="//@featureSelections.0/@feature/@operator.2">
+        <modelElements href="exampleCar.ecore#//Diesel"/>
+      </feature>
+    </owningSelection>
+    <owningSelection state="selected" featureName="Tyre" operator="">
+      <feature name="Tyre" owningOperator="//@featureSelections.0/@feature/@operator.3">
+        <modelElements href="exampleCar.ecore#//Tyre"/>
+      </feature>
+    </owningSelection>
+  </featureSelections>
+</resolutionmodel:ResolutionModel>

@@ -1,0 +1,1 @@
+This plugin contains a version of the Obeo Designer flow example to test the decorator.

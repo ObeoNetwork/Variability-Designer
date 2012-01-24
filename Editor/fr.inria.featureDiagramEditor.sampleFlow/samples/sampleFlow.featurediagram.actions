@@ -1,0 +1,301 @@
+create(xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid,featurediagram,[0,1278319310346,'Bob']).
+addProperty(xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid,graphtypetree, 'true' ,[0,1278319310347,'Bob']).
+create(xmiid_xzcEEIgQEdMxMqoa95QEXxIwxmiid,feature,[0,1278319310348,'Bob']).
+addProperty(xmiid_xzcEEIgQEdMxMqoa95QEXxIwxmiid,name, 'System' ,[0,1278319310349,'Bob']).
+addProperty(xmiid_xzcEEIgQEdMxMqoa95QEXxIwxmiid,selected, 'false' ,[0,1278319310350,'Bob']).
+create(xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid,feature,[0,1278319310352,'Bob']).
+addProperty(xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid,name, 'Global Architecture' ,[0,1278319310353,'Bob']).
+addProperty(xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid,selected, 'false' ,[0,1278319310354,'Bob']).
+create(xmiid_2E__4IgQEdMxMqoa95QEXxIwxmiid,feature,[0,1278319310356,'Bob']).
+addProperty(xmiid_2E__4IgQEdMxMqoa95QEXxIwxmiid,name, 'powered' ,[0,1278319310357,'Bob']).
+addProperty(xmiid_2E__4IgQEdMxMqoa95QEXxIwxmiid,selected, 'false' ,[0,1278319310358,'Bob']).
+create(xmiid_302z8IgQEdMxMqoa95QEXxIwxmiid,feature,[0,1278319310360,'Bob']).
+addProperty(xmiid_302z8IgQEdMxMqoa95QEXxIwxmiid,name, 'twoInputs' ,[0,1278319310361,'Bob']).
+addProperty(xmiid_302z8IgQEdMxMqoa95QEXxIwxmiid,selected, 'false' ,[0,1278319310362,'Bob']).
+addReference(xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid,features, xmiid_xzcEEIgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310351,'Bob']).
+addReference(xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid,features, xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310355,'Bob']).
+addReference(xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid,features, xmiid_2E__4IgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310359,'Bob']).
+addReference(xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid,features, xmiid_302z8IgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310363,'Bob']).
+addReference(xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid,root, xmiid_xzcEEIgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310364,'Bob']).
+create(xmiid_5rlsEIgQEdMxMqoa95QEXxIwxmiid,and,[0,1278319310366,'Bob']).
+addProperty(xmiid_5rlsEIgQEdMxMqoa95QEXxIwxmiid,name, 'And' ,[0,1278319310367,'Bob']).
+addReference(xmiid_xzcEEIgQEdMxMqoa95QEXxIwxmiid,owningfeaturediagram, xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310365,'Bob']).
+addReference(xmiid_xzcEEIgQEdMxMqoa95QEXxIwxmiid,operator, xmiid_5rlsEIgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310368,'Bob']).
+addReference(xmiid_5rlsEIgQEdMxMqoa95QEXxIwxmiid,owningfeature, xmiid_xzcEEIgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310369,'Bob']).
+addReference(xmiid_5rlsEIgQEdMxMqoa95QEXxIwxmiid,features, xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310370,'Bob']).
+create(xmiid_BBN10IgREdMxMqoa95QEXxIwxmiid,xor,[0,1278319310372,'Bob']).
+addProperty(xmiid_BBN10IgREdMxMqoa95QEXxIwxmiid,name, 'Xor' ,[0,1278319310373,'Bob']).
+create(xmiid_D3IdkIgSEdMxMqoa95QEXxIwxmiid,model,[0,1278319310375,'Bob']).
+addProperty(xmiid_D3IdkIgSEdMxMqoa95QEXxIwxmiid,name, 'new model' ,[0,1278319310376,'Bob']).
+addReference(xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid,owningfeaturediagram, xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310371,'Bob']).
+addReference(xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid,operator, xmiid_BBN10IgREdMxMqoa95QEXxIwxmiid ,[0,1278319310374,'Bob']).
+addReference(xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid,models, xmiid_D3IdkIgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310377,'Bob']).
+addReference(xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid,owningoperator, xmiid_5rlsEIgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310378,'Bob']).
+addReference(xmiid_BBN10IgREdMxMqoa95QEXxIwxmiid,owningfeature, xmiid_zt2iUIgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310379,'Bob']).
+addReference(xmiid_BBN10IgREdMxMqoa95QEXxIwxmiid,features, xmiid_2E__4IgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310380,'Bob']).
+addReference(xmiid_BBN10IgREdMxMqoa95QEXxIwxmiid,features, xmiid_302z8IgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310381,'Bob']).
+create(xmiid_On2DkIgREdMxMqoa95QEXxIwxmiid,model,[0,1278319310383,'Bob']).
+addProperty(xmiid_On2DkIgREdMxMqoa95QEXxIwxmiid,name, 'new model' ,[0,1278319310384,'Bob']).
+addReference(xmiid_2E__4IgQEdMxMqoa95QEXxIwxmiid,owningfeaturediagram, xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310382,'Bob']).
+addReference(xmiid_2E__4IgQEdMxMqoa95QEXxIwxmiid,models, xmiid_On2DkIgREdMxMqoa95QEXxIwxmiid ,[0,1278319310385,'Bob']).
+addReference(xmiid_2E__4IgQEdMxMqoa95QEXxIwxmiid,owningoperator, xmiid_BBN10IgREdMxMqoa95QEXxIwxmiid ,[0,1278319310386,'Bob']).
+create(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,processor,[0,1278319310387,'Bob']).
+addProperty(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310388,'Bob']).
+addProperty(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310389,'Bob']).
+addProperty(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,capacity, '5' ,[0,1278319310390,'Bob']).
+addProperty(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,load, '5' ,[0,1278319310391,'Bob']).
+addProperty(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,consumption, '50' ,[0,1278319310392,'Bob']).
+addProperty(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,powerstatus, 'none' ,[0,1278319310393,'Bob']).
+addProperty(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,name, 'input controller' ,[0,1278319310394,'Bob']).
+addProperty(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,volume, '5' ,[0,1278319310395,'Bob']).
+addProperty(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,weight, '10' ,[0,1278319310396,'Bob']).
+addReference(xmiid_On2DkIgREdMxMqoa95QEXxIwxmiid,elements, xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid ,[0,1278319310397,'Bob']).
+create(xmiid_s7MtUYgREdMxMqoa95QEXxIwxmiid,dataflow,[0,1278319310398,'Bob']).
+addProperty(xmiid_s7MtUYgREdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310399,'Bob']).
+addProperty(xmiid_s7MtUYgREdMxMqoa95QEXxIwxmiid,usage, 'low' ,[0,1278319310400,'Bob']).
+addProperty(xmiid_s7MtUYgREdMxMqoa95QEXxIwxmiid,capacity, '10' ,[0,1278319310401,'Bob']).
+addProperty(xmiid_s7MtUYgREdMxMqoa95QEXxIwxmiid,load, '5' ,[0,1278319310402,'Bob']).
+addReference(xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid,outgoingflows, xmiid_s7MtUYgREdMxMqoa95QEXxIwxmiid ,[0,1278319310403,'Bob']).
+create(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,processor,[0,1278319310404,'Bob']).
+addProperty(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310405,'Bob']).
+addProperty(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,usage, 'unused' ,[0,1278319310406,'Bob']).
+addProperty(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,capacity, '15' ,[0,1278319310407,'Bob']).
+addProperty(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,load, '15' ,[0,1278319310408,'Bob']).
+addProperty(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,consumption, '150' ,[0,1278319310409,'Bob']).
+addProperty(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,powerstatus, 'none' ,[0,1278319310410,'Bob']).
+addProperty(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,name, 'data pocessor' ,[0,1278319310411,'Bob']).
+addProperty(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,volume, '15' ,[0,1278319310412,'Bob']).
+addProperty(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,weight, '10' ,[0,1278319310413,'Bob']).
+addReference(xmiid_s7MtUYgREdMxMqoa95QEXxIwxmiid,target, xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310414,'Bob']).
+addReference(xmiid_s7MtUYgREdMxMqoa95QEXxIwxmiid,source, xmiid_s7MtUIgREdMxMqoa95QEXxIwxmiid ,[0,1278319310415,'Bob']).
+create(xmiid_TptMxMPjpCEdMxM5SZ8AQ2hengxmiid,dataflow,[0,1278319310416,'Bob']).
+addProperty(xmiid_TptMxMPjpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310417,'Bob']).
+addProperty(xmiid_TptMxMPjpCEdMxM5SZ8AQ2hengxmiid,usage, 'low' ,[0,1278319310418,'Bob']).
+addProperty(xmiid_TptMxMPjpCEdMxM5SZ8AQ2hengxmiid,capacity, '10' ,[0,1278319310419,'Bob']).
+addProperty(xmiid_TptMxMPjpCEdMxM5SZ8AQ2hengxmiid,load, '5' ,[0,1278319310420,'Bob']).
+create(xmiid_TptMxMPDpCEdMxM5SZ8AQ2hengxmiid,dataflow,[0,1278319310422,'Bob']).
+addProperty(xmiid_TptMxMPDpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310423,'Bob']).
+addProperty(xmiid_TptMxMPDpCEdMxM5SZ8AQ2hengxmiid,usage, 'standard' ,[0,1278319310424,'Bob']).
+addProperty(xmiid_TptMxMPDpCEdMxM5SZ8AQ2hengxmiid,capacity, '10' ,[0,1278319310425,'Bob']).
+addProperty(xmiid_TptMxMPDpCEdMxM5SZ8AQ2hengxmiid,load, '10' ,[0,1278319310426,'Bob']).
+create(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,dataflow,[0,1278319310428,'Bob']).
+addProperty(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310429,'Bob']).
+addProperty(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,usage, 'high' ,[0,1278319310430,'Bob']).
+addProperty(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,capacity, '10' ,[0,1278319310431,'Bob']).
+addProperty(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,load, '15' ,[0,1278319310432,'Bob']).
+create(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,dataflow,[0,1278319310434,'Bob']).
+addProperty(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310435,'Bob']).
+addProperty(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,usage, 'high' ,[0,1278319310436,'Bob']).
+addProperty(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,capacity, '10' ,[0,1278319310437,'Bob']).
+addProperty(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,load, '15' ,[0,1278319310438,'Bob']).
+addReference(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,incomingflows, xmiid_TptMxMPjpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310421,'Bob']).
+addReference(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,incomingflows, xmiid_TptMxMPDpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310427,'Bob']).
+addReference(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,outgoingflows, xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310433,'Bob']).
+addReference(xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid,outgoingflows, xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310439,'Bob']).
+create(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,processor,[0,1278319310441,'Bob']).
+addProperty(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310442,'Bob']).
+addProperty(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,usage, 'unused' ,[0,1278319310443,'Bob']).
+addProperty(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,capacity, '5' ,[0,1278319310444,'Bob']).
+addProperty(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,load, '5' ,[0,1278319310445,'Bob']).
+addProperty(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,consumption, '50' ,[0,1278319310446,'Bob']).
+addProperty(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,powerstatus, 'none' ,[0,1278319310447,'Bob']).
+addProperty(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,name, 'input controller' ,[0,1278319310448,'Bob']).
+addProperty(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,volume, '5' ,[0,1278319310449,'Bob']).
+addProperty(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,weight, '10' ,[0,1278319310450,'Bob']).
+addReference(xmiid_TptMxMPjpCEdMxM5SZ8AQ2hengxmiid,target, xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310440,'Bob']).
+addReference(xmiid_TptMxMPjpCEdMxM5SZ8AQ2hengxmiid,source, xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310451,'Bob']).
+addReference(xmiid_TptMxMPTpCEdMxM5SZ8AQ2hengxmiid,outgoingflows, xmiid_TptMxMPjpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310452,'Bob']).
+create(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,processor,[0,1278319310454,'Bob']).
+addProperty(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310455,'Bob']).
+addProperty(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,usage, 'unused' ,[0,1278319310456,'Bob']).
+addProperty(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,capacity, '10' ,[0,1278319310457,'Bob']).
+addProperty(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,load, '5' ,[0,1278319310458,'Bob']).
+addProperty(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,consumption, '100' ,[0,1278319310459,'Bob']).
+addProperty(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,powerstatus, 'none' ,[0,1278319310460,'Bob']).
+addProperty(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,name, 'input controller' ,[0,1278319310461,'Bob']).
+addProperty(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,volume, '10' ,[0,1278319310462,'Bob']).
+addProperty(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,weight, '10' ,[0,1278319310463,'Bob']).
+addReference(xmiid_TptMxMPDpCEdMxM5SZ8AQ2hengxmiid,target, xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310453,'Bob']).
+addReference(xmiid_TptMxMPDpCEdMxM5SZ8AQ2hengxmiid,source, xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310464,'Bob']).
+create(xmiid_TptMxMMzpCEdMxM5SZ8AQ2hengxmiid,dataflow,[0,1278319310465,'Bob']).
+addProperty(xmiid_TptMxMMzpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310466,'Bob']).
+addProperty(xmiid_TptMxMMzpCEdMxM5SZ8AQ2hengxmiid,usage, 'low' ,[0,1278319310467,'Bob']).
+addProperty(xmiid_TptMxMMzpCEdMxM5SZ8AQ2hengxmiid,capacity, '10' ,[0,1278319310468,'Bob']).
+addProperty(xmiid_TptMxMMzpCEdMxM5SZ8AQ2hengxmiid,load, '5' ,[0,1278319310469,'Bob']).
+create(xmiid_TptMxMNjpCEdMxM5SZ8AQ2hengxmiid,dataflow,[0,1278319310471,'Bob']).
+addProperty(xmiid_TptMxMNjpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310472,'Bob']).
+addProperty(xmiid_TptMxMNjpCEdMxM5SZ8AQ2hengxmiid,usage, 'low' ,[0,1278319310473,'Bob']).
+addProperty(xmiid_TptMxMNjpCEdMxM5SZ8AQ2hengxmiid,capacity, '10' ,[0,1278319310474,'Bob']).
+addProperty(xmiid_TptMxMNjpCEdMxM5SZ8AQ2hengxmiid,load, '5' ,[0,1278319310475,'Bob']).
+addReference(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,incomingflows, xmiid_TptMxMMzpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310470,'Bob']).
+addReference(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,incomingflows, xmiid_TptMxMNjpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310476,'Bob']).
+addReference(xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid,outgoingflows, xmiid_TptMxMPDpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310477,'Bob']).
+create(xmiid_TptMxMMjpCEdMxM5SZ8AQ2hengxmiid,datasource,[0,1278319310479,'Bob']).
+addProperty(xmiid_TptMxMMjpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310480,'Bob']).
+addProperty(xmiid_TptMxMMjpCEdMxM5SZ8AQ2hengxmiid,usage, 'unused' ,[0,1278319310481,'Bob']).
+addProperty(xmiid_TptMxMMjpCEdMxM5SZ8AQ2hengxmiid,volume, '5' ,[0,1278319310482,'Bob']).
+addProperty(xmiid_TptMxMMjpCEdMxM5SZ8AQ2hengxmiid,name, 'outdoor' ,[0,1278319310483,'Bob']).
+addReference(xmiid_TptMxMMzpCEdMxM5SZ8AQ2hengxmiid,target, xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310478,'Bob']).
+addReference(xmiid_TptMxMMzpCEdMxM5SZ8AQ2hengxmiid,source, xmiid_TptMxMMjpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310484,'Bob']).
+addReference(xmiid_TptMxMMjpCEdMxM5SZ8AQ2hengxmiid,outgoingflows, xmiid_TptMxMMzpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310485,'Bob']).
+create(xmiid_TptMxMNTpCEdMxM5SZ8AQ2hengxmiid,datasource,[0,1278319310487,'Bob']).
+addProperty(xmiid_TptMxMNTpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310488,'Bob']).
+addProperty(xmiid_TptMxMNTpCEdMxM5SZ8AQ2hengxmiid,usage, 'unused' ,[0,1278319310489,'Bob']).
+addProperty(xmiid_TptMxMNTpCEdMxM5SZ8AQ2hengxmiid,volume, '5' ,[0,1278319310490,'Bob']).
+addProperty(xmiid_TptMxMNTpCEdMxM5SZ8AQ2hengxmiid,name, 'outdoor sensor' ,[0,1278319310491,'Bob']).
+addReference(xmiid_TptMxMNjpCEdMxM5SZ8AQ2hengxmiid,target, xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310486,'Bob']).
+addReference(xmiid_TptMxMNjpCEdMxM5SZ8AQ2hengxmiid,source, xmiid_TptMxMNTpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310492,'Bob']).
+addReference(xmiid_TptMxMNTpCEdMxM5SZ8AQ2hengxmiid,outgoingflows, xmiid_TptMxMNjpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310493,'Bob']).
+addReference(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,source, xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310494,'Bob']).
+create(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,processor,[0,1278319310495,'Bob']).
+addProperty(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,status, 'active' ,[0,1278319310496,'Bob']).
+addProperty(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,usage, 'unused' ,[0,1278319310497,'Bob']).
+addProperty(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,capacity, '15' ,[0,1278319310498,'Bob']).
+addProperty(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,load, '15' ,[0,1278319310499,'Bob']).
+addProperty(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,consumption, '150' ,[0,1278319310500,'Bob']).
+addProperty(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,powerstatus, 'none' ,[0,1278319310501,'Bob']).
+addProperty(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,name, 'output controller' ,[0,1278319310502,'Bob']).
+addProperty(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,volume, '15' ,[0,1278319310503,'Bob']).
+addProperty(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,weight, '10' ,[0,1278319310504,'Bob']).
+addReference(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,target, xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310505,'Bob']).
+addReference(xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid,source, xmiid_TptMxMQDpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310506,'Bob']).
+addReference(xmiid_TptMxMPzpCEdMxM5SZ8AQ2hengxmiid,incomingflows, xmiid_TptMxMQTpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310507,'Bob']).
+create(xmiid_O4P3EIgREdMxMqoa95QEXxIwxmiid,model,[0,1278319310509,'Bob']).
+addProperty(xmiid_O4P3EIgREdMxMqoa95QEXxIwxmiid,name, 'new model' ,[0,1278319310510,'Bob']).
+addReference(xmiid_302z8IgQEdMxMqoa95QEXxIwxmiid,owningfeaturediagram, xmiid_wF3H8IgQEdMxMqoa95QEXxIwxmiid ,[0,1278319310508,'Bob']).
+addReference(xmiid_302z8IgQEdMxMqoa95QEXxIwxmiid,models, xmiid_O4P3EIgREdMxMqoa95QEXxIwxmiid ,[0,1278319310511,'Bob']).
+addReference(xmiid_302z8IgQEdMxMqoa95QEXxIwxmiid,owningoperator, xmiid_BBN10IgREdMxMqoa95QEXxIwxmiid ,[0,1278319310512,'Bob']).
+create(xmiid_ySMxMDQIgREdMxMqoa95QEXxIwxmiid,poweroutput,[0,1278319310513,'Bob']).
+addProperty(xmiid_ySMxMDQIgREdMxMqoa95QEXxIwxmiid,power, '1000' ,[0,1278319310514,'Bob']).
+create(xmiid_ySMxMDQYgREdMxMqoa95QEXxIwxmiid,powerlink,[0,1278319310516,'Bob']).
+create(xmiid_ySMxMDQogREdMxMqoa95QEXxIwxmiid,powerinput,[0,1278319310518,'Bob']).
+addReference(xmiid_O4P3EIgREdMxMqoa95QEXxIwxmiid,elements, xmiid_ySMxMDQIgREdMxMqoa95QEXxIwxmiid ,[0,1278319310515,'Bob']).
+addReference(xmiid_O4P3EIgREdMxMqoa95QEXxIwxmiid,elements, xmiid_ySMxMDQYgREdMxMqoa95QEXxIwxmiid ,[0,1278319310517,'Bob']).
+addReference(xmiid_O4P3EIgREdMxMqoa95QEXxIwxmiid,elements, xmiid_ySMxMDQogREdMxMqoa95QEXxIwxmiid ,[0,1278319310519,'Bob']).
+create(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,compositeprocessor,[0,1278319310520,'Bob']).
+addProperty(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,consumption, '0' ,[0,1278319310521,'Bob']).
+addProperty(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,powerstatus, 'none' ,[0,1278319310522,'Bob']).
+addProperty(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,name, 'camera1' ,[0,1278319310523,'Bob']).
+addProperty(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,temperature, '0' ,[0,1278319310524,'Bob']).
+addProperty(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,weight, '0' ,[0,1278319310525,'Bob']).
+addProperty(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310526,'Bob']).
+addProperty(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310527,'Bob']).
+addProperty(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,capacity, '10' ,[0,1278319310528,'Bob']).
+addProperty(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,load, '0' ,[0,1278319310529,'Bob']).
+create(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,compositeprocessor,[0,1278319310531,'Bob']).
+addProperty(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,consumption, '0' ,[0,1278319310532,'Bob']).
+addProperty(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,powerstatus, 'none' ,[0,1278319310533,'Bob']).
+addProperty(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,name, 'camera2' ,[0,1278319310534,'Bob']).
+addProperty(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,temperature, '0' ,[0,1278319310535,'Bob']).
+addProperty(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,weight, '0' ,[0,1278319310536,'Bob']).
+addProperty(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310537,'Bob']).
+addProperty(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310538,'Bob']).
+addProperty(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,capacity, '10' ,[0,1278319310539,'Bob']).
+addProperty(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,load, '0' ,[0,1278319310540,'Bob']).
+create(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,compositeprocessor,[0,1278319310542,'Bob']).
+addProperty(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,consumption, '480' ,[0,1278319310543,'Bob']).
+addProperty(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,powerstatus, 'none' ,[0,1278319310544,'Bob']).
+addProperty(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,name, 'processing unit' ,[0,1278319310545,'Bob']).
+addProperty(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,temperature, '50' ,[0,1278319310546,'Bob']).
+addProperty(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,weight, '80' ,[0,1278319310547,'Bob']).
+addProperty(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310548,'Bob']).
+addProperty(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310549,'Bob']).
+addProperty(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,capacity, '10' ,[0,1278319310550,'Bob']).
+addProperty(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,load, '0' ,[0,1278319310551,'Bob']).
+addReference(xmiid_D3IdkIgSEdMxMqoa95QEXxIwxmiid,elements, xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310530,'Bob']).
+addReference(xmiid_D3IdkIgSEdMxMqoa95QEXxIwxmiid,elements, xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310541,'Bob']).
+addReference(xmiid_D3IdkIgSEdMxMqoa95QEXxIwxmiid,elements, xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310552,'Bob']).
+create(xmiid_GHyRkYgSEdMxMqoa95QEXxIwxmiid,datasource,[0,1278319310553,'Bob']).
+addProperty(xmiid_GHyRkYgSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310554,'Bob']).
+addProperty(xmiid_GHyRkYgSEdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310555,'Bob']).
+addProperty(xmiid_GHyRkYgSEdMxMqoa95QEXxIwxmiid,volume, '5' ,[0,1278319310556,'Bob']).
+addProperty(xmiid_GHyRkYgSEdMxMqoa95QEXxIwxmiid,name, 'outdoor' ,[0,1278319310557,'Bob']).
+addReference(xmiid_GHyRkIgSEdMxMqoa95QEXxIwxmiid,elements, xmiid_GHyRkYgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310558,'Bob']).
+create(xmiid_GHyRkogSEdMxMqoa95QEXxIwxmiid,dataflow,[0,1278319310559,'Bob']).
+addProperty(xmiid_GHyRkogSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310560,'Bob']).
+addProperty(xmiid_GHyRkogSEdMxMqoa95QEXxIwxmiid,usage, 'low' ,[0,1278319310561,'Bob']).
+addProperty(xmiid_GHyRkogSEdMxMqoa95QEXxIwxmiid,capacity, '10' ,[0,1278319310562,'Bob']).
+addProperty(xmiid_GHyRkogSEdMxMqoa95QEXxIwxmiid,load, '5' ,[0,1278319310563,'Bob']).
+addReference(xmiid_GHyRkYgSEdMxMqoa95QEXxIwxmiid,outgoingflows, xmiid_GHyRkogSEdMxMqoa95QEXxIwxmiid ,[0,1278319310564,'Bob']).
+addReference(xmiid_GHyRkogSEdMxMqoa95QEXxIwxmiid,target, xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310565,'Bob']).
+addReference(xmiid_GHyRkogSEdMxMqoa95QEXxIwxmiid,source, xmiid_GHyRkYgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310566,'Bob']).
+create(xmiid_JFlfcYgSEdMxMqoa95QEXxIwxmiid,datasource,[0,1278319310567,'Bob']).
+addProperty(xmiid_JFlfcYgSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310568,'Bob']).
+addProperty(xmiid_JFlfcYgSEdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310569,'Bob']).
+addProperty(xmiid_JFlfcYgSEdMxMqoa95QEXxIwxmiid,volume, '5' ,[0,1278319310570,'Bob']).
+addProperty(xmiid_JFlfcYgSEdMxMqoa95QEXxIwxmiid,name, 'outdoor sensor' ,[0,1278319310571,'Bob']).
+addReference(xmiid_JFlfcIgSEdMxMqoa95QEXxIwxmiid,elements, xmiid_JFlfcYgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310572,'Bob']).
+create(xmiid_JFlfcogSEdMxMqoa95QEXxIwxmiid,dataflow,[0,1278319310573,'Bob']).
+addProperty(xmiid_JFlfcogSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310574,'Bob']).
+addProperty(xmiid_JFlfcogSEdMxMqoa95QEXxIwxmiid,usage, 'low' ,[0,1278319310575,'Bob']).
+addProperty(xmiid_JFlfcogSEdMxMqoa95QEXxIwxmiid,capacity, '10' ,[0,1278319310576,'Bob']).
+addProperty(xmiid_JFlfcogSEdMxMqoa95QEXxIwxmiid,load, '5' ,[0,1278319310577,'Bob']).
+addReference(xmiid_JFlfcYgSEdMxMqoa95QEXxIwxmiid,outgoingflows, xmiid_JFlfcogSEdMxMqoa95QEXxIwxmiid ,[0,1278319310578,'Bob']).
+addReference(xmiid_JFlfcogSEdMxMqoa95QEXxIwxmiid,target, xmiid_TptMxMOzpCEdMxM5SZ8AQ2hengxmiid ,[0,1278319310579,'Bob']).
+addReference(xmiid_JFlfcogSEdMxMqoa95QEXxIwxmiid,source, xmiid_JFlfcYgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310580,'Bob']).
+create(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,processor,[0,1278319310581,'Bob']).
+addProperty(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310582,'Bob']).
+addProperty(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310583,'Bob']).
+addProperty(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,capacity, '5' ,[0,1278319310584,'Bob']).
+addProperty(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,load, '5' ,[0,1278319310585,'Bob']).
+addProperty(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,consumption, '50' ,[0,1278319310586,'Bob']).
+addProperty(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,powerstatus, 'none' ,[0,1278319310587,'Bob']).
+addProperty(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,name, 'input controller' ,[0,1278319310588,'Bob']).
+addProperty(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,volume, '5' ,[0,1278319310589,'Bob']).
+addProperty(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,weight, '10' ,[0,1278319310590,'Bob']).
+create(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,processor,[0,1278319310592,'Bob']).
+addProperty(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310593,'Bob']).
+addProperty(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310594,'Bob']).
+addProperty(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,capacity, '15' ,[0,1278319310595,'Bob']).
+addProperty(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,load, '15' ,[0,1278319310596,'Bob']).
+addProperty(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,consumption, '150' ,[0,1278319310597,'Bob']).
+addProperty(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,powerstatus, 'none' ,[0,1278319310598,'Bob']).
+addProperty(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,name, 'output controller' ,[0,1278319310599,'Bob']).
+addProperty(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,volume, '15' ,[0,1278319310600,'Bob']).
+addProperty(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,weight, '10' ,[0,1278319310601,'Bob']).
+create(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,processor,[0,1278319310603,'Bob']).
+addProperty(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310604,'Bob']).
+addProperty(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310605,'Bob']).
+addProperty(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,capacity, '15' ,[0,1278319310606,'Bob']).
+addProperty(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,load, '15' ,[0,1278319310607,'Bob']).
+addProperty(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,consumption, '150' ,[0,1278319310608,'Bob']).
+addProperty(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,powerstatus, 'none' ,[0,1278319310609,'Bob']).
+addProperty(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,name, 'data pocessor' ,[0,1278319310610,'Bob']).
+addProperty(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,volume, '15' ,[0,1278319310611,'Bob']).
+addProperty(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,weight, '10' ,[0,1278319310612,'Bob']).
+create(xmiid_ZK9AiYgSEdMxMqoa95QEXxIwxmiid,fan,[0,1278319310614,'Bob']).
+addProperty(xmiid_ZK9AiYgSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310615,'Bob']).
+addProperty(xmiid_ZK9AiYgSEdMxMqoa95QEXxIwxmiid,usage, 'unused' ,[0,1278319310616,'Bob']).
+addProperty(xmiid_ZK9AiYgSEdMxMqoa95QEXxIwxmiid,consumption, '30' ,[0,1278319310617,'Bob']).
+addProperty(xmiid_ZK9AiYgSEdMxMqoa95QEXxIwxmiid,powerstatus, 'none' ,[0,1278319310618,'Bob']).
+addProperty(xmiid_ZK9AiYgSEdMxMqoa95QEXxIwxmiid,speed, '3000' ,[0,1278319310619,'Bob']).
+addProperty(xmiid_ZK9AiYgSEdMxMqoa95QEXxIwxmiid,weight, '40' ,[0,1278319310620,'Bob']).
+addReference(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,elements, xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid ,[0,1278319310591,'Bob']).
+addReference(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,elements, xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310602,'Bob']).
+addReference(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,elements, xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid ,[0,1278319310613,'Bob']).
+addReference(xmiid_ZK9AgIgSEdMxMqoa95QEXxIwxmiid,elements, xmiid_ZK9AiYgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310621,'Bob']).
+create(xmiid_ZK9AhIgSEdMxMqoa95QEXxIwxmiid,dataflow,[0,1278319310622,'Bob']).
+addProperty(xmiid_ZK9AhIgSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310623,'Bob']).
+addProperty(xmiid_ZK9AhIgSEdMxMqoa95QEXxIwxmiid,usage, 'low' ,[0,1278319310624,'Bob']).
+addProperty(xmiid_ZK9AhIgSEdMxMqoa95QEXxIwxmiid,capacity, '10' ,[0,1278319310625,'Bob']).
+addProperty(xmiid_ZK9AhIgSEdMxMqoa95QEXxIwxmiid,load, '5' ,[0,1278319310626,'Bob']).
+addReference(xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid,outgoingflows, xmiid_ZK9AhIgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310627,'Bob']).
+addReference(xmiid_ZK9AhIgSEdMxMqoa95QEXxIwxmiid,target, xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid ,[0,1278319310628,'Bob']).
+addReference(xmiid_ZK9AhIgSEdMxMqoa95QEXxIwxmiid,source, xmiid_ZK9Ag4gSEdMxMqoa95QEXxIwxmiid ,[0,1278319310629,'Bob']).
+create(xmiid_ZK9Ah4gSEdMxMqoa95QEXxIwxmiid,dataflow,[0,1278319310631,'Bob']).
+addProperty(xmiid_ZK9Ah4gSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310632,'Bob']).
+addProperty(xmiid_ZK9Ah4gSEdMxMqoa95QEXxIwxmiid,usage, 'high' ,[0,1278319310633,'Bob']).
+addProperty(xmiid_ZK9Ah4gSEdMxMqoa95QEXxIwxmiid,capacity, '10' ,[0,1278319310634,'Bob']).
+addProperty(xmiid_ZK9Ah4gSEdMxMqoa95QEXxIwxmiid,load, '15' ,[0,1278319310635,'Bob']).
+create(xmiid_ZK9AiIgSEdMxMqoa95QEXxIwxmiid,dataflow,[0,1278319310637,'Bob']).
+addProperty(xmiid_ZK9AiIgSEdMxMqoa95QEXxIwxmiid,status, 'active' ,[0,1278319310638,'Bob']).
+addProperty(xmiid_ZK9AiIgSEdMxMqoa95QEXxIwxmiid,usage, 'high' ,[0,1278319310639,'Bob']).
+addProperty(xmiid_ZK9AiIgSEdMxMqoa95QEXxIwxmiid,capacity, '10' ,[0,1278319310640,'Bob']).
+addProperty(xmiid_ZK9AiIgSEdMxMqoa95QEXxIwxmiid,load, '15' ,[0,1278319310641,'Bob']).
+addReference(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,incomingflows, xmiid_ZK9AhIgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310630,'Bob']).
+addReference(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,outgoingflows, xmiid_ZK9Ah4gSEdMxMqoa95QEXxIwxmiid ,[0,1278319310636,'Bob']).
+addReference(xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid,outgoingflows, xmiid_ZK9AiIgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310642,'Bob']).
+addReference(xmiid_ZK9Ah4gSEdMxMqoa95QEXxIwxmiid,source, xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid ,[0,1278319310643,'Bob']).
+addReference(xmiid_ZK9AiIgSEdMxMqoa95QEXxIwxmiid,target, xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310644,'Bob']).
+addReference(xmiid_ZK9AiIgSEdMxMqoa95QEXxIwxmiid,source, xmiid_ZK9AhogSEdMxMqoa95QEXxIwxmiid ,[0,1278319310645,'Bob']).
+addReference(xmiid_ZK9AhYgSEdMxMqoa95QEXxIwxmiid,incomingflows, xmiid_ZK9AiIgSEdMxMqoa95QEXxIwxmiid ,[0,1278319310646,'Bob']).

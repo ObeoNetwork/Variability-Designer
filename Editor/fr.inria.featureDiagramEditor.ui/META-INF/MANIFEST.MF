@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-Name: Obeo Designer Viewpoint Project
+Bundle-SymbolicName: fr.inria.featureDiagramEditor.ui;singleton:=true
+Bundle-Version: 1.0.1
+Bundle-Activator: fr.inria.featureDiagramEditor.ui.Activator
+Require-Bundle: fr.obeo.acceleo.gen,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ fr.obeo.dsl.viewpoint,
+ fr.obeo.dsl.common,
+ fr.inria.featureDiagramEditor.emf,
+ org.eclipse.core.resources,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.edit,
+ org.eclipse.emf.edit.ui,
+ org.eclipse.emf.transaction,
+ org.eclipse.gmf.runtime.diagram.core
+Eclipse-LazyStart: true
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: fr.inria.featureDiagramEditor.ui
+Provide-Package: fr.inria.featureDiagramEditor.ui,
+ fr.inria.featureDiagramEditor.ui.wizard
+Bundle-ClassPath: .

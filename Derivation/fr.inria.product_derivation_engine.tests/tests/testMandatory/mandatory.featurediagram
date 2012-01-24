@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_SUyrgHSXEeCttpG3aQedWg" root="_TTiLsHSXEeCttpG3aQedWg">
+  <features xmi:id="_TTiLsHSXEeCttpG3aQedWg" name="System">
+    <operator xsi:type="featureDiagram:Mandatory" xmi:id="_aY5E0HSXEeCttpG3aQedWg" features="_UMtPYHSXEeCttpG3aQedWg _Ud5tEHSXEeCttpG3aQedWg" name="Mandatory"/>
+    <modelElements href="car.ecore#//Car"/>
+  </features>
+  <features xmi:id="_UMtPYHSXEeCttpG3aQedWg" name="Motor" owningOperator="_aY5E0HSXEeCttpG3aQedWg">
+    <modelElements href="car.ecore#//Motor"/>
+  </features>
+  <features xmi:id="_Ud5tEHSXEeCttpG3aQedWg" name="ABS" owningOperator="_aY5E0HSXEeCttpG3aQedWg">
+    <modelElements href="car.ecore#//ABS"/>
+  </features>
+</featureDiagram:FeatureDiagram>

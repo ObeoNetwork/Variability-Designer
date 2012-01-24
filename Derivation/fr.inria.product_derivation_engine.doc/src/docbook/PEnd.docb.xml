@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2010-2012 mgouyett.
+  INRIA-IRISA- Triskell Team
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+  
+  Contributors:
+      mgouyett - initial API and implementation
+  	INRIA-IRISA- Triskell Team
+  	contact : marie.gouyette@gmail.com
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<book lang="en-US">
+  <?ooogenerator OpenOffice.org/2.0$Linux OpenOffice.org_project/680m1$Build-8990?>
+  <?oooversion?>
+  <bookinfo>
+    <pubdate>Build date: @BUILD.DATE@</pubdate>
+    <date>Last modification: $Date:: 2010-05-25 08:39:54#$</date>
+    <author>
+      <firstname> Marie Gouyette</firstname>
+      <firstname/>
+    </author>
+    <title>Product Derivation Engine End-User documentation</title>
+    <keywordset>
+      <keyword>Product Derivation Engine</keyword>
+      <keyword>metamodeling</keyword>
+      <keyword>Software Product Line (SPL)</keyword>
+    </keywordset>
+    <subtitle> </subtitle>
+    <bibliomisc>Licence EPL</bibliomisc>
+    <bibliomisc/>
+    <abstract>
+      <para>This documentation presents the use of product derivation in association with a feature
+        diagram editor. This product derivation tool and feature diagram editor takes part of the
+        ANR Project Movida. </para>
+    </abstract>
+    <publisher>
+      <publishername>INRIA</publishername>
+      <address>
+        <state>France</state>
+        <otheraddr>
+          <ulink url="http://www.inria.fr">http://www.inria.fr</ulink>
+        </otheraddr>
+      </address>
+    </publisher>
+    <confgroup>
+      <conftitle>title</conftitle>
+      <confnum>Reference</confnum>
+      <confsponsor>sponsor</confsponsor>
+    </confgroup>
+  </bookinfo>
+  <preface>
+    <?print-orientation portrait?>
+    <title>Preface</title>
+    <para>Feature models are a way to add variability on models. By variability, we mean to model
+      common and variable parts of a given architecture. An example of use of variability is given
+      by <emphasis role="italic">Software Product Line (SPL)</emphasis> which consists in derive
+      different family of products according to their similarities and differences. Another use is
+      to model different software architecture possible choices. So, we have developped a tool that
+      permit to create feature model (cf Feature Diagram Editor Documentation and <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/FeatureDiagramEditorDemo.htm"> sample wink
+        video</ulink>. ) and another tool that permit to use derivation on this Feature Diagram
+      Editor. This document present quickly how to install and use the product derivation engine for
+      feature diagram editor with a<ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/SelectionAndDerivationDemo.htm"> sample
+        wink video</ulink>. For more information about this editor please refer to the <ulink
+        url="@ONLINE.OR.LOCAL@/fr.inria.featureDiagramEditor.doc/help/@OUTPUT.VERSION@/Movida-ProductDerivationEngine-Technical-Documentation/index.html"
+        > technical documentation</ulink>.</para>
+    <important>
+      <title> Product Derivation engine depends of Feature Diagram Editor</title>
+      <para> This product derivation engine constitutes an extension of the Feature Diagram Editor.
+        You must have installed the Feature Diagram Editor before install it.</para>
+    </important>
+  </preface>
+  <chapter>
+    <title>Product Derivation overview</title>
+    <para>We can define variability on an architecture model thanks to the Feature Diagram Editor,
+      associating Domain Model Elements of a given model to a given feature . The product derivation
+      tool permits to create a product model <emphasis role="italic">(resolved model</emphasis>)
+      from the architecture model at the beginning (<emphasis role="italic">base model</emphasis>)
+      and the<emphasis role="italic"> feature model</emphasis>. Firstly, we select all wanted
+      features through a selection engine tool and store what features are selected or unselcted in
+        a<emphasis role="italic"> resolution model</emphasis>. Then we use this <emphasis
+        role="italic">resolution model</emphasis> to obtain the <emphasis role="italic">resolved
+        model</emphasis> through the product derivation tool.The next section will present the
+      installation of the product derivation engine, a quickly presentation of use and a <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/SelectionAndDerivationDemo.htm"> sample
+        wink video</ulink>.</para>
+  </chapter>
+  <chapter>
+    <title>Installation </title>
+    <para>You need to install first the Feature Diagram Editor and all its dependencies. For more
+      informations about that please refer to the <emphasis role="bold">Feature Diagram Editor
+        Documentation</emphasis>.</para>
+    <para/>
+    <section>
+      <title>Install Product Derivation Engine from the Movida studio update site</title>
+      <para>If the Movida studio update site is already added in the <emphasis role="italic">Install
+          New Sofware</emphasis> go to <emphasis role="italic">Help</emphasis>-><emphasis
+          role="italic">Install New Software</emphasis>. On the Work with field, search the Movida
+        studio update site and check <emphasis role="italic">Product Derivation
+        Engine</emphasis>.</para>
+      <para><inlinegraphic fileref="PEnd_figures/InstallProductDerivationEngine.png"/></para>
+      <para>Click on Next on all of the following wizard, accept the license ansd click on Finish.
+        You also need to restart your Eclipse.</para>
+    </section>
+    <section>
+      <title>Install Product Derivation Engine separately</title>
+      <para>To install the Product Derivation Engine unzip the update site <emphasis role="bold">
+          fr.inria.product_derivation_engine.OD6.updatesite.zip</emphasis>, open Eclipse and go to
+        Help -> Install New Software. On the new wizard, click on <emphasis role="bold"
+          >Add</emphasis> name your new update site <emphasis role="bold">Selection and Derivation
+          Engine </emphasis> and search the unzipped update site. </para>
+    </section>
+  </chapter>
+  <chapter>
+    <title> Product Derivation Engine : Quick presentation</title>
+    <para>This chapter present a very quick of use of Product Derivation Engine. For more
+      information please refer to the <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/SelectionAndDerivationDemo.htm"> sample
+        wink video</ulink> and the <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/FeatureDiagramEditorDemo.htm"> sample wink
+        video</ulink> of the Feature Diagram Editor.</para>
+    <section>
+      <title> Derivation example presentation</title>
+      <para>We want to derive the following<emphasis role="italic"> base model</emphasis> which
+        represents a car (this example is available in the Eclipse examples, go to<emphasis
+          role="italic"> File</emphasis>-><emphasis role="italic">New</emphasis>-><emphasis
+          role="italic">Example</emphasis>-><emphasis role="italic"> Product Derivation
+          Sample</emphasis> -><emphasis role="italic"> Product Derivation Test</emphasis> :</para>
+      <para><inlinegraphic fileref="PEnd_figures/baseModel.png"/></para>
+      <para>We have ever created a feature model for this base model through the<emphasis
+          role="italic"> Feature Diagram Editor </emphasis>tool : </para>
+      <para><inlinegraphic fileref="PEnd_figures/Feature%20Diagram%20Editor.jpg"/></para>
+      <para>We want to select a car with GPS, Radio, Electric Window and a diesel motor.</para>
+    </section>
+    <section>
+      <title>How to use selection engine</title>
+      <para> </para>
+      <para>We suppose you have a feature model created with the feature diagram editor tool and the
+        corresponding Obeo Designer session :</para>
+      <para><inlinegraphic fileref="PEnd_figures/select_features.png"/></para>
+      <para/>
+      <para>
+        <important>
+          <title> Obeo Designer session must be open </title>
+          <para><emphasis role="bold"> Be sure Obeo Designer session for the feature model is
+              opened. So, double click on the session file (.aird) if it is not the
+            case.</emphasis></para>
+        </important>
+      </para>
+      <para>To select features on the fearture model simply right click on the feature model (here
+          <emphasis role="italic">fd.featurediagram</emphasis>) ->Movida-> Select features.</para>
+      <para>You obtain the following view in your Eclipse : </para>
+      <para><inlinegraphic fileref="PEnd_figures/created_resolution_model.png"/></para>
+      <para>Open the new resolution model file (here fd2011_10_14_10_44_12.resolutionmodel) and
+        check features you want to select :</para>
+      <para><inlinegraphic fileref="PEnd_figures/completed_resolution_model.png"/></para>
+      <para>Each icon corresponds to given operator that reference the feature :</para>
+      <para>
+        <itemizedlist>
+          <listitem>
+            <para><inlinegraphic fileref="PEnd_figures/Mandatory.png"/> : mandatory operator</para>
+          </listitem>
+          <listitem>
+            <para><inlinegraphic fileref="PEnd_figures/Optional.png"/> : optional operator</para>
+          </listitem>
+          <listitem>
+            <para><inlinegraphic fileref="PEnd_figures/Card.png"/> : Card operator</para>
+          </listitem>
+          <listitem>
+            <para><inlinegraphic fileref="PEnd_figures/Or.png"/> : Or operator</para>
+          </listitem>
+          <listitem>
+            <para><inlinegraphic fileref="PEnd_figures/Xor.png"/> : alternative operator
+              (Xor)</para>
+          </listitem>
+        </itemizedlist>
+      </para>
+      <para>Icons for unselected feature are grayed out.</para>
+      <para>This section shows you how to create a new resolution model to store selected or
+        unselected features. The next section present how to derive this resolution model to obtain
+        a <emphasis role="bold">resolved model</emphasis> (product model).</para>
+    </section>
+    <section>
+      <title> How to use Product Derivation Engine</title>
+      <para>We have obtained a new resolution model in the last section. So, we use it with the
+        Product Derivation Engine. To start with, we add it on the Obeo Designer session : right
+        click on the Obeo Designer session (here<emphasis role="italic"> fd.aird</emphasis>) ->
+          <emphasis role="italic">Add Model</emphasis>. A new wizard appears, select <emphasis
+          role="italic">Add Existing Resource</emphasis> -> <emphasis role="italic"
+          >Finish</emphasis>. Then click to<emphasis role="italic"> Browse Workspace</emphasis> to
+        search and select the <emphasis role="italic">resolution model</emphasis>.</para>
+      <para><inlinegraphic fileref="PEnd_figures/select_session.png"/></para>
+      <para>Then right click on the<emphasis role="italic"> resolution model</emphasis>
+          file<emphasis role="italic"> Movida</emphasis> -><emphasis role="italic"> Derive
+          Product</emphasis>. </para>
+      <para>We obtain the following resolved model : </para>
+      <para><inlinegraphic fileref="PEnd_figures/resolvedModel.png"/></para>
+      <para>We have derived a car model with a diesel motor, a GPS, a radio and with electric
+        windows.</para>
+    </section>
+  </chapter>
+  <chapter>
+    <title> Conclusion</title>
+    <para> This document made a quick tour of the Product Derivation functionalities for Feature
+      Diagram Editor. For more details please refer to the <ulink
+        url="http://movida.gforge.inria.fr/uploads/Demos/SelectionAndDerivationDemo.htm"> wink
+        video</ulink> . </para>
+  </chapter>
+</book>

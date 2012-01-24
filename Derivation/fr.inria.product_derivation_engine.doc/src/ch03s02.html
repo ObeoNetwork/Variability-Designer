@@ -1,0 +1,24 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>How to use Product Derivation</title><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><meta name="keywords" content="Product Derivation Engine, metamodeling, Software Product Line (SPL)"><link rel="home" href="index.html" title="Product Derivation Engine End-User documentation"><link rel="up" href="ch03.html" title="Chapter&nbsp;3.&nbsp; Product Derivation Engine : Quick presentation"><link rel="prev" href="ch03.html" title="Chapter&nbsp;3.&nbsp; Product Derivation Engine : Quick presentation"><link rel="next" href="ch04.html" title="Chapter&nbsp;4.&nbsp; Conclusion"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="section" lang="en-US"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e152"></a> How to use Product Derivation</h2></div></div></div><p>To launch Product Derivation from the Feature Diagram Editor simply click on the
+        FeatureDiagram (white part ) -&gt;<span class="italic">Derive Feature Model</span> -&gt;
+          <span class="italic">Derive Feature Model.</span></p><p>As shown on the following picture, you can choose the feature you want on the Eclipse
+        console : </p><p><img src="Movida-ProductDerivationEngine-End-User-Documentation_figures/DerivationEclipseConsole.png"></p><p> Product Derivation is made in two steps :</p><div class="orderedlist"><ol type="1"><li><p> Call <span class="bold"><strong>selection engine</strong></span> asking user to select
+              feature : </p><p>To do this , simply right click on the white part of the FeatureDiagram -&gt;
+              Selection Engine -&gt; Selection. Then :</p><p>
+              </p><div class="orderedlist"><ol type="a"><li><p> Select file name for resolution model.</p><p>
+                    </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"> resolution model must have .resolutionmodel extension</h3><p> Do not forget to use the extension .resolutionmodel otherwise, product
+                        derivation cannot be made correctly.</p></div><p>
+                  </p></li><li><p>The selection engine browses the model starting with all children of a given
+                    feature and then the children of the selected features. On this step you can
+                    determines how many choices you want by typing the number of desired choices and
+                    select a proposed feature by typing its name on the Eclipse Console. &#8226; </p></li></ol></div><p>
+            </p></li><li><p>Then you need to launch derivation.As for selection engine, right click on the
+              white part of the FeatureDiagram -&gt; Product Derivation -&gt; Derive Feature Model and
+              type to it the path for the wanted resolution model. </p></li><li><p>Type the name of the product model (output model for product derivation
+              process).</p></li></ol></div><p>
+      </p><p>
+        </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"> all models used in selection and product derivation are stored on the same folder
+            as feature model</h3><p> Note that in this version all models used in selection and product derivation are
+            stored on the same folder as feature model</p></div><p>
+      </p><p> So, you have obtained a new product model by this way.</p></div></body></html>

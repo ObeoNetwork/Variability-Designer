@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   </HEAD>
+<BODY>
+<OBJECT type="text/site properties">
+<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Feature Diagram Editor End-User documentation">
+<param name="Local" value="index.html"></OBJECT></LI>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Preface">
+<param name="Local" value="pr01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Feature Diagram Editor Overview">
+<param name="Local" value="ch01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Installation">
+<param name="Local" value="ch02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Install feature diagram with the Movida studio update site">
+<param name="Local" value="ch02.html#d0e86"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Install feature diagram editor separately">
+<param name="Local" value="ch02s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Feature Diagram Editor : Quick presentation">
+<param name="Local" value="ch03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Create a new Feature Diagram Model">
+<param name="Local" value="ch03.html#d0e177"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Create model elements with the palette">
+<param name="Local" value="ch03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Add domain model elements into features">
+<param name="Local" value="ch03s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Add Domain Model Elements by Drag and Drop">
+<param name="Local" value="ch03s03.html#d0e428"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Another way to add Domain Model Elements">
+<param name="Local" value="ch03s03.html#d0e466"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Filter elements to display in the graphical editor">
+<param name="Local" value="ch03s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Use Tree and RelationShip representation">
+<param name="Local" value="ch03s05.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Use tree representation">
+<param name="Local" value="ch03s05.html#d0e528"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Use relationship representation">
+<param name="Local" value="ch03s05.html#d0e535"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Check Praxis Constraints">
+<param name="Local" value="ch03s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Check OCL constraints">
+<param name="Local" value="ch03s07.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Conclusion">
+<param name="Local" value="ch04.html"></OBJECT></LI>
+</UL>
+</UL>
+</BODY></HTML>

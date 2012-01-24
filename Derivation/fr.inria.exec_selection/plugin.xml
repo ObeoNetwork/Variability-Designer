@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+ * Copyright (c) 2010-2012 mgouyett.
+ * INRIA-IRISA- Triskell Team
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     mgouyett - initial API and implementation
+ * 	INRIA-IRISA- Triskell Team
+ * 	contact : marie.gouyette@gmail.com
+-->
+
+<!-- This plugin permits to launch the selection and the derivation with a popup menu.-->
+<plugin>
+   <extension
+         id="fr.inria.exec_selection"
+         name="fr.inria.exec_selection"
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="fr.inria.exec_selection.actionSet1"
+            label="Launch Selection Engine"
+            visible="true">
+         <menu
+               id="LaunchSelectionMenu"
+               label="Selection">
+            <separator
+                  name="selectionSeparator">
+            </separator>
+         </menu>
+         <action
+               class="fr.inria.exec_selection.popup.actions.SelectionEngineAction"
+               id="fr.inria.exec_selection.action.LaunchSelection"
+               label="Launch Selection"
+               menubarPath="LaunchSelectionMenu/selectionSeparator"
+               style="push"
+               toolbarPath="selectionSeparator">
+         </action>
+      </actionSet>
+   </extension>
+      <extension
+         id="fr.inria.exec_derivation"
+         name="fr.inria.exec_derivation"
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="fr.inria.exec_derivation.actionSet1"
+            label="Launch Derivation Engine"
+            visible="true">
+         <menu
+               id="LaunchSelectionMenu"
+               label="MOVIDA">
+            <separator
+                  name="selectionSeparator">
+            </separator>
+         </menu>
+         <action
+               class="fr.inria.exec_derivation.popup.actions.ProductDerivationAction"
+               id="fr.inria.exec_derivation.action.LaunchDerivation"
+               label="Launch Derivation"
+               menubarPath="LaunchSelectionMenu/selectionSeparator"
+               style="push"
+               toolbarPath="selectionSeparator">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="fr.inria.exec_selection.contribution1"
+            nameFilter="*.featurediagram"
+            objectClass="org.eclipse.core.resources.IResource">
+         <menu
+               id="fr.inria.exec_selection.menu1"
+               label="Movida"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="fr.inria.exec_selection.popup.actions.SelectionEngineAction"
+               enablesFor="1"
+               id="fr.inria.exec_selection.newAction"
+               label="Select Features"
+               menubarPath="fr.inria.exec_selection.menu1/group1">
+         </action>
+      </objectContribution>
+   </extension>
+      <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="fr.inria.exec_derivation.contribution1"
+            nameFilter="*.resolutionmodel"
+            objectClass="org.eclipse.core.resources.IResource">
+         <menu
+               id="fr.inria.exec_derivation.menu2"
+               label="Movida"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="fr.inria.exec_derivation.popup.actions.ProductDerivationAction"
+               enablesFor="1"
+               id="fr.inria.exec_derivation.newAction"
+               label="Derive Product"
+               menubarPath="fr.inria.exec_derivation.menu2/group1">
+         </action>
+      </objectContribution>
+   </extension>
+   
+</plugin>

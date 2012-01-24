@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!-- 
+ * Copyright (c) 2010-2012 Marie Gouyette.
+ * INRIA-IRISA- Triskell
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     INRIA-IRISA- Triskell
+ *     Marie Gouyette - initial API and implementation
+ *     contact marie.gouyette@gmail.com
+-->
+<plugin>
+  <extension point="fr.obeo.dsl.viewpoint.componentization">
+    <component class="fr.inria.featureDiagramEditor.ui.Activator"
+               id="fr.inria.featureDiagramEditor.ui"
+	       name="FeatureDiagramEditor">
+    </component>
+  </extension>
+  <extension
+        point="fr.obeo.dsl.viewpoint.externalJavaAction">
+     <javaActions
+           actionClass="fr.inria.featureDiagramEditor.ui.wizard.Call"
+           id="fr.inria.featureDiagramEditor.ui.wizard.Call">
+     </javaActions>
+  </extension>
+</plugin>

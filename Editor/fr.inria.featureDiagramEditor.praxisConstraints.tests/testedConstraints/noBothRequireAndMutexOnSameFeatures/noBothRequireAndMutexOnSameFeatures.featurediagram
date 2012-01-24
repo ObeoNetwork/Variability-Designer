@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_f0SI0JMyEd-cxaYLx0olog" root="_hKd4oJMyEd-cxaYLx0olog">
+  <features xmi:id="_hKd4oJMyEd-cxaYLx0olog" name="root Feature">
+    <operator xsi:type="featureDiagram:Or" xmi:id="_k1zh8JMyEd-cxaYLx0olog" features="_iQrSwJMyEd-cxaYLx0olog _ihyQ4JMyEd-cxaYLx0olog" name="Or"/>
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_m2LeQJMyEd-cxaYLx0olog" features="_iuIq0JMyEd-cxaYLx0olog" name="Opt"/>
+  </features>
+  <features xmi:id="_iQrSwJMyEd-cxaYLx0olog" name="a" owningOperator="_k1zh8JMyEd-cxaYLx0olog"/>
+  <features xmi:id="_ihyQ4JMyEd-cxaYLx0olog" name="b" owningOperator="_k1zh8JMyEd-cxaYLx0olog"/>
+  <features xmi:id="_iuIq0JMyEd-cxaYLx0olog" name="c" owningOperator="_m2LeQJMyEd-cxaYLx0olog"/>
+  <constraintEdges xmi:id="_o3mjcJMyEd-cxaYLx0olog" target="_iuIq0JMyEd-cxaYLx0olog" source="_iQrSwJMyEd-cxaYLx0olog">
+    <constraint xsi:type="featureDiagram:Require" xmi:id="_o3mjcZMyEd-cxaYLx0olog"/>
+  </constraintEdges>
+  <constraintEdges xmi:id="__a06sAb4EeGeSYOaywhwhg" target="_iQrSwJMyEd-cxaYLx0olog" source="_iuIq0JMyEd-cxaYLx0olog">
+    <constraint xsi:type="featureDiagram:Mutex" xmi:id="__a9dkAb4EeGeSYOaywhwhg"/>
+  </constraintEdges>
+</featureDiagram:FeatureDiagram>

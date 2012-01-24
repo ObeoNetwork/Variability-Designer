@@ -1,0 +1,85 @@
+<project name="PEnd" default="all">
+	<!-- configuration properties -->		
+	<!-- project configuration -->
+	<property name="project.base.dir" location=".."/>
+	<property name="project.name" value="PEnd"/>
+	<property name="build.dir" location="${project.base.dir}/build"/>
+	<property name="build.docbook.dir" location="${build.dir}/docbook42"/>
+	<property name="OOo.source.dir" location="${project.base.dir}/src/OOo"/>
+	<property name="OOo.source.file" location="${OOo.source.dir}/${project.name}.sxw"/>
+	<!--<property name="deployment.dest" location="\\\\jersey\\triskell\\www\\triskell\\softwares\\kermeta\\docs"/>-->
+	<property name="deployment.dest" location="\\\\jersey\\triskell\\www\\kermeta.org\\docs"/>
+			
+	<target name="all" depends="preparedbk, html.single, html.chunked, pdf.fop">
+	</target>
+	
+
+	<target name="OOo2dbk">
+		<ant antfile="common_build.xml"
+		     target="OOo2dbk"/>
+	</target>
+	
+	<target name="preparedbk">
+		<ant antfile="common_build.xml"
+		     target="preparedbk"/>
+	</target>
+	
+	<target name="html.single">
+		<ant antfile="common_build.xml"
+		     target="html.single"/>
+			
+	</target>
+	
+	<target name="html.chunked"  >
+		<ant antfile="common_build.xml"
+		     target="html.chunked"/> 
+	</target>
+	
+	<target name="html.help" >
+		<ant antfile="common_build.xml"
+		     target="html.help"/>
+	</target>
+	
+	<target name="eclipse.help" depends="preparedbk">
+		<ant antfile="common_build.xml"
+		     target="eclipse.help"/>
+	</target>
+	
+	<target name="pdf.fop"  >
+		<ant antfile="common_build.xml"
+		     target="pdf.fop"/>
+	</target>
+
+	<target name="deploy" description="copy documentation files to http://www.irisa.fr/triskell/prive/docs" >
+		<ant antfile="common_build.xml"
+		     target="dbkdeploy"/>
+
+	</target>
+
+	<!-- Cleaning targets -->
+    <target name="clean">
+		<ant antfile="common_build.xml"
+		     target="clean"/>
+    </target>
+	<target name="clean.fop">
+		<ant antfile="common_build.xml"
+		     target="clean.fop"/>
+	</target>
+	<target name="clean.html.chunked">
+		<ant antfile="common_build.xml"
+		     target="clean.html.chunked"/>
+	</target>
+	<target name="clean.html.single">
+		<ant antfile="common_build.xml"
+		     target="clean.html.single"/>
+	</target>
+	<target name="clean.html.help">
+		<ant antfile="common_build.xml"
+		     target="clean.html.help"/>
+	</target>
+	<target name="clean.eclipse.help">
+		<ant antfile="common_build.xml"
+		     target="clean.eclipse.help"/>
+	</target>
+
+</project>

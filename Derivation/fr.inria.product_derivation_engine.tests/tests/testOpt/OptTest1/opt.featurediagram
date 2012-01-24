@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xmi:id="_PuRQwMfmEd-D8OULRVYasw" root="_WZPT8MfmEd-D8OULRVYasw">
+  <features xmi:id="_WZPT8MfmEd-D8OULRVYasw" name="car">
+    <operator xsi:type="featureDiagram:Opt" xmi:id="_khMGEMfmEd-D8OULRVYasw" features="_e2B6EMfmEd-D8OULRVYasw _fwpIMMfmEd-D8OULRVYasw _hHrMkMfmEd-D8OULRVYasw" name="Opt"/>
+    <modelElements href="car.ecore#//Car"/>
+  </features>
+  <features xmi:id="_e2B6EMfmEd-D8OULRVYasw" name="GPS" owningOperator="_khMGEMfmEd-D8OULRVYasw">
+    <modelElements href="car.ecore#//GPS"/>
+  </features>
+  <features xmi:id="_fwpIMMfmEd-D8OULRVYasw" name="Aircond" owningOperator="_khMGEMfmEd-D8OULRVYasw">
+    <modelElements href="car.ecore#//AirCond"/>
+  </features>
+  <features xmi:id="_hHrMkMfmEd-D8OULRVYasw" name="Radio" owningOperator="_khMGEMfmEd-D8OULRVYasw">
+    <modelElements href="car.ecore#//Radio"/>
+  </features>
+</featureDiagram:FeatureDiagram>
