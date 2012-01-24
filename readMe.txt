@@ -1,3 +1,17 @@
+/*******************************************************************************
+ * Copyright (c) 2010-2012 mgouyett.
+ * INRIA-IRISA- Triskell Team
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Marie Gouyette - initial API and implementation
+ * 	INRIA-IRISA- Triskell Team
+ * 	contact : marie.gouyette@gmail.com
+ ******************************************************************************/
+
 All of these projects come from the INRIA Triskell team contribution on the ANR project MOVIDA.
 
 On this variability tool we use four models :
